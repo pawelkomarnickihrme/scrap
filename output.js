@@ -1,77 +1,81 @@
 {
-  "perfumeName": "Erba Pura Xerjoff",
-  "brand": "Xerjoff",
-  "description": "Erba Pura by Xerjoff is a Oriental fragrance for women and men. Erba Pura was launched in 2019. Erba Pura was created by Christian Carbonnel and Laura Santander. Top notes are Sicilian Orange, Calabrian bergamot and Sicilian Lemon; middle note is Fruits; base notes are White Musk, Madagascar Vanilla and Amber. Read about this perfume in other languages: Deutsch, Español, Français, Čeština, Italiano, Русский, Polski, Português, Ελληνικά, 汉语, Nederlands, Srpski, Română, العربية, Українська, Монгол, עברית.",
-  "mainImageUrl": "https://fimgs.net/mdimg/perfume-thumbs/375x500.55157.jpg",
+  "perfumeName": "Black Sea Lorenzo Pazzaglia",
+  "brand": "Lorenzo Pazzaglia",
+  "description": "Black Sea by Lorenzo Pazzaglia is a fragrance for women and men. Black Sea was launched in 2019. The nose behind this fragrance is Lorenzo Pazzaglia. Top notes are Salt, Ozonic notes, Watery Notes, Myrtle and Bergamot; middle notes are Sea Notes, Salt, Ylang-Ylang and Orange Blossom; base notes are Ambergris, Algae, White Musk, Oakmoss and Patchouli. \"The sky darkens and the sea is calm, just before the storm. The wind arrives with its load of flowers and aromatic herbs and the menacing sky is reflected in the leaden water that looks like ink. It's a moment: the waves slap the rocks with such a force as to saturate the air and the saltiness applauds the air filling the lungs. Nature is demonstrating her immense strength. Black Sea is a perfume that releases the power of the elements, a fragrance for me as I fearlessly throw myself into the arms of a creation to be discovered. \" - Antea DevonTop Notes: Bergamot, Sardinian Myrtle, Salt, Ozone, Aquatic Notes Heart notes: Orange Blossom, Black Salt of Cyprus, Ylang-Ylang, Marine Notes Base Notes: Seaweed, White Musk, Patchouli, Oakmoss, OrientalgrisRead about this perfume in other languages: Deutsch, Español, Français, Čeština, Italiano, Русский, Polski, Português, Ελληνικά, 汉语, Nederlands, Srpski, Română, العربية, Українська, Монгол, עברית.",
+  "mainImageUrl": "https://fimgs.net/mdimg/perfume-thumbs/375x500.69652.jpg",
   "userReviews": [],
-  "rating": 3.8,
-  "ratingCount": 10076,
+  "rating": 4.2,
+  "ratingCount": 1112,
   "notes": {
     "topNotes": [
-      "Sicilian Orange",
-      "Calabrian bergamot",
-      "Sicilian Lemon"
+      "Salt",
+      "Ozonic notes",
+      "Watery Notes",
+      "Myrtle",
+      "Bergamot"
     ],
     "heartNotes": [
-      "Fruits"
+      "Sea Notes",
+      "Salt",
+      "Ylang-Ylang",
+      "Orange Blossom"
     ],
     "baseNotes": [
+      "Ambergris",
+      "Algae",
       "White Musk",
-      "Madagascar Vanilla",
-      "Amber"
+      "Oakmoss",
+      "Patchouli"
     ]
   },
   "similarPerfumes": [
     {
-      "name": "Athoor Al Alam Wadood"
+      "name": "Parfums de Marly Valaya"
     },
     {
-      "name": "Dolce&Gabbana Light Blue pour Homme"
+      "name": "Lancôme La Vie Est Belle Vanille Nude"
     },
     {
-      "name": "Amouage Guidance"
+      "name": "Abercrombie & Fitch First Instinct"
     },
     {
-      "name": "Zara Ebony Wood"
+      "name": "Fragrance World Lush Cherry"
     },
     {
-      "name": "Lush Breath Of God"
+      "name": "Lush Lust"
     },
     {
-      "name": "Byredo 1996 Inez & Vinoodh"
+      "name": "Sol de Janeiro Flor Mística"
     },
     {
-      "name": "Rabanne Paco Rabanne Pour Homme"
+      "name": "Maison Martin Margiela Jazz Club"
     },
     {
-      "name": "BDK Parfums Gris Charnel"
+      "name": "Clive Christian Blonde Amber"
     },
     {
-      "name": "Amouage Reflection 45 Man"
+      "name": "Commodity Milk Orchid"
     },
     {
-      "name": "Lattafa Perfumes Nebras Elixir"
+      "name": "Al-Rehab Dakar"
     },
     {
-      "name": "Lancôme La Vie Est Belle"
+      "name": "Davidoff Cool Water"
     },
     {
-      "name": "Issey Miyake Le Sel d’Issey"
+      "name": "Serge Lutens Feminité du Bois"
     },
     {
-      "name": "Zara Sugar Foam"
+      "name": "Maison Mataha Café des Délices"
     },
     {
-      "name": "Le Labo The Noir 29"
+      "name": "Maison Martin Margiela Afternoon Delight"
     },
     {
-      "name": "Argos Triumph Of Bacchus"
+      "name": "Valentino Valentino Uomo Born in Roma Ivory"
     },
     {
       "name": "New Reviews"
-    },
-    {
-      "name": "Perfumes as Beautiful as the Fall Time"
     },
     {
       "name": "Español"
@@ -81,41 +85,132 @@
     },
     {
       "name": "Italiano"
+    },
+    {
+      "name": "Русский"
     }
   ],
-  "recommendedPerfumes": [],
+  "recommendedPerfumes": [
+    {
+      "name": "XJ 1861 Naxos",
+      "brand": "Xerjoff"
+    },
+    {
+      "name": "Bois Impérial",
+      "brand": "Essential Parfums"
+    },
+    {
+      "name": "Megamare",
+      "brand": "Orto Parisi"
+    },
+    {
+      "name": "Sex-Sea",
+      "brand": "Lorenzo Pazzaglia"
+    },
+    {
+      "name": "Dream Sea",
+      "brand": "Lorenzo Pazzaglia"
+    },
+    {
+      "name": "Hacivat",
+      "brand": "Nishane"
+    },
+    {
+      "name": "Van Py Rhum",
+      "brand": "Lorenzo Pazzaglia"
+    },
+    {
+      "name": "Summer Hammer",
+      "brand": "Lorenzo Pazzaglia"
+    },
+    {
+      "name": "Aventus",
+      "brand": "Creed"
+    },
+    {
+      "name": "Evil Angel a.k.a. 28.09",
+      "brand": "Lorenzo Pazzaglia"
+    },
+    {
+      "name": "Layton",
+      "brand": "Parfums de Marly"
+    },
+    {
+      "name": "Carbonara",
+      "brand": "Lorenzo Pazzaglia"
+    },
+    {
+      "name": "Ganymede",
+      "brand": "Marc-Antoine Barrois"
+    },
+    {
+      "name": "Sauvage Elixir",
+      "brand": "Dior"
+    },
+    {
+      "name": "Grand Soir",
+      "brand": "Maison Francis Kurkdjian"
+    },
+    {
+      "name": "Artik Sea",
+      "brand": "Lorenzo Pazzaglia"
+    },
+    {
+      "name": "Reflection Man",
+      "brand": "Amouage"
+    },
+    {
+      "name": "Red Tobacco",
+      "brand": "Mancera"
+    },
+    {
+      "name": "Dior Homme Intense 2011",
+      "brand": "Dior"
+    },
+    {
+      "name": "Black Afgano",
+      "brand": "Nasomatto"
+    }
+  ],
   "longevity": {
-    "veryWeak": 78,
-    "weak": 122,
-    "moderate": 918,
-    "longLasting": 2365,
-    "eternal": 3081,
+    "veryWeak": 18,
+    "weak": 12,
+    "moderate": 73,
+    "longLasting": 245,
+    "eternal": 519,
     "mostVoted": "eternal"
   },
   "projection": {
-    "strong": 2644,
+    "strong": 304,
     "mostVoted": "strong"
   },
   "gender": {
-    "unisex": 3490,
+    "female": 12,
+    "moreFemale": 5,
+    "unisex": 302,
+    "moreMale": 285,
+    "male": 232,
     "mostVoted": "unisex"
   },
   "valueForMoney": {
-    "overpriced": 2174,
-    "fair": 1885,
-    "mostVoted": "overpriced"
+    "priceTooHigh": 72,
+    "overpriced": 132,
+    "fair": 280,
+    "goodQuality": 144,
+    "excellentQuality": 150,
+    "mostVoted": "fair"
   },
   "emotionRating": {
-    "okay": 1885,
+    "okay": 280,
     "mostVoted": "okay"
   },
   "season": {},
   "timeOfDay": {},
   "sillage": {
-    "intimate": 197,
-    "moderate": 1304,
-    "strong": 2644,
-    "enormous": 2386,
-    "mostVoted": "strong"
+    "intimate": 25,
+    "moderate": 111,
+    "strong": 304,
+    "enormous": 406,
+    "mostVoted": "enormous"
   }
 }

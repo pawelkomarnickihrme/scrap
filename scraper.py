@@ -302,31 +302,146 @@ def extract_similar_perfumes(soup: BeautifulSoup) -> List[Dict[str, str]]:
     return similar[:20]  # Limit do 20 podobnych
 
 
-def extract_recommended_perfumes(soup: BeautifulSoup) -> List[Dict[str, str]]:
-    """Wyciąga rekomendowane perfumy."""
-    recommended = []
+def extract_people_also_like(soup: BeautifulSoup) -> List[Dict[str, str]]:
+    """Wyciąga perfumy z sekcji 'People who like this also like'."""
+    perfumes = []
     
-    # Szukaj sekcji z rekomendacjami - typowe nazwy
-    rec_keywords = ["rekomendowane", "recommended", "suggested", "you may also like"]
+    # Znajdź span z tekstem "People who like this also like"
+    title_span = soup.find("span", string=re.compile(r"People who like this also like", re.I))
+    if not title_span:
+        # Alternatywnie szukaj w span który zawiera ten tekst
+        title_span = soup.find("span", string=lambda text: text and "People who like this also like" in text)
     
-    for keyword in rec_keywords:
-        # Szukaj w nagłówkach, linkach, divach
-        sections = soup.find_all(
-            lambda tag: tag.name in ["h2", "h3", "h4", "div", "section"]
-            and keyword.lower() in clean_text(tag.get_text()).lower()
-        )
+    if not title_span:
+        return perfumes
+    
+    # Znajdź kontener strike-title (rodzic span)
+    strike_title = title_span.find_parent(class_="strike-title")
+    if not strike_title:
+        # Jeśli nie ma klasy strike-title, użyj bezpośredniego rodzica
+        strike_title = title_span.find_parent()
+    
+    if not strike_title:
+        return perfumes
+    
+    # Znajdź następny element carousel (może być następnym siblingem lub w następnym div)
+    carousel = strike_title.find_next_sibling(class_=re.compile(r"carousel", re.I))
+    if not carousel:
+        # Szukaj w następnych siblingach
+        current = strike_title.next_sibling
+        while current:
+            if hasattr(current, 'get') and isinstance(current, Tag):
+                if 'carousel' in current.get('class', []):
+                    carousel = current
+                    break
+            current = current.next_sibling if hasattr(current, 'next_sibling') else None
+    
+    if not carousel:
+        # Spróbuj znaleźć carousel w rodzicu
+        parent = strike_title.find_parent()
+        if parent:
+            carousel = parent.find(class_=re.compile(r"carousel", re.I))
+    
+    if not carousel:
+        return perfumes
+    
+    # Znajdź wszystkie carousel-cell w carousel
+    cells = carousel.find_all(class_="carousel-cell")
+    
+    for cell in cells:
+        # Znajdź link w cell
+        link = cell.find("a", href=re.compile(r"/perfume", re.I))
+        if not link:
+            continue
         
-        for section in sections:
-            # Znajdź wszystkie linki w sekcji lub w następnych elementach
-            container = section.find_next_sibling() or section.parent
-            if container:
-                links = container.find_all("a", href=re.compile(r"/perfume|/perfumes", re.I))
-                for link in links:
-                    name = clean_text(link.get_text())
-                    if name and len(name) > 2 and name not in [r["name"] for r in recommended]:
-                        recommended.append({"name": name})
+        # Wyciągnij markę
+        brand_span = link.find("span", class_="brand")
+        brand = ""
+        if brand_span:
+            brand = clean_text(brand_span.get_text())
+        
+        # Wyciągnij nazwę perfum (w span z klasą ztworowseclipse lub jako tekst linka)
+        name_span = link.find("span", class_="ztworowseclipse")
+        name = ""
+        if name_span:
+            name = clean_text(name_span.get_text())
+        else:
+            # Jeśli nie ma span z nazwą, spróbuj wyciągnąć z całego tekstu linka
+            link_text = clean_text(link.get_text())
+            # Usuń markę z tekstu
+            if brand:
+                link_text = link_text.replace(brand, "").strip()
+            name = link_text
+        
+        # Jeśli nadal nie ma nazwy, spróbuj wyciągnąć z href lub alt obrazu
+        if not name:
+            img = link.find("img")
+            if img and img.get("alt"):
+                alt_text = img.get("alt")
+                # Usuń markę z alt jeśli jest
+                if brand and brand in alt_text:
+                    name = alt_text.replace(brand, "").strip()
+                else:
+                    name = alt_text
+        
+        # Normalizuj nazwę i markę
+        name = clean_text(name)
+        brand = clean_text(brand)
+        
+        # Dodaj tylko jeśli mamy nazwę
+        if name and len(name) > 1:
+            # Sprawdź duplikaty (normalizując nazwy)
+            name_normalized = name.lower().strip()
+            brand_normalized = brand.lower().strip() if brand else ""
+            
+            is_duplicate = False
+            for existing in perfumes:
+                existing_name = existing.get("name", "").lower().strip()
+                existing_brand = existing.get("brand", "").lower().strip()
+                if (name_normalized == existing_name and 
+                    (not brand_normalized or not existing_brand or brand_normalized == existing_brand)):
+                    is_duplicate = True
+                    break
+            
+            if not is_duplicate:
+                perfume_data = {"name": name}
+                if brand:
+                    perfume_data["brand"] = brand
+                perfumes.append(perfume_data)
     
-    return recommended[:20]  # Limit do 20 rekomendowanych
+    return perfumes
+
+
+def extract_recommended_perfumes(soup: BeautifulSoup) -> List[Dict[str, str]]:
+    """Wyciąga rekomendowane perfumy z sekcji 'People who like this also like'."""
+    # Użyj dedykowanej funkcji dla "People who like this also like"
+    perfumes = extract_people_also_like(soup)
+    
+    # Jeśli nie znaleziono, spróbuj alternatywnych metod
+    if not perfumes:
+        # Szukaj sekcji z rekomendacjami - typowe nazwy
+        rec_keywords = ["rekomendowane", "recommended", "suggested", "you may also like"]
+        
+        for keyword in rec_keywords:
+            # Szukaj w nagłówkach, linkach, divach
+            sections = soup.find_all(
+                lambda tag: tag.name in ["h2", "h3", "h4", "div", "section"]
+                and keyword.lower() in clean_text(tag.get_text()).lower()
+            )
+            
+            for section in sections:
+                # Znajdź wszystkie linki w sekcji lub w następnych elementach
+                container = section.find_next_sibling() or section.parent
+                if container:
+                    links = container.find_all("a", href=re.compile(r"/perfume|/perfumes", re.I))
+                    for link in links:
+                        name = clean_text(link.get_text())
+                        if name and len(name) > 2:
+                            # Sprawdź duplikaty
+                            if name not in [r["name"] for r in perfumes]:
+                                perfumes.append({"name": name})
+    
+    return perfumes[:20]  # Limit do 20 rekomendowanych
 
 
 def extract_voting_data(soup: BeautifulSoup, category: str, options_mapping: Dict[str, List[str]]) -> Dict[str, Any]:
@@ -390,13 +505,48 @@ def extract_voting_data(soup: BeautifulSoup, category: str, options_mapping: Dic
                     vote_count = int(numbers[0])
                     
                     # Sprawdź, która opcja pasuje
+                    # Strategia: najpierw dokładne dopasowania, potem częściowe (najdłuższe najpierw)
+                    matched = False
+                    vote_name_lower = vote_name_text.lower()
+                    vote_name_normalized = vote_name_lower.replace(" ", "")
+                    
+                    # KROK 1: Sprawdź dokładne dopasowania (po normalizacji spacji)
                     for eng_option, variants in options_mapping.items():
                         for variant in variants:
-                            if variant.lower() in vote_name_text:
+                            variant_normalized = variant.lower().replace(" ", "")
+                            if variant_normalized == vote_name_normalized:
                                 data[eng_option] = vote_count
                                 if vote_count > max_votes:
                                     max_votes = vote_count
                                     most_voted_value = eng_option
+                                matched = True
+                                break
+                        if matched:
+                            break
+                    
+                    # KROK 2: Jeśli nie znaleziono dokładnego, sprawdź częściowe dopasowania
+                    # Sortuj opcje od najdłuższych wariantów do najkrótszych (żeby "more female" pasowało przed "female")
+                    if not matched:
+                        sorted_options = sorted(
+                            options_mapping.items(),
+                            key=lambda x: max(len(v.replace(" ", "")) for v in x[1]),
+                            reverse=True
+                        )
+                        for eng_option, variants in sorted_options:
+                            # Sortuj warianty od najdłuższych do najkrótszych
+                            sorted_variants = sorted(variants, key=lambda v: len(v.replace(" ", "")), reverse=True)
+                            for variant in sorted_variants:
+                                variant_lower = variant.lower()
+                                # Sprawdź czy wariant jest zawarty w tekście (ale nie na odwrót!)
+                                # To zapobiega dopasowaniu "kobieta" do "kobieta / unisex"
+                                if variant_lower in vote_name_lower:
+                                    data[eng_option] = vote_count
+                                    if vote_count > max_votes:
+                                        max_votes = vote_count
+                                        most_voted_value = eng_option
+                                    matched = True
+                                    break
+                            if matched:
                                 break
     
     if most_voted_value and max_votes > 0:
@@ -433,20 +583,23 @@ def extract_all_voting_data(soup: BeautifulSoup) -> Dict[str, Dict[str, Any]]:
             soup,
             "gender",
             {
-                "feminine": ["kobieta", "feminine", "kobieta / unisex"],
-                "unisex": ["unisex"],
-                "masculine": ["mężczyzna", "masculine", "mężczyzna / unisex"],
+                # Ważne: kolejność i długość wariantów jest istotna - dłuższe/more specyficzne najpierw
+                "moreFemale": ["more female", "morefemale", "more feminine"],
+                "female": ["female", "kobieta", "feminine", "woman", "women", "kobiet", "for women"],
+                "unisex": ["unisex", "uni-sex"],
+                "moreMale": ["more male", "moremale", "more masculine"],
+                "male": ["male", "mężczyzna", "masculine", "man", "men", "mężczyzn", "for men"],
             },
         ),
         "valueForMoney": extract_voting_data(
             soup,
             "valueForMoney",
             {
-                "priceTooHigh": ["cena za wysoka", "price too high"],
-                "overpriced": ["zawyżona cena", "overpriced"],
+                "priceTooHigh": ["way overpriced", "cena za wysoka", "price too high"],
+                "overpriced": ["overpriced", "zawyżona cena"],
                 "fair": ["ok", "fair"],
-                "goodQuality": ["dobra jakość", "good quality"],
-                "excellentQuality": ["doskonała jakość", "excellent quality"],
+                "goodQuality": ["good value", "dobra jakość", "good quality"],
+                "excellentQuality": ["great value", "doskonała jakość", "excellent quality"],
             },
         ),
         "emotionRating": extract_voting_data(
@@ -556,6 +709,86 @@ async def main():
             json.dump(data, f, ensure_ascii=False, indent=2)
         
         print(f"Dane zapisane do {output_file}")
+        
+        # Uruchom testy wartości LONGEVITY
+        print("\n" + "=" * 50)
+        print("Uruchamianie testów wartości LONGEVITY...")
+        print("=" * 50)
+        
+        try:
+            from test_output_longevity import test_longevity_values
+            test_passed = test_longevity_values(output_file)
+            if not test_passed:
+                print("\n⚠️  Ostrzeżenie: Testy wartości LONGEVITY nie przeszły pomyślnie")
+                print("   Sprawdź dane w pliku output.js\n")
+        except ImportError:
+            print("⚠️  Nie można zaimportować modułu testowego")
+        except Exception as e:
+            print(f"⚠️  Błąd podczas uruchamiania testów: {e}")
+        
+        # Uruchom testy wartości SILLAGE
+        print("\n" + "=" * 50)
+        print("Uruchamianie testów wartości SILLAGE...")
+        print("=" * 50)
+        
+        try:
+            from test_output_sillage import test_sillage_values
+            test_passed = test_sillage_values(output_file)
+            if not test_passed:
+                print("\n⚠️  Ostrzeżenie: Testy wartości SILLAGE nie przeszły pomyślnie")
+                print("   Sprawdź dane w pliku output.js\n")
+        except ImportError:
+            print("⚠️  Nie można zaimportować modułu testowego SILLAGE")
+        except Exception as e:
+            print(f"⚠️  Błąd podczas uruchamiania testów SILLAGE: {e}")
+        
+        # Uruchom testy wartości GENDER
+        print("\n" + "=" * 50)
+        print("Uruchamianie testów wartości GENDER...")
+        print("=" * 50)
+        
+        try:
+            from test_output_gender import test_gender_values
+            test_passed = test_gender_values(output_file)
+            if not test_passed:
+                print("\n⚠️  Ostrzeżenie: Testy wartości GENDER nie przeszły pomyślnie")
+                print("   Sprawdź dane w pliku output.js\n")
+        except ImportError:
+            print("⚠️  Nie można zaimportować modułu testowego GENDER")
+        except Exception as e:
+            print(f"⚠️  Błąd podczas uruchamiania testów GENDER: {e}")
+        
+        # Uruchom testy wartości PRICE VALUE
+        print("\n" + "=" * 50)
+        print("Uruchamianie testów wartości PRICE VALUE...")
+        print("=" * 50)
+        
+        try:
+            from test_output_price_value import test_price_value_values
+            test_passed = test_price_value_values(output_file)
+            if not test_passed:
+                print("\n⚠️  Ostrzeżenie: Testy wartości PRICE VALUE nie przeszły pomyślnie")
+                print("   Sprawdź dane w pliku output.js\n")
+        except ImportError:
+            print("⚠️  Nie można zaimportować modułu testowego PRICE VALUE")
+        except Exception as e:
+            print(f"⚠️  Błąd podczas uruchamiania testów PRICE VALUE: {e}")
+        
+        # Uruchom testy sekcji "People who like this also like"
+        print("\n" + "=" * 50)
+        print("Uruchamianie testów sekcji 'People who like this also like'...")
+        print("=" * 50)
+        
+        try:
+            from test_output_also_like import test_also_like_perfumes
+            test_passed = test_also_like_perfumes(output_file)
+            if not test_passed:
+                print("\n⚠️  Ostrzeżenie: Testy sekcji 'People who like this also like' nie przeszły pomyślnie")
+                print("   Sprawdź dane w pliku output.js\n")
+        except ImportError:
+            print("⚠️  Nie można zaimportować modułu testowego 'People who like this also like'")
+        except Exception as e:
+            print(f"⚠️  Błąd podczas uruchamiania testów 'People who like this also like': {e}")
         
     except Exception as e:
         print(f"Błąd: {e}", file=sys.stderr)

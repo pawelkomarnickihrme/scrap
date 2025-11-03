@@ -9,19 +9,34 @@ Program do scrapowania danych o perfumach ze strony internetowej przy użyciu Be
 
 ## Instalacja
 
+1. Utwórz środowisko wirtualne:
+```bash
+python3 -m venv venv
+```
+
+2. Aktywuj środowisko wirtualne:
+```bash
+source venv/bin/activate
+```
+
+3. Zainstaluj wymagane pakiety:
 ```bash
 pip install -r requirements.txt
 ```
 
 ## Użycie
 
+Pamiętaj, aby najpierw aktywować środowisko wirtualne:
+
 ```bash
+source venv/bin/activate
 python scraper.py [URL]
 ```
 
 Lub bez argumentu (program zapyta o URL):
 
 ```bash
+source venv/bin/activate
 python scraper.py
 ```
 
