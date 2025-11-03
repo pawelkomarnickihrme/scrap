@@ -412,6 +412,190 @@ def extract_people_also_like(soup: BeautifulSoup) -> List[Dict[str, str]]:
     return perfumes
 
 
+def extract_reminds_me_perfumes(soup: BeautifulSoup) -> List[Dict[str, str]]:
+    """Wyciąga perfumy z sekcji 'This perfume reminds me of'."""
+    perfumes = []
+    
+    # Szukaj span z tekstem "reminds me" lub podobnym (podobnie jak w extract_people_also_like)
+    reminds_keywords = [
+        "this perfume reminds me",
+        "reminds me of",
+        "this reminds me",
+        "reminds me",
+        "przypomina mi",
+        "to perfum przypomina mi",
+    ]
+    
+    title_span = None
+    for keyword in reminds_keywords:
+        # Najpierw szukaj span z dokładnym tekstem
+        title_span = soup.find("span", string=re.compile(keyword, re.I))
+        if not title_span:
+            # Alternatywnie szukaj w span który zawiera ten tekst
+            title_span = soup.find("span", string=lambda text: text and keyword.lower() in text.lower())
+        if title_span:
+            break
+    
+    # Jeśli nie znaleziono span, szukaj w div
+    if not title_span:
+        for keyword in reminds_keywords:
+            title_div = soup.find(
+                lambda tag: tag.name == "div"
+                and keyword.lower() in clean_text(tag.get_text()).lower()
+            )
+            if title_div:
+                # Znajdź span w tym div lub użyj div jako punktu odniesienia
+                title_span = title_div.find("span")
+                if not title_span:
+                    # Użyj div jako punktu odniesienia
+                    title_span = title_div
+                break
+    
+    if not title_span:
+        return perfumes
+    
+    # Znajdź kontener strike-title (rodzic span)
+    strike_title = title_span.find_parent(class_="strike-title")
+    if not strike_title:
+        # Jeśli nie ma klasy strike-title, użyj bezpośredniego rodzica
+        strike_title = title_span.find_parent()
+    
+    if not strike_title:
+        return perfumes
+    
+    # Znajdź następny element carousel (może być następnym siblingem lub w następnym div)
+    carousel = strike_title.find_next_sibling(class_=re.compile(r"carousel", re.I))
+    if not carousel:
+        # Szukaj w następnych siblingach
+        current = strike_title.next_sibling
+        while current:
+            if hasattr(current, 'get') and isinstance(current, Tag):
+                if 'carousel' in current.get('class', []):
+                    carousel = current
+                    break
+            current = current.next_sibling if hasattr(current, 'next_sibling') else None
+    
+    if not carousel:
+        # Spróbuj znaleźć carousel w rodzicu
+        parent = strike_title.find_parent()
+        if parent:
+            carousel = parent.find(class_=re.compile(r"carousel", re.I))
+    
+    if not carousel:
+        # Szukaj flickity-slider (typowy kontener dla carousel)
+        flickity = strike_title.find_next_sibling(class_="flickity-slider")
+        if not flickity:
+            flickity = strike_title.find_parent(class_="flickity-slider")
+        if flickity:
+            carousel = flickity
+    
+    # Jeśli nadal nie znaleziono, szukaj flickity-slider w następnych elementach po strike_title
+    if not carousel:
+        # Szukaj w następnych siblingach strike_title
+        current = strike_title.next_sibling
+        while current:
+            if hasattr(current, 'get') and isinstance(current, Tag):
+                if 'flickity-slider' in current.get('class', []):
+                    carousel = current
+                    break
+            current = current.next_sibling if hasattr(current, 'next_sibling') else None
+    
+    # Jeśli nadal nie znaleziono, szukaj wszystkich flickity-slider i sprawdź czy któryś jest w sekcji z "reminds me"
+    if not carousel:
+        all_flickity = soup.find_all(class_="flickity-slider")
+        for flickity in all_flickity:
+            # Sprawdź czy w okolicy tego flickity-slider jest tekst "reminds me"
+            parent = flickity.find_parent()
+            if parent:
+                parent_text = clean_text(parent.get_text()).lower()
+                if any(keyword in parent_text for keyword in ["reminds me", "this perfume reminds", "przypomina mi", "to perfum przypomina"]):
+                    carousel = flickity
+                    break
+    
+    if not carousel:
+        return perfumes
+    
+    # Znajdź wszystkie carousel-cell w carousel
+    cells = carousel.find_all(class_="carousel-cell")
+    
+    for cell in cells:
+        # Znajdź link w cell
+        link = cell.find("a", href=re.compile(r"/perfume", re.I))
+        if not link:
+            continue
+        
+        # Wyciągnij brand i name z href (format: /perfume/Brand/Name-ID.html)
+        href = link.get("href", "")
+        brand = ""
+        name = ""
+        
+        if href:
+            # Parsuj href: /perfume/Brand/Name-ID.html
+            # Nazwa może zawierać myślniki, więc szukamy wszystkiego przed ostatnim -ID.html
+            match = re.match(r"/perfume/([^/]+)/(.+?)-(\d+)\.html", href)
+            if match:
+                brand = match.group(1).replace("-", " ")
+                name = match.group(2).replace("-", " ")
+        
+        # Jeśli nie udało się wyciągnąć z href, spróbuj z alt/title obrazu
+        if not name or not brand:
+            img = link.find("img")
+            if img:
+                alt_text = img.get("alt", "") or img.get("title", "")
+                if alt_text:
+                    # Format: "Name Brand" lub "Brand Name"
+                    parts = alt_text.split()
+                    if len(parts) >= 2:
+                        # Często ostatnie słowa to brand, reszta to name
+                        # Spróbuj znaleźć brand w ostatnich 2-3 słowach
+                        if not brand:
+                            # Sprawdź czy któryś z ostatnich elementów wygląda na brand
+                            for i in range(max(1, len(parts) - 2), len(parts)):
+                                potential_brand = " ".join(parts[i:])
+                                if len(potential_brand) > 2:
+                                    brand = potential_brand
+                                    name = " ".join(parts[:i])
+                                    break
+                        if not name:
+                            name = alt_text.replace(brand, "").strip() if brand else alt_text
+        
+        # Jeśli nadal nie ma nazwy, spróbuj wyciągnąć z tekstu linka
+        if not name:
+            link_text = clean_text(link.get_text())
+            if link_text and len(link_text) > 2:
+                name = link_text
+                # Usuń markę z nazwy jeśli jest
+                if brand and brand in name:
+                    name = name.replace(brand, "").strip()
+        
+        # Normalizuj nazwę i markę
+        name = clean_text(name)
+        brand = clean_text(brand)
+        
+        # Dodaj tylko jeśli mamy nazwę
+        if name and len(name) > 1:
+            # Sprawdź duplikaty (normalizując nazwy)
+            name_normalized = name.lower().strip()
+            brand_normalized = brand.lower().strip() if brand else ""
+            
+            is_duplicate = False
+            for existing in perfumes:
+                existing_name = existing.get("name", "").lower().strip()
+                existing_brand = existing.get("brand", "").lower().strip()
+                if (name_normalized == existing_name and 
+                    (not brand_normalized or not existing_brand or brand_normalized == existing_brand)):
+                    is_duplicate = True
+                    break
+            
+            if not is_duplicate:
+                perfume_data = {"name": name}
+                if brand:
+                    perfume_data["brand"] = brand
+                perfumes.append(perfume_data)
+    
+    return perfumes
+
+
 def extract_recommended_perfumes(soup: BeautifulSoup) -> List[Dict[str, str]]:
     """Wyciąga rekomendowane perfumy z sekcji 'People who like this also like'."""
     # Użyj dedykowanej funkcji dla "People who like this also like"
@@ -444,6 +628,76 @@ def extract_recommended_perfumes(soup: BeautifulSoup) -> List[Dict[str, str]]:
     return perfumes[:20]  # Limit do 20 rekomendowanych
 
 
+def extract_pros(soup: BeautifulSoup) -> List[str]:
+    """Wyciąga pros (zalety) z sekcji Pros w HTML."""
+    pros_list = []
+    
+    # Znajdź główny div z Pros (z klasą cell small-12 medium-6)
+    # Szukamy diva który zawiera tekst "Pros" w nagłówku
+    pros_section = None
+    for div in soup.find_all('div', class_='cell small-12 medium-6'):
+        header = div.find('h4', class_='header')
+        if header and 'Pros' in clean_text(header.get_text()):
+            pros_section = div
+            break
+    
+    if not pros_section:
+        return pros_list
+    
+    # Znajdź wszystkie span wewnątrz divów z klasą "cell small-12"
+    # które są wewnątrz sekcji pros (pomijając spany z liczbami w num-votes-sp)
+    for item_div in pros_section.find_all('div', class_='cell small-12'):
+        # Znajdź span który NIE jest wewnątrz num-votes-sp
+        all_spans = item_div.find_all('span')
+        for span in all_spans:
+            # Sprawdź czy span nie jest wewnątrz num-votes-sp
+            parent_num_votes = span.find_parent('div', class_='num-votes-sp')
+            if not parent_num_votes:
+                text = clean_text(span.get_text())
+                # Upewnij się że to nie jest liczba (czyli pros tekst)
+                if text and not text.isdigit():
+                    pros_list.append(text)
+                    break  # Weź tylko pierwszy span który nie jest liczbą
+    
+    # Zwróć tylko pierwsze 5 pros
+    return pros_list[:5]
+
+
+def extract_cons(soup: BeautifulSoup) -> List[str]:
+    """Wyciąga cons (wady) z sekcji Cons w HTML."""
+    cons_list = []
+    
+    # Znajdź główny div z Cons (z klasą cell small-12 medium-6)
+    # Szukamy diva który zawiera tekst "Cons" w nagłówku
+    cons_section = None
+    for div in soup.find_all('div', class_='cell small-12 medium-6'):
+        header = div.find('h4', class_='header')
+        if header and 'Cons' in clean_text(header.get_text()):
+            cons_section = div
+            break
+    
+    if not cons_section:
+        return cons_list
+    
+    # Znajdź wszystkie span wewnątrz divów z klasą "cell small-12"
+    # które są wewnątrz sekcji cons (pomijając spany z liczbami w num-votes-sp)
+    for item_div in cons_section.find_all('div', class_='cell small-12'):
+        # Znajdź span który NIE jest wewnątrz num-votes-sp
+        all_spans = item_div.find_all('span')
+        for span in all_spans:
+            # Sprawdź czy span nie jest wewnątrz num-votes-sp
+            parent_num_votes = span.find_parent('div', class_='num-votes-sp')
+            if not parent_num_votes:
+                text = clean_text(span.get_text())
+                # Upewnij się że to nie jest liczba (czyli cons tekst)
+                if text and not text.isdigit():
+                    cons_list.append(text)
+                    break  # Weź tylko pierwszy span który nie jest liczbą
+    
+    # Zwróć tylko pierwsze 5 cons
+    return cons_list[:5]
+
+
 def extract_voting_data(soup: BeautifulSoup, category: str, options_mapping: Dict[str, List[str]]) -> Dict[str, Any]:
     """Wyciąga dane głosowania dla danej kategorii.
     
@@ -456,10 +710,8 @@ def extract_voting_data(soup: BeautifulSoup, category: str, options_mapping: Dic
     # Mapowanie nazw kategorii na tytuły w HTML
     category_titles = {
         "longevity": ["LONGEVITY"],
-        "projection": ["PROJECTION", "SIŁA PROJEKCJI"],
         "gender": ["GENDER", "PŁEĆ"],
         "valueForMoney": ["VALUE FOR MONEY", "STOSUNEK JAKOŚĆ/CENA"],
-        "emotionRating": ["EMOTION", "ODCZUCIA"],
         "season": ["SEASON", "PORA ROKU"],
         "timeOfDay": ["TIME OF DAY", "PORA DNIA"],
         "sillage": ["SILLAGE"],
@@ -555,6 +807,116 @@ def extract_voting_data(soup: BeautifulSoup, category: str, options_mapping: Dic
     return data
 
 
+def extract_percentage_width_data(soup: BeautifulSoup, category: str, options_mapping: Dict[str, List[str]]) -> Dict[str, Any]:
+    """Wyciąga wartości procentowe width dla danej kategorii (season, timeOfDay).
+    
+    Szuka elementów z vote-button-legend i odpowiadających im wartości width w stylach.
+    
+    options_mapping: Dict z angielską nazwą opcji jako kluczem i listą wariantów jako wartością
+    """
+    data = {}
+    most_voted_value = None
+    max_percentage = 0.0
+    
+    # Mapowanie nazw kategorii na tytuły w HTML
+    category_titles = {
+        "season": ["SEASON", "PORA ROKU"],
+        "timeOfDay": ["TIME OF DAY", "PORA DNIA"],
+    }
+    
+    # Znajdź sekcję kategorii po tytule
+    category_section = None
+    titles = category_titles.get(category, [category.upper()])
+    
+    for title in titles:
+        # Szukaj span lub innego elementu z tekstem tytułu
+        title_elem = soup.find(lambda tag: tag.name in ["span", "h2", "h3", "h4", "div"] 
+                               and clean_text(tag.get_text()).upper() == title.upper())
+        if title_elem:
+            # Znajdź kontener sekcji (zwykle rodzic lub dziadek)
+            category_section = title_elem.find_parent(class_=re.compile(r"cell|section|container", re.I))
+            if not category_section:
+                category_section = title_elem.find_parent("div")
+            if category_section:
+                break
+    
+    # Jeśli nie znaleziono sekcji, szukaj w całym soup
+    search_soup = category_section if category_section else soup
+    
+    # Znajdź wszystkie elementy vote-button-legend w sekcji
+    vote_legends = search_soup.find_all(class_="vote-button-legend")
+    
+    for vote_legend in vote_legends:
+        legend_text = clean_text(vote_legend.get_text()).lower()
+        
+        # Znajdź kontener który zawiera ten element (szukaj rodzica z index)
+        container = vote_legend.find_parent(attrs={"index": True})
+        if not container:
+            # Jeśli nie ma index, szukaj w rodzicu
+            container = vote_legend.find_parent()
+        
+        if container:
+            # Znajdź div z voting-small-chart-size w tym kontenerze
+            chart_div = container.find("div", class_="voting-small-chart-size")
+            if chart_div:
+                # Znajdź wszystkie divy z stylem
+                inner_divs = chart_div.find_all("div", style=True)
+                for div in inner_divs:
+                    style = div.get("style", "")
+                    # Szukamy diva z background rgb (nie rgba) - to jest wewnętrzny div z width
+                    if "background:" in style and "rgb(" in style and "rgba(" not in style:
+                        # Wyodrębnij width z stylu
+                        width_match = re.search(r"width:\s*([\d.]+)%", style)
+                        if width_match:
+                            width_percent = float(width_match.group(1))
+                            
+                            # Sprawdź, która opcja pasuje
+                            matched = False
+                            legend_lower = legend_text.lower()
+                            legend_normalized = legend_lower.replace(" ", "")
+                            
+                            # KROK 1: Sprawdź dokładne dopasowania
+                            for eng_option, variants in options_mapping.items():
+                                for variant in variants:
+                                    variant_normalized = variant.lower().replace(" ", "")
+                                    if variant_normalized == legend_normalized:
+                                        data[eng_option] = width_percent
+                                        if width_percent > max_percentage:
+                                            max_percentage = width_percent
+                                            most_voted_value = eng_option
+                                        matched = True
+                                        break
+                                if matched:
+                                    break
+                            
+                            # KROK 2: Jeśli nie znaleziono dokładnego, sprawdź częściowe dopasowania
+                            if not matched:
+                                sorted_options = sorted(
+                                    options_mapping.items(),
+                                    key=lambda x: max(len(v.replace(" ", "")) for v in x[1]),
+                                    reverse=True
+                                )
+                                for eng_option, variants in sorted_options:
+                                    sorted_variants = sorted(variants, key=lambda v: len(v.replace(" ", "")), reverse=True)
+                                    for variant in sorted_variants:
+                                        variant_lower = variant.lower()
+                                        if variant_lower in legend_lower:
+                                            data[eng_option] = width_percent
+                                            if width_percent > max_percentage:
+                                                max_percentage = width_percent
+                                                most_voted_value = eng_option
+                                            matched = True
+                                            break
+                                    if matched:
+                                        break
+                            break
+    
+    if most_voted_value and max_percentage > 0:
+        data["mostVoted"] = most_voted_value
+    
+    return data
+
+
 def extract_all_voting_data(soup: BeautifulSoup) -> Dict[str, Dict[str, Any]]:
     """Wyciąga wszystkie dane głosowania."""
     return {
@@ -567,16 +929,6 @@ def extract_all_voting_data(soup: BeautifulSoup) -> Dict[str, Dict[str, Any]]:
                 "moderate": ["moderate", "przeciętna"],
                 "longLasting": ["long lasting", "długotrwała"],
                 "eternal": ["eternal", "wieczna"],
-            },
-        ),
-        "projection": extract_voting_data(
-            soup,
-            "projection",
-            {
-                "soft": ["łagodna", "soft"],
-                "average": ["przeciętna", "average"],
-                "strong": ["duża", "strong"],
-                "huge": ["olbrzymia", "huge"],
             },
         ),
         "gender": extract_voting_data(
@@ -602,33 +954,22 @@ def extract_all_voting_data(soup: BeautifulSoup) -> Dict[str, Dict[str, Any]]:
                 "excellentQuality": ["great value", "doskonała jakość", "excellent quality"],
             },
         ),
-        "emotionRating": extract_voting_data(
-            soup,
-            "emotionRating",
-            {
-                "loveIt": ["kocham", "love it"],
-                "likeIt": ["lubię", "like it"],
-                "okay": ["ok", "okay"],
-                "dislike": ["nie lubię", "dislike"],
-                "hateIt": ["nienawidzę", "hate it"],
-            },
-        ),
-        "season": extract_voting_data(
+        "season": extract_percentage_width_data(
             soup,
             "season",
             {
-                "winter": ["zima", "winter"],
-                "spring": ["wiosna", "spring"],
-                "summer": ["lato", "summer"],
-                "autumn": ["jesień", "autumn"],
+                "winter": ["winter", "zima"],
+                "spring": ["spring", "wiosna"],
+                "summer": ["summer", "lato"],
+                "fall": ["fall", "autumn", "jesień"],
             },
         ),
-        "timeOfDay": extract_voting_data(
+        "timeOfDay": extract_percentage_width_data(
             soup,
             "timeOfDay",
             {
-                "day": ["dzień", "day"],
-                "evening": ["wieczór", "evening"],
+                "day": ["day", "dzień"],
+                "night": ["night", "noc", "evening", "wieczór"],
             },
         ),
         "sillage": extract_voting_data(
@@ -675,6 +1016,9 @@ async def scrape_perfume_data(url: str) -> Dict[str, Any]:
             "notes": extract_notes(main_content),
             "similarPerfumes": extract_similar_perfumes(main_content),
             "recommendedPerfumes": extract_recommended_perfumes(main_content),
+            "remindsMePerfumes": extract_reminds_me_perfumes(main_content),
+            "pros": extract_pros(main_content),
+            "cons": extract_cons(main_content),
         }
         
         # Dodaj dane głosowania
@@ -709,6 +1053,13 @@ async def main():
             json.dump(data, f, ensure_ascii=False, indent=2)
         
         print(f"Dane zapisane do {output_file}")
+        
+        # Zapisz również do output.json
+        output_json_file = "output.json"
+        with open(output_json_file, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+        
+        print(f"Dane zapisane do {output_json_file}")
         
         # Uruchom testy wartości LONGEVITY
         print("\n" + "=" * 50)

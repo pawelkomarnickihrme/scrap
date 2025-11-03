@@ -22,10 +22,8 @@ def extract_voting_data(soup: BeautifulSoup, category: str, options_mapping: Dic
     # Mapowanie nazw kategorii na tytuły w HTML
     category_titles = {
         "longevity": ["LONGEVITY"],
-        "projection": ["PROJECTION", "SIŁA PROJEKCJI"],
         "gender": ["GENDER", "PŁEĆ"],
         "valueForMoney": ["VALUE FOR MONEY", "STOSUNEK JAKOŚĆ/CENA"],
-        "emotionRating": ["EMOTION", "ODCZUCIA"],
         "season": ["SEASON", "PORA ROKU"],
         "timeOfDay": ["TIME OF DAY", "PORA DNIA"],
     }
