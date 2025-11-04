@@ -152,3 +152,4 @@ Thumbs.db
 
 # Large output files (if generated)
 *.html.backup
+output

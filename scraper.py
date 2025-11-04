@@ -7,11 +7,15 @@ Używa Crawl4AI i BeautifulSoup do pobrania i parsowania danych.
 import json
 import re
 import sys
+import random
+import asyncio
 from typing import Dict, List, Optional, Any
 from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup, Tag, NavigableString
 from crawl4ai import AsyncWebCrawler
+from crawl4ai import ProxyConfig, BrowserConfig
+from crawl4ai.proxy_strategy import RoundRobinProxyStrategy
 
 
 def clean_text(text: str) -> str:
@@ -985,47 +989,191 @@ def extract_all_voting_data(soup: BeautifulSoup) -> Dict[str, Dict[str, Any]]:
     }
 
 
-async def scrape_perfume_data(url: str) -> Dict[str, Any]:
-    """Główna funkcja scrapująca dane o perfumach."""
-    async with AsyncWebCrawler() as crawler:
-        result = await crawler.arun(url=url)
+async def scrape_perfume_data(url: str, max_retries: int = 3, proxy_config: Optional[ProxyConfig] = None) -> Dict[str, Any]:
+    """Główna funkcja scrapująca dane o perfumach.
+    
+    Args:
+        url: URL strony do scrapowania
+        max_retries: Maksymalna liczba prób przy błędach 429
+        proxy_config: Opcjonalna konfiguracja proxy (ProxyConfig lub None)
+    """
+    # Konfiguracja nagłówków HTTP, aby uniknąć wykrycia
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+        "Accept-Language": "pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Accept-Encoding": "gzip, deflate, br",
+        "DNT": "1",
+        "Connection": "keep-alive",
+        "Upgrade-Insecure-Requests": "1",
+        "Sec-Fetch-Dest": "document",
+        "Sec-Fetch-Mode": "navigate",
+        "Sec-Fetch-Site": "none",
+        "Sec-Fetch-User": "?1",
+        "Cache-Control": "max-age=0",
+    }
+    
+    # Zwiększone opóźnienie przed requestem (5-10 sekund) - aby uniknąć 429
+    await asyncio.sleep(random.uniform(5.0, 10.0))
+    
+    # Przygotuj BrowserConfig z proxy jeśli dostępne
+    browser_config = None
+    if proxy_config:
+        browser_config = BrowserConfig(
+            headless=True,
+            proxy_config=proxy_config,
+        )
+    
+    for attempt in range(max_retries):
+        try:
+            async with AsyncWebCrawler(
+                headless=True,
+                verbose=False,
+                browser_config=browser_config,
+            ) as crawler:
+                # Użyj networkidle z dłuższym timeoutem i większym opóźnieniem
+                # aby zapewnić pełne załadowanie JavaScript
+                result = await crawler.arun(
+                    url=url,
+                    headers=headers,
+                    wait_for="networkidle",  # Czekaj na zakończenie ładowania sieci
+                    delay_before_return_html=random.uniform(3.0, 5.0),  # Dłuższe opóźnienie przed zwróceniem HTML (3-5 sekund)
+                )
+                
+                # Sprawdź czy otrzymaliśmy błąd 429
+                if result.status_code == 429:
+                    wait_time = (2 ** attempt) * random.uniform(30, 60)  # Exponential backoff: 30-60s, 60-120s, 120-240s
+                    print(f"⚠️  Otrzymano błąd 429 (Too Many Requests). Czekam {wait_time:.1f} sekund przed ponowną próbą...", file=sys.stderr)
+                    await asyncio.sleep(wait_time)
+                    continue  # Spróbuj ponownie
+                
+                # Dodatkowe opóźnienie po pobraniu strony (symulacja czytania strony)
+                await asyncio.sleep(random.uniform(2.0, 4.0))
+                
+                if not result.success:
+                    # Sprawdź czy błąd zawiera informację o 429
+                    if "429" in str(result.error_message) or "too many" in str(result.error_message).lower():
+                        wait_time = (2 ** attempt) * random.uniform(30, 60)
+                        print(f"⚠️  Wykryto błąd 429. Czekam {wait_time:.1f} sekund przed ponowną próbą...", file=sys.stderr)
+                        await asyncio.sleep(wait_time)
+                        continue
+                    raise Exception(f"Nie udało się pobrać strony: {result.error_message}")
+                
+                # Jeśli dotarliśmy tutaj, request był udany
+                break
+                
+        except Exception as e:
+            # Jeśli to ostatnia próba, rzuć wyjątek
+            if attempt == max_retries - 1:
+                raise
+            
+            # Sprawdź czy błąd zawiera informację o 429
+            error_str = str(e).lower()
+            if "429" in error_str or "too many" in error_str or "rate limit" in error_str:
+                wait_time = (2 ** attempt) * random.uniform(30, 60)
+                print(f"⚠️  Wykryto błąd rate limiting. Czekam {wait_time:.1f} sekund przed ponowną próbą...", file=sys.stderr)
+                await asyncio.sleep(wait_time)
+                continue
+            else:
+                # Jeśli to inny błąd, rzuć wyjątek od razu
+                raise
+    
+    # Jeśli dotarliśmy tutaj, oznacza to że request był udany
+    # (gdyby wszystkie próby się nie powiodły, wyjątek zostałby rzucony wcześniej)
+    html = result.html
+    soup = BeautifulSoup(html, "html.parser")
+    
+    # Znajdź element #main-content - spróbuj kilka razy z opóźnieniem jeśli nie znaleziono
+    main_content = soup.find(id="main-content")
+    if not main_content:
+        # Jeśli nie znaleziono, spróbuj użyć całego body jako fallback
+        # lub sprawdź czy HTML w ogóle został pobrany
+        if not html or len(html) < 100:
+            raise Exception(f"Nie udało się pobrać zawartości strony. HTML ma tylko {len(html) if html else 0} znaków.")
         
-        if not result.success:
-            raise Exception(f"Nie udało się pobrać strony: {result.error_message}")
+        # Sprawdź czy strona została przekierowana lub czy jest błąd
+        if "error" in html.lower() or "not found" in html.lower() or "404" in html.lower():
+            raise Exception("Strona zwróciła błąd (404 lub podobny)")
         
-        html = result.html
-        soup = BeautifulSoup(html, "html.parser")
-        
-        # Znajdź element #main-content
-        main_content = soup.find(id="main-content")
-        if not main_content:
-            raise Exception("Nie znaleziono elementu #main-content")
-        
-        # Usuń niechciane elementy
-        remove_unwanted_elements(main_content)
-        
-        # Wyciągnij wszystkie dane
-        perfume_data = {
-            "perfumeName": extract_perfume_name(main_content),
-            "brand": extract_brand(main_content),
-            "description": extract_description(main_content),
-            "mainImageUrl": extract_main_image_url(main_content, url),
-            "userReviews": extract_user_reviews(main_content),
-            "rating": extract_rating(main_content),
-            "ratingCount": extract_rating_count(main_content),
-            "notes": extract_notes(main_content),
-            "similarPerfumes": extract_similar_perfumes(main_content),
-            "recommendedPerfumes": extract_recommended_perfumes(main_content),
-            "remindsMePerfumes": extract_reminds_me_perfumes(main_content),
-            "pros": extract_pros(main_content),
-            "cons": extract_cons(main_content),
-        }
-        
-        # Dodaj dane głosowania
-        voting_data = extract_all_voting_data(main_content)
-        perfume_data.update(voting_data)
-        
-        return perfume_data
+        # Spróbuj użyć body jako fallback
+        body = soup.find("body")
+        if body:
+            print("⚠️  Ostrzeżenie: Nie znaleziono #main-content, używam body jako fallback", file=sys.stderr)
+            main_content = body
+        else:
+            raise Exception("Nie znaleziono elementu #main-content ani body. Strona może wymagać JavaScript lub być zablokowana.")
+    
+    # Usuń niechciane elementy
+    remove_unwanted_elements(main_content)
+    
+    # Wyciągnij wszystkie dane (BEZ userReviews - będą w osobnym pliku)
+    perfume_data = {
+        "perfumeName": extract_perfume_name(main_content),
+        "brand": extract_brand(main_content),
+        "description": extract_description(main_content),
+        "mainImageUrl": extract_main_image_url(main_content, url),
+        "rating": extract_rating(main_content),
+        "ratingCount": extract_rating_count(main_content),
+        "notes": extract_notes(main_content),
+        "similarPerfumes": extract_similar_perfumes(main_content),
+        "recommendedPerfumes": extract_recommended_perfumes(main_content),
+        "remindsMePerfumes": extract_reminds_me_perfumes(main_content),
+        "pros": extract_pros(main_content),
+        "cons": extract_cons(main_content),
+    }
+    
+    # Dodaj dane głosowania
+    voting_data = extract_all_voting_data(main_content)
+    perfume_data.update(voting_data)
+    
+    return perfume_data
+
+
+def load_proxy_config() -> Optional[ProxyConfig]:
+    """Ładuje konfigurację proxy z zmiennej środowiskowej PROXY.
+    
+    Obsługiwane formaty:
+    - http://username:password@ip:port
+    - http://ip:port
+    - socks5://ip:port
+    - ip:port:username:password
+    - ip:port
+    
+    Returns:
+        ProxyConfig lub None jeśli proxy nie jest ustawione
+    """
+    import os
+    proxy_str = os.getenv("PROXY")
+    if not proxy_str:
+        return None
+    
+    try:
+        return ProxyConfig.from_string(proxy_str.strip())
+    except Exception as e:
+        print(f"⚠️  Błąd podczas ładowania proxy: {e}", file=sys.stderr)
+        return None
+
+
+def load_proxy_list() -> List[ProxyConfig]:
+    """Ładuje listę proxy z zmiennej środowiskowej PROXIES (rozdzielone przecinkami).
+    
+    Returns:
+        Lista ProxyConfig lub pusta lista jeśli proxy nie są ustawione
+    """
+    import os
+    proxies_str = os.getenv("PROXIES")
+    if not proxies_str:
+        return []
+    
+    proxies = []
+    for proxy_str in proxies_str.split(","):
+        proxy_str = proxy_str.strip()
+        if proxy_str:
+            try:
+                proxies.append(ProxyConfig.from_string(proxy_str))
+            except Exception as e:
+                print(f"⚠️  Błąd podczas ładowania proxy '{proxy_str}': {e}", file=sys.stderr)
+    return proxies
 
 
 async def main():
@@ -1044,8 +1192,15 @@ async def main():
     
     print(f"Scrapowanie strony: {url}")
     
+    # Załaduj proxy jeśli dostępne
+    proxy_config = load_proxy_config()
+    if proxy_config:
+        print(f"✓ Używam proxy: {proxy_config.server}")
+    else:
+        print("ℹ️  Proxy nie jest skonfigurowane (ustaw zmienną PROXY aby użyć proxy)")
+    
     try:
-        data = await scrape_perfume_data(url)
+        data = await scrape_perfume_data(url, proxy_config=proxy_config)
         
         # Zapisz do output.js
         output_file = "output.js"
@@ -1140,6 +1295,30 @@ async def main():
             print("⚠️  Nie można zaimportować modułu testowego 'People who like this also like'")
         except Exception as e:
             print(f"⚠️  Błąd podczas uruchamiania testów 'People who like this also like': {e}")
+        
+        # Po zakończeniu wszystkich testów, uruchom scrape_reviews.py
+        print("\n" + "=" * 50)
+        print("Uruchamianie scrape_reviews.py...")
+        print("=" * 50)
+        
+        try:
+            import subprocess
+            result = subprocess.run(
+                [sys.executable, "scrape_reviews.py", url],
+                capture_output=True,
+                text=True,
+                encoding="utf-8"
+            )
+            if result.stdout:
+                print(result.stdout)
+            if result.stderr:
+                print(result.stderr, file=sys.stderr)
+            if result.returncode != 0:
+                print(f"⚠️  Błąd: scrape_reviews.py zakończył się z kodem {result.returncode}")
+        except Exception as e:
+            print(f"⚠️  Błąd podczas uruchamiania scrape_reviews.py: {e}")
+            import traceback
+            traceback.print_exc()
         
     except Exception as e:
         print(f"Błąd: {e}", file=sys.stderr)

@@ -59,3 +59,5 @@ Program zapisuje dane do pliku `output.js` w formacie JSON zgodnym z interfejsem
   - Podobne i rekomendowane perfumy
   - Dane głosowania (trwałość, projekcja, płeć, wartość za pieniądze, emocje, sezon, pora dnia)
 
+
+
