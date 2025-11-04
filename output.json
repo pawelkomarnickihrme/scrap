@@ -1,70 +1,77 @@
 {
-  "perfumeName": "Erba Pura Xerjoff",
-  "brand": "Xerjoff",
-  "description": "Erba Pura by Xerjoff is a Oriental fragrance for women and men. Erba Pura was launched in 2019. Erba Pura was created by Christian Carbonnel and Laura Santander. Top notes are Sicilian Orange, Calabrian bergamot and Sicilian Lemon; middle note is Fruits; base notes are White Musk, Madagascar Vanilla and Amber. Read about this perfume in other languages: Deutsch, Español, Français, Čeština, Italiano, Русский, Polski, Português, Ελληνικά, 汉语, Nederlands, Srpski, Română, العربية, Українська, Монгол, עברית.",
-  "mainImageUrl": "https://fimgs.net/mdimg/perfume-thumbs/375x500.55157.jpg",
-  "rating": 3.8,
-  "ratingCount": 10084,
+  "perfumeName": "Black Sea Lorenzo Pazzaglia",
+  "brand": "Lorenzo Pazzaglia",
+  "description": "Black Sea by Lorenzo Pazzaglia is a fragrance for women and men. Black Sea was launched in 2019. The nose behind this fragrance is Lorenzo Pazzaglia. Top notes are Salt, Ozonic notes, Watery Notes, Myrtle and Bergamot; middle notes are Sea Notes, Salt, Ylang-Ylang and Orange Blossom; base notes are Ambergris, Algae, White Musk, Oakmoss and Patchouli. \"The sky darkens and the sea is calm, just before the storm. The wind arrives with its load of flowers and aromatic herbs and the menacing sky is reflected in the leaden water that looks like ink. It's a moment: the waves slap the rocks with such a force as to saturate the air and the saltiness applauds the air filling the lungs. Nature is demonstrating her immense strength. Black Sea is a perfume that releases the power of the elements, a fragrance for me as I fearlessly throw myself into the arms of a creation to be discovered. \" - Antea DevonTop Notes: Bergamot, Sardinian Myrtle, Salt, Ozone, Aquatic Notes Heart notes: Orange Blossom, Black Salt of Cyprus, Ylang-Ylang, Marine Notes Base Notes: Seaweed, White Musk, Patchouli, Oakmoss, OrientalgrisRead about this perfume in other languages: Deutsch, Español, Français, Čeština, Italiano, Русский, Polski, Português, Ελληνικά, 汉语, Nederlands, Srpski, Română, العربية, Українська, Монгол, עברית.",
+  "mainImageUrl": "https://fimgs.net/mdimg/perfume-thumbs/375x500.69652.jpg",
+  "rating": 4.19,
+  "ratingCount": 1116,
   "notes": {
     "topNotes": [
-      "Sicilian Orange",
-      "Calabrian bergamot",
-      "Sicilian Lemon"
+      "Salt",
+      "Ozonic notes",
+      "Watery Notes",
+      "Myrtle",
+      "Bergamot"
     ],
     "heartNotes": [
-      "Fruits"
+      "Sea Notes",
+      "Salt",
+      "Ylang-Ylang",
+      "Orange Blossom"
     ],
     "baseNotes": [
+      "Ambergris",
+      "Algae",
       "White Musk",
-      "Madagascar Vanilla",
-      "Amber"
+      "Oakmoss",
+      "Patchouli"
     ]
   },
   "similarPerfumes": [
     {
-      "name": "Lush Lust"
+      "name": "Cirque du Soleil L'eau de Parfum"
     },
     {
-      "name": "Sol de Janeiro Flor Mística"
+      "name": "Spiritica Atmayatra"
     },
     {
-      "name": "Maison Martin Margiela Jazz Club"
+      "name": "Versace Crystal Emerald"
     },
     {
-      "name": "Clive Christian Blonde Amber"
+      "name": "Banana Republic Dark Cherry & Amber"
     },
     {
-      "name": "Commodity Milk Orchid"
+      "name": "Amouage Imitation Man"
     },
     {
-      "name": "Al-Rehab Dakar"
+      "name": "Zoologist Perfumes Portuguese Man O' War"
     },
     {
-      "name": "Davidoff Cool Water"
+      "name": "Kerosene Unknown Pleasures"
     },
     {
-      "name": "Serge Lutens Feminité du Bois"
+      "name": "Toskovat' Inexcusable Evil"
     },
     {
-      "name": "Maison Mataha Café des Délices"
+      "name": "Afnan Supremacy Collector's Edition Pour Homme"
     },
     {
-      "name": "Maison Martin Margiela Afternoon Delight"
+      "name": "Etat Libre d'Orange Une Amourette Roland Mouret"
     },
     {
-      "name": "Valentino Valentino Uomo Born in Roma Ivory"
+      "name": "Maison Alhambra Athena"
     },
     {
-      "name": "Dior Dior Homme Parfum 2025"
+      "name": "Aaron Terence Hughes Kayos"
     },
     {
-      "name": "Novellista Citrus Affair"
+      "name": "Lattafa Perfumes Dynasty"
     },
     {
-      "name": "The Dua Brand Invasion of the Barbers"
+      "name": "Zara Amber Satin"
     },
     {
-      "name": "Orientica Muntasira Dhahab"
+      "name": "Mazzolari Vaniglia"
     },
     {
       "name": "New Reviews"
@@ -88,431 +95,332 @@
       "brand": "Xerjoff"
     },
     {
-      "name": "Angels' Share",
-      "brand": "By Kilian"
+      "name": "Bois Impérial",
+      "brand": "Essential Parfums"
     },
     {
-      "name": "Baccarat Rouge 540",
-      "brand": "Maison Francis Kurkdjian"
+      "name": "Megamare",
+      "brand": "Orto Parisi"
     },
     {
-      "name": "Layton",
-      "brand": "Parfums de Marly"
+      "name": "Sex-Sea",
+      "brand": "Lorenzo Pazzaglia"
     },
     {
-      "name": "Tobacco Vanille",
-      "brand": "Tom Ford"
+      "name": "Dream Sea",
+      "brand": "Lorenzo Pazzaglia"
     },
     {
-      "name": "Le Male Elixir",
-      "brand": "Jean Paul Gaultier"
+      "name": "Hacivat",
+      "brand": "Nishane"
+    },
+    {
+      "name": "Van Py Rhum",
+      "brand": "Lorenzo Pazzaglia"
+    },
+    {
+      "name": "Summer Hammer",
+      "brand": "Lorenzo Pazzaglia"
     },
     {
       "name": "Aventus",
       "brand": "Creed"
     },
     {
-      "name": "Le Male Le Parfum",
-      "brand": "Jean Paul Gaultier"
+      "name": "Evil Angel a.k.a. 28.09",
+      "brand": "Lorenzo Pazzaglia"
     },
     {
-      "name": "Grand Soir",
-      "brand": "Maison Francis Kurkdjian"
+      "name": "Layton",
+      "brand": "Parfums de Marly"
     },
     {
-      "name": "Emporio Armani Stronger With You Intensely",
-      "brand": "Giorgio Armani"
+      "name": "Carbonara",
+      "brand": "Lorenzo Pazzaglia"
     },
     {
-      "name": "Dior Homme Intense 2011",
-      "brand": "Dior"
-    },
-    {
-      "name": "Y Eau de Parfum",
-      "brand": "Yves Saint Laurent"
-    },
-    {
-      "name": "Khamrah",
-      "brand": "Lattafa Perfumes"
+      "name": "Ganymede",
+      "brand": "Marc-Antoine Barrois"
     },
     {
       "name": "Sauvage Elixir",
       "brand": "Dior"
     },
     {
-      "name": "By the Fireplace",
-      "brand": "Maison Martin Margiela"
+      "name": "Grand Soir",
+      "brand": "Maison Francis Kurkdjian"
     },
     {
-      "name": "Althaïr",
-      "brand": "Parfums de Marly"
+      "name": "Artik Sea",
+      "brand": "Lorenzo Pazzaglia"
     },
     {
-      "name": "Black Orchid",
-      "brand": "Tom Ford"
+      "name": "Reflection Man",
+      "brand": "Amouage"
     },
     {
-      "name": "Spicebomb Extreme",
-      "brand": "Viktor&Rolf"
+      "name": "Red Tobacco",
+      "brand": "Mancera"
     },
     {
-      "name": "Side Effect",
-      "brand": "Initio Parfums Prives"
+      "name": "Dior Homme Intense 2011",
+      "brand": "Dior"
     },
     {
-      "name": "Ombré Leather (2018)",
-      "brand": "Tom Ford"
+      "name": "Black Afgano",
+      "brand": "Nasomatto"
     }
   ],
   "remindsMePerfumes": [
     {
-      "name": "Kirke",
-      "brand": "Tiziana Terenzi"
+      "name": "Acqua di Sale",
+      "brand": "Profumum Roma"
     },
     {
-      "name": "Amber Oud Gold Edition",
-      "brand": "Al Haramain Perfumes"
+      "name": "Ask",
+      "brand": "Maiora Parfum"
     },
     {
-      "name": "Ana Abiyedh",
-      "brand": "Lattafa Perfumes"
+      "name": "Salaria",
+      "brand": "Giardino Benessere"
     },
     {
-      "name": "Jardin Exclusif",
-      "brand": "Mancera"
+      "name": "Megamare",
+      "brand": "Orto Parisi"
     },
     {
-      "name": "Erba Gold",
-      "brand": "Xerjoff"
+      "name": "Sex Sea",
+      "brand": "Lorenzo Pazzaglia"
     },
     {
-      "name": "Erba Pura",
-      "brand": "Sospiro Perfumes"
+      "name": "A Chaos In The Ocean",
+      "brand": "PARIS CORNER"
     },
     {
-      "name": "King",
-      "brand": "Bharara"
+      "name": "Turkuaz",
+      "brand": "Regalien"
     },
     {
-      "name": "Tender Amber",
-      "brand": "Zara"
+      "name": "Villa Lympia",
+      "brand": "Oriza L Legrand"
     },
     {
-      "name": "Don t Ask Me Permission",
-      "brand": "Simone Andreoli"
+      "name": "Blu Mare",
+      "brand": "Giardini Di Toscana"
     },
     {
-      "name": "Erba Pura Magica",
-      "brand": "Sospiro Perfumes"
+      "name": "Hades",
+      "brand": "Giardino Benessere"
     },
     {
-      "name": "Royal Amber",
-      "brand": "Orientica Premium"
+      "name": "Black Caviar",
+      "brand": "Electimuss"
     },
     {
-      "name": "Herbal Aquatica",
-      "brand": "Montale"
+      "name": "Tonic Water",
+      "brand": "Mizensir"
     },
     {
-      "name": "Confidential Private Gold",
-      "brand": "Lattafa Perfumes"
+      "name": "A mmare",
+      "brand": "Carthusia"
     },
     {
-      "name": "Philos Pura",
-      "brand": "Maison Alhambra"
+      "name": "Insomnia",
+      "brand": "Kinetic Perfumes"
     },
     {
-      "name": "La Yuqawam Jasmine Wisp",
-      "brand": "Rasasi"
+      "name": "Yaringa",
+      "brand": "Parfums d Elmar"
     },
     {
-      "name": "Juicy Flowers",
-      "brand": "Mancera"
+      "name": "Squid",
+      "brand": "Zoologist Perfumes"
     },
     {
-      "name": "Shaghaf Oud Ahmar",
-      "brand": "Swiss Arabian"
+      "name": "Artik Sea",
+      "brand": "Lorenzo Pazzaglia"
     },
     {
-      "name": "Durrat Al Aroos",
-      "brand": "Al Wataniah"
+      "name": "For Easy Days",
+      "brand": "NIVIRU"
     },
     {
-      "name": "Saffira",
-      "brand": "La Rive"
+      "name": "Armani Prive Bleu Turquoise",
+      "brand": "Giorgio Armani"
     },
     {
-      "name": "Velvet Fantasy",
-      "brand": "Montale"
+      "name": "Out At Sea",
+      "brand": "The Dua Brand"
     }
   ],
   "pros": [
-    "Beastly projection",
-    "24hr performance",
-    "Luscious fruits",
-    "Beautiful scent",
-    "Long lasting citrus"
+    "Great performance and longevity",
+    "Excellent aquatic scent",
+    "Addictive and easy to wear",
+    "Good quality fragrance",
+    "Ideal for summer season"
   ],
   "cons": [
-    "May be too strong if oversprayed",
-    "Offensive scent to some people",
-    "Overdosing of synthetics",
-    "Sickening sharp fruity notes",
-    "Aggressive aromachemicals ruining the scent"
+    "Not suitable for those who prefer sweet or coconut notes",
+    "May not be suitable for those who dislike aquatic scents",
+    "The seaweed and algae notes may not be appealing to everyone",
+    "Some people find it too strong or overwhelming",
+    "Not suitable for formal occasions or winter season"
   ],
   "longevity": {
-    "veryWeak": 79,
-    "weak": 122,
-    "moderate": 919,
-    "longLasting": 2367,
-    "eternal": 3083,
+    "veryWeak": 18,
+    "weak": 12,
+    "moderate": 73,
+    "longLasting": 246,
+    "eternal": 519,
     "mostVoted": "eternal"
   },
   "gender": {
-    "female": 1085,
-    "moreFemale": 1316,
-    "unisex": 3495,
-    "moreMale": 514,
-    "male": 310,
+    "female": 12,
+    "moreFemale": 5,
+    "unisex": 303,
+    "moreMale": 285,
+    "male": 232,
     "mostVoted": "unisex"
   },
   "valueForMoney": {
-    "priceTooHigh": 1285,
-    "overpriced": 2178,
-    "fair": 1886,
-    "goodQuality": 411,
-    "excellentQuality": 160,
-    "mostVoted": "overpriced"
+    "priceTooHigh": 72,
+    "overpriced": 132,
+    "fair": 280,
+    "goodQuality": 145,
+    "excellentQuality": 150,
+    "mostVoted": "fair"
   },
   "season": {
-    "winter": 35.454,
-    "spring": 92.7324,
+    "winter": 32.4695,
+    "spring": 83.9939,
     "summer": 100.0,
-    "fall": 58.1195,
+    "fall": 54.4207,
     "mostVoted": "summer"
   },
   "timeOfDay": {
-    "day": 93.0343,
-    "night": 56.308,
+    "day": 86.8902,
+    "night": 72.7134,
     "mostVoted": "day"
   },
   "sillage": {
-    "intimate": 198,
-    "moderate": 1305,
-    "strong": 2647,
-    "enormous": 2387,
-    "mostVoted": "strong"
+    "intimate": 25,
+    "moderate": 112,
+    "strong": 304,
+    "enormous": 406,
+    "mostVoted": "enormous"
   },
   "review": [
-    "I can’t with this one. It’s too invasive and in your face. At first I thought I liked it and then a few minutes after wearing this on my hand I realized I in fact did not like this and after washing my hand 3 times, it’s still radiating off my hand. This is the Michael Myers of fragrances, it just won’t die. The fruitiness is overly synthetic and headache inducing.",
-    "She's gorgeous. Fruity with a touch of spice, and long lasting. Perfect for the office!",
-    "This is my rave scent. I love it so much. It gives me energy, and for me it is just perfect, for all night raving. I don't wear it anywhere else. ❤😎",
-    "I loved this for so long. Maybe I never realized - One day I wore it to watch my girlfriend play hockey (slightly oversprayed as it was hot outside) and a few passerby’s mentioned that it reeked of bleach while they all circled around and agreed then realized it was me. I had to apologize and it was just pure embarrassment on both ends. I haven’t reached for it since, one may say not to care what others think but I don’t want to walk around smelling like the janitor sitting in the supply closet having his fruit salad. As one has explained to me before… It has turned into a vacation scent for me now. I still like it but if someone thinks I reek at least if i am on vacation they don’t speak English to tell me.",
-    "i really, really love this fragrance. the citrus and musky dry-down is fabulous. it's really strong and the projection is great aswell. have gotten compliments from this. it was a summer staple for me until i drained it",
-    "So overrated and mid. You wanna smell like a banana smoothie with sweet be my guest.",
-    "Diğer meyve sepeti.",
-    "zesty basket of ripe fruits",
-    "Was over hyped, now over hated. It’s a very nice clean fruity scent that performs well. It’s really good. Unisex.",
-    "super easy to like, it smelled quite artificial but in a very good way. my first thought was that i was smelling body wash, some nice 5+ euros body wash that you can get at the supermarket, nothing more, nothing less, but that projects and lasts for a very long time, i can't say i love it, but its super safe and super good smelling",
-    "Complexity: 2 Longevity: 3 Radiance: 3 Occasion: 3 Season: 5 Overall: 3.2 I’ve had to go back to this review. You’ll either love it or hate it. I hate it. Sickly sweet scent with, maybe, a touch of floral with minty mouthwash thrown in. Longevity not as good as other Xerjoff’s.",
-    "My first niche, will never forget smelling this for the first time and maniplualting my self due to the price tag to thinking this was good . Beast mode longevetiy and projection. Unfornatantley this was way too femenine for my liking. The smell however is great. If you can pull this off then do not hesitate",
-    "Totally sucks smell so strong and bad",
-    "Seriously, I HATE this. I know - hate is a very strong emotion but I mean it. This fragrance makes me absolutely angry and disgusted. I can't stand this s**t. All I can smell is crazy artificial fruit with aggressive musk. When I read other reviews saying about wonderful fruit and vanilla I'm genuinely like WTF? Projection is INSANE! Lasts forever. I hope that hype for this is going to die anytime soon. Seriously it's a torture to be around Erba Pura.",
-    "I'd like to talk about the Xerjoff line in general because I noticed something very annoying with these perfumes. At first they have an intoxicating, rich, fresh, sexy and balanced smell to them, but once those top notes – the citrus, orange, herbs, fruit etc. – disappear these fragrances change drastically. What I can smell after half an hour are the same, almost uniform masculine-leaning base notes of a synthetic-smelling musky, stale, gigolo smell that I don't want to smell on myself as a woman. On men, these base notes might come across as seductive but let me tell you I tried a lot of these perfumes on a paper strip and they all dried down into this unpleasant, unbalanced, bitter scent. Except for maybe Alexandria II, thanks to the excessive amount of woody notes, and Golden Dallah which to me smelled like christmas rum punch due to the fruits, sweet notes and spices in it.",
-    "Unfortunately, this smells like a dirty, neglected animal stall (as a student I went to the zoo and the tapir den smelled just like it) sprinkled with sweat and pickle brine to me. This impression is so strong, that it drowns out any pleasantness that this fragrance might have. It's also obnoxiously loud, like the towns drunkard stumbling down the main road at 3 AM in the morning screaming at the top of his lungs, and with its current popularity it's more like an entire parade of town drunkards marching through town. Very unfortunate fragrance.",
-    "Smells good when you smell it for the first time, but after that it's just a pure synthetic musk bomb that reeks. Way too overhyped, way too worn, way too many dupes. I smell this every single day I go out and that disgusting synthetic musk turns my stomach upside down. Yes it's unique. Yes it was something special when it came out. But now with all the dupes and all the hype it's just too much. And if any perfume taught me that crazy strength does not mean it's a good perfume, it's this.",
-    "this was the fragrance that got me into Xerjoff a year ago. a very beautiful and vibrant fruity vanilla scent. it's like a toned down version of Paco Rabanne's 1 million",
-    "Mediterranean Mirage is a dupe in case you are curious about this fragrance and thankfully so, you don't have to waste money",
-    "Its one of the worst fragrances ever",
-    "I was overseas in Eastern Europe and I smelled so much of this perfume dna on men. I don't know who finds it attractive, it hurt my nose every time I picked up the trail of the scent. Sharp, loud, unpleasant.",
-    "Personally, Erba Pura is my go-to wear 1-2 sprays is enough for 10+ hours of longevity I understand all the hype and its definitely worth a gate keep. Also the huzz love it",
-    "I didn’t think I could keep redefining my personal idea of “perplexity,” but it seems to happen more and more often (not always, but often) whenever I try niche fragrances that are heavily hyped. Of course, there’s always the factor of how a scent reacts on one’s own skin — but on me, Erba Pura doesn’t give me anything “fresh,” and very little that feels genuinely citrusy. What I get is basically an indistinct mishmash of fake, hyper-sweet fruits. Maybe that’s my limitation, but I honestly can’t wrap my head around some of the things I see written in earlier reviews. To my nose, a fragrance like this might only appeal to a teenager still using those old-school multicolor pens with scented inks (green apple, strawberry, pineapple, etc.). That’s exactly what Erba Pura reminds me of: the pens some of my classmates had in middle school. If my partner wore this, I’d politely ask her to take a shower and try again with something more grown-up — and, most importantly, less cloying.",
-    "This was oooober hyped up online, and as a fruit lover I've been trying to test this in person for quite some time. Smelled it on paper today, and close up you can smell all the fruits. It's tropical, sweet, and super juicy. But my god, the chemically cologne smell this emits is overpowering. Had to roll down the windows on the car ride home because it was so cologney and ripe. If the musk was toned down this would be an instant buy, but the fruits are smothered by that synthetic smell. Had to begrudgingly wash it off and yet it's still lingering.",
-    "Haven't smelled this one, but keep seeing BBW's new Mediterranean Mirage is a close, long-lasting dupe.",
-    "Erba pura مصنف للجنسين لكن رائحته نسائية لم ترق لي يناسب الكثير من المناسبات أبرزها تلك الفسحات على شاطئ البحر في جو بارد او معتدل لايصلح في الجو الحار .",
-    "I 💚 everything about this deliciously fruity perfume. I'm not getting the \"it's too musky\" smell that so many people complain about. It's just wonderful. I could not see a man wearing this...It's feminine to me. A low-cost option for a similar scent is Philos Pura by Maison Alhambra; it is a very good one to try for sure. It is so close to the OG imo.",
-    "Gummy bears. 6/10",
-    "I have a full bottle only sprayed once If anyone wants to buy or trade (I’m LA based but happy to ship). Dm me. Not interested in designer or budget fragrances",
-    "I personally can't stand this fragrance. Objectively it's an unbelievably strong and persistent fruity and fresh summer scent, which is rare and remarkable. Too bad that for me it is an obnoxious, loud, pungent chemical bomb, that doesn't smell like fruits at all. To make it worse there's something about this fragrance that smells so unexplainably old, like a note of old lady or hospital somehow. 6/10",
-    "Personal: 9/10 – I don't usually like loud, syrupy, super synthetic bottles, but I actually do really enjoy this one for some reason. It's the exception to the rule. Mass appeal: 9/10 – Candy-sweet fruity bombs are very likable, even if a bit juvenile. Compliment puller. Iconic and well loved for a reason. Performance: 9/10 – Nuclear. It lasts as long as you'd expect something to loud and syrupy to last. It doesn't disappoint. Value: 7/10 - Xerjoff's price tag hurts, and there are much cheaper designers that are somewhat similar, and clones that are cheap, but you'll never get THIS. Uniqueness: 6.5/10 – Fruity candy bombs aren’t new, but this one is polished and amplified. Not entirely unique, but it's unique enough. SCORE: 81/100 Full bottle buy? YES, but I would get bored of it pretty quickly. Blind buy? NO, unless you know you love loud, syrupy sweet fruity scents. Recommend? YES, if you want a fruity niche beast with massive projection. Date night? YES, it’s flirty, fun, and sweet enough to impress in casual settings. Office safe? NO, unless you want to fumigate the whole office with mango Skittles. Pros: Extremely loud, long-lasting, juicy fruity fun. Compliment magnet. Cons: A bit synthetic and cloying if oversprayed. It's pricey. You won't be the only one wearing it. Erba Pura is a true fruit salad sugar bomb. It's syrupy, extremely sweet, very loud, and it makes sure you know if you're wearing it, or if someone else is. It projects very well and lasts for a long time. There are clones out there that get you 85% of the way there, Ana Abiyedh is one of the most notable to me, but no clone will ever get that fruity, juicy, candy like vibe that Erba Pura demonstrates. It's unique enough, but what it does is be loud without being annoying. If oversprayed, for sure, but with a couple sprays it does its job and won't gas the entire room out. This isn't my usual cup of tea, but for some reason, I'm drawn to Erba Pura specifically over almost all other juicy syrupy fruit fragrances. It's designer-esque but with enough uniqueness to stand out from designer alternatives, and a distinctly unisex appeal that similar designers don't have. For me, it's an enjoyable sniff, but I don't think I could pull off wearing it frequently. It doesn't quite fit my darker vibe, but during the summertime, it might work just fine. I couldn't pull off a full 100ml bottle, but maybe I'll have to get a 50, just so I can wear it when the time is right. Review #96 in my fragrance journey – this fragrance I own as a decant",
-    "i hate this fragrance, its so bad, its so annoying, its very bad, i hate it, i hate it, i hate it. Smells like some bad rotten moldy ugly fruit. boiii i dont wanna smell like that like what the frick",
-    "Juicy synthetic fruits. I sometimes wear it. Not good daily, if it’s your signature and u wear it indoors I might start secretly hate you or saying stuff aloud like “ what’s that stench “ “ omg did someone bring rotten fruits “ even tho it’s not that, and I quite like it but it just doesn’t work in work environment.",
-    "I wanted to like this but it’s just offensive and headache inducing. The musk cuts through the top notes and it was a scrubber for me.",
-    "Bought a felt bottle for a good price for my girlfriend, but this thing is so good we share it now. Fresh, bright, citrusy fruits on a bed of clean laundered musk and creamy vanilla. It is loud and can be hard to pull off, but its fantastic as a layering option. Be careful with sprays, be mindful of occasion. Smells more like a bona fide vacation fragrance. Try this at SpritzTheWorldDotNet",
-    "Musky, fruity, citrusy perfume. This is so beautiful. Although this is unisex I loved to wear this. I wouldn't buy it again since I am more of a sweet gourmand girlie. This doesn't leave your skin or hair once you spray it on. Monster performance.",
-    "I can see why people like Erba Pura, but for me it is a nightmare. The fruit is juicy, bright, and actually really nice, but then the musk comes crashing in and ruins everything. On my skin it turns into something that smells like the fruit has been left out too long, overripe and rotting. It was so unpleasant I genuinely had to shower it off. Love the fruit, absolutely hate the musk. I only had a decant, but even that reminded me of the original felt bottles, which were fantastic. Why they ditched that design for basic painted glass I will never understand. For the price Xerjoff ask, they should have kept the felt. At least then I would have enjoyed looking at the bottle, even if I could never stand to wear what is inside it.",
-    "No mango in this one!! That comes directly from Xerjoff corporate!!",
-    "It should be noted first of all that I bought the edition with the velvet bottle, and it is definitely impressive, the whole presentation is admirable. Regarding the smell - I am very disappointed.. A very strong synthetic smell of fruits and cheap synthetic \"musk\".. I expected much, much more for the price A plus point is that the perfume lasts a very long time and also radiates excellently. In conclusion - a perfume for collectors, yes A perfume just for the smell? Only if you really like it",
-    "Disappointed. Smells like nothing to me. Just there. I was very excited to try it. It has all the notes I love. Makes me sad.",
-    "I believe they forget to include the rest of ingredients on mine bottle. Mine just smell to Ambroxan middle note Ambroxan and Ambroxan",
-    "A synthetically smelling fruit basket that lasts 12+ hours and projects like crazy. I love it although it’s definitely divisive.",
-    "sweet & synthetically fruity :/ i wish it smelled more like real fruit but im ok with the fruity candy smell ngl. maybe it’ll grow on me more",
-    "I'd like to confirm what @eaudemale has already suggested twice: this is a dupe for Britney Spears (Midnight) Fantasy. Al Rehab's Midnight is also a very close alternative for an even cheaper cost. You're welcome.",
-    "Podem falar o que quiserem, mas a verdade e' que este perfume e' uma maquina de elogios ! Nao e' a toa ter o Hype Mundial que tem e possuir uma fragrancia facil de agradar. O fato de ter uma fixacao e projecao absurda, tambem faz que seu valor $ seja honesto. Perfume Italiano de altissima qualidade ! Fragrancia: 9/10 Fixacao: 10/10 Projecao: 9/10 Valor-Beneficio: 8/10",
-    "i really thought i was going to love this. i’m a fan of fruity frags , one of my favs is tygar. this being fruity i was excited, also hearing it’s projection was insane and longevity for a fruity summer frag. what i got was exactly that, but what i failed to read before buying was that the longevity and projection being so incredible is due to the INCREDIBLY SYNTHETIC smell to it all. it all just isn’t well blended imo, smells headache-inducing. the only way i was able to make this tolerable was with doing 1 spray and 4 of hawas tropical / paradise garden. the minty really helped blend it. but now it’s been traded for torino 22. just really not worth it imo. blind buy with caution as it can be decent in REALLY RARE conditions.",
-    "So feminine for a man..",
-    "It’s really amazing how polarizing this fragrance is. For me, it just smells really good. It is strong and projects very well all day. Fresh and intoxicating.",
-    "It feels way too similar to Tiziana Kirke — almost identical, and definitely far too feminine.",
-    "I get a pleasant and simple musky fruity fragrance, but my friend thinks it smells like toilet cleaning products, so...",
-    "This message is for women. Please don't use it. It smells too animalic, like an animal and rotten wood. Instead of attracting, it scares them away.",
-    "This in my opinion, is the best Xerjoff and one of the best fruity summer fragrances on the market. It starts off very very sweet and fruity with citruses. The drydown is just as good with some musk and vanilla. So good. Its very youthful. I heard its \"zesty\" (Im gen z and chronically online) but I dont get that vibe at all, its perfect if you are a teen! Defintly can wear this all year. Fresh enough for the summer, and sweet enough for winter and fall! 8.9/10 Love this, I need a bottle of this ASAP! EDIT: lowk too strong like 3 sprays MAX and its too syntheitc foir me and people tell me its not good. ill give it 7.9 but gold is better will make review.",
-    "It smells gorgeous on paper, but sadly gives chewed old gum on my skin. After 2 hours it dried down to amber and musk, which is nice, I guess fruits in this formula just don’t work well with my chemistry",
-    "While I do recognize that fragrance is entirely subjective and each person has their own right of expression, I believe that this fragrance is overhated. To me, this smells like a beautiful, sweet, photorealistic fruit basket with insane projection and sillage. I really want this one in my collection, and it could definitely work as a standalone or layered with a more masculine fragrance. Overall I adore this scent, not blind buy safe though make sure to try it in person.",
-    "I tried it on my skin and loved it. It's giving Italian summer in the best way possible. I will be going back to that V Perfumes store to pick this up soon! I can't stop thinking about it. Longevity is impressive, and projection is also very good. At first, I could really smell the lemon, and as it dried down, it got a bit sweeter and muskier. I can see myself wearing this out during the summer, perhaps to a nice dinner or a special outing.",
-    "One of the best in my collection. It's wonderful. It has personality, lasts all day, and projects. A true magnet for compliments and 100% unisex. This is a 10/10 in my books.",
-    "I'd like this on my woman. Super fruity with a little musk. Not for a man imo. Smells good though.",
-    "Only fragrance that made me nauseous to the point I can't be close to anyone who smells like it.",
-    "Talk about performance. This things lasts easy 7h and sillage is insane. I had it as a gift from my manager. Strong attractive scent but also mature. Made for those who like explicit presence. Its \"orientalness\" is geniously blended into a complex fruity/powdery/floral ecosystem. Too intense for me but definitely hits hard and leaves a remarkable trace.",
-    "After a fairly meh experience following purchase and maceration for 2 months, as a fairly nonchalant male, daytime wear of this will draw attention in any room. It becomes worth the price tag! You can see in real time people around you taking deep whiffs and tracking your movement around the room. Before Maceration, very feminine, After Maceration, fairly unisex for summer sunny day time wear, nighttime would probably confuse people around you",
-    "Most worn fragrance in the pride parade 2025 by \"men\"",
-    "Upon spraying this on my skin it smelled just fine for the first couple minutes, but then...then the smell turned into such a pungent musky synthetically fruity smell reminiscent of sweaty armpits you desparately try to cover up with a fruity deodorant. I guess the only positive thing I can say about this fragrance is it's longevity. Unfortunately for me, the longevity of the fragrance was another downside because no matter how much I scrubbed I could not get this offensive scent off me.",
-    "très bon parfum pour l'été",
-    "Literally smells like a Coca-Cola gum. It's a pretty good smell but it may be too feminine leaning to some. I don't mind it though, beautiful smell.",
-    "It’s a sweet fruity musky scent, good for all seasons and time , it’s a little bit sweet but still pretty",
-    "So looking at the scores for Pura & Gold,I'm surprised at the disparity because to my nose these are twins! I'd say Gold was stronger on the vanilla but honestly I'd be surprised if you could tell them apart side by side. Thankfully I only ordered a 10 ml decant of this, I own a 100ml bottle of Gold, you definitely don't need both in your collection.If I was to set them apart I'd say that Pura is the summer version of Gold, personally I wouldn't wear Gold in high heat as it can get a bit cloying.",
-    "This isn't any type of musk, this is a synthetic component called ambrocenide which is in fact very cheap which helps to reduce the production cost while still allowing to manufacture those \"powerhouse\" fragrances that fill the room. Unfortunately for us, there are quite a lot of olfactory-impaired individuals who can't detect it in a fragrance which in turn enables these miserly companies to keep getting away with using it. That is also the reason why people say (and genuinely believe) that no one can really hate this and all the hate is undeserved, and why there's no point in trying to argue over this type of fragrance with someone incapable of perceiving it for what it is. What good would it do if you told them ambrocenide smells like formaldehyde, as in, it's its odor profile, not your subjective opinion on it? People will still trust their own nose over you, and they don't care if they walk around smelling like a fruity mortuary as long as they only smell the fruity part. This is the modern perfumery we're stuck with.",
-    "I sprayed this perfume on my skin two hours ago and it smelled quite pleasant for the first hour, all fruity and agreeable etc. No noticeable musks for me. Then I took a shower afterwards and now I'm stuck with the sweaty musk. All the fruity notes have been stripped. I'm with the ones who want this type of musk banned on this. It smells cheap and nauseating. Anything with this musk in it will be long lasting obviously.",
-    "Nuclear ┐( ͡ಠ ʖ̯ ͡ಠ)┌ Massive sillage, I have never smelled something like this before. I think if you put this on, the entire neighbourhood can smell you. Longevity 12/10 Projection ∞/10 Scent Noseblind in 60 seconds/10",
-    "It is the most universal fragrence I can think of. It works in every occasion in my opinion. I think this is hard to hate and very easy to like. 7.8/10",
-    "It's really good, but way too many people have this. I smell it at the mall, work, gym, movies, grocery store, and even the pet store. Almost every day, I smell someone wearing this. This is one of those mass-appealing fragrances where everyone knows a guy that has it, not a bad fragrance, but I'll probably sell my bottle. I don't want to smell like 40% of the male population in the summer. Besides, I think it's a little too synthetic. GO LIGHT ON THE SPRAYS... PLEASE...",
-    "The hate behind this fragrance is so forced😂 Oversprayers made people hate this. You do not need 10-12 sprays of this. More like 2-3 sprays. If you’re still a somewhat average nose like me you’ll like it",
-    "Instead of banning natural ingredients because they’re “too allergenic”, IFRA needs to ban whatever synthetic musk is being used this this perfume. The comment below me (@baltep) isn’t getting the point. People don’t hate this fragrance because it’s synthetic. All fruity fragrances are synthetic, since you can’t extract oils from real fruit. People hate this fragrance because it uses that obnoxious sharp musk, that everyone is genuinely tired of smelling. No one actually smells the fruity notes because that musk just overshadows everything, especially in the sillage. If you spray it on your own skin and smell it up-close, yeah you will smell the fruit. But trust me, no one is going to be smelling fruit on you when you wear this. The perfumers decided to taint it with that horrendous sharp musk that you often smell in the sillage of shallow women who douse themselves in perfume every morning. It’s horrible, and probably the biggest cause of headaches in all of perfumery. If you want to be obnoxious and unlikeable, this fragrance is perfect for you.",
-    "Erba Pura is beautiful. It doesn’t deserve the hate it gets. The biggest complaint is that it smells synthetic. And yeah, maybe it does, but that doesn’t automatically make it bad. As Jean Giono once said, “If you absolutely insist on the pure, unmixed song of the nightingale, I recommend the synthetic nightingale.” Synthetic doesn’t mean cheap, tacky, or offensive. In this case, it means a stunning fruit accord that’s clean, soft, slightly aldehydic, and reminiscent of fruit skins, particularly peach. As it dries down, the sweet musk blends in perfectly, creating a velvety, airy scent trail that smells exactly like the bottle feels: plush and fuzzy. This doesn’t lean super feminine either. It’s nearly perfectly unisex and wearable for almost any age group, though it tends to resonate more with younger audiences. As we all know, the performance is wild. It stays on clothes for days and projects relentlessly for hours, but thanks to its soft texture, it doesn’t come off aggressive unless you overspray. It’s not for everyone. And especially for guys, this might not be the safest blind buy. I personally prefer Erba Gold, like a lot of people do, but Erba Pura still deserves way more love than it gets. Scent (on skin): 7.5/10 Scent (sillage): 9/10 Projection: 10/10 Longevity: 10/10 Value: 3/10 Originality: 6.5/10 Mass appeal: 7/10 Versatility: 5.5/10",
-    "Awful blinding shampoo scent. Would never buy this even for 1 tenth the price",
-    "For me, nothing special, except that it’s a good composition.",
-    "If you like this sort of DNA but want something lighter and more mass appealing, Michael Malul Citizen Jack Parfum. Smelling EP, I was immediately reminded of CJP and I very much prefer CJP. Some things that EP has over CJP though are the longevity and depth (despite that depth being synthetic). Do I see the appeal to EP? Yes, if you are super into fruity, deep, warm fragrances then chances are you'll like EP. But at the pricepoint, I would explore other options. Definitely worth a sniff though",
-    "Wanted to love it but it smells a little like a wet rug or something to me. It reminds me of the Commodity line - a mix between Milk & Amber with some fruits thrown in. I can’t say it’s necessarily bad but it is obnoxious and loud for sure, if that’s your thing..",
-    "I was excited to review this one after seeing it constantly hyped online. I happened to receive a free sample of it with my recent Fragrancebuy purchase and I unfortunately have to agree with the haters here. It really doesn't smell anything but synthetic. It's almost exactly like opening a bottle of Herbal Essences shampoo and smelling it, except those are 7 bucks and this is 400. It doesn't surprise me as even Xerjoff are ambiguous with the note breakdown listing just \"Mediterranean Fruits\" as a note. It's just messy.",
-    "Egyszerűen imádom, valóban lehet hogy valakinek kicsit animalis, vagy túl erős.",
-    "This is so obnoxious, everytime someone wears this my nose feels harassed",
-    "Maybe I have a bad sample, but this isn't beast mode. It's a basic popular fragrance where you have a very fruity, sweet scent that under cut a musky undertone. If I had testosterone, this would smell great on me, but I want fruit that smells like fruit.",
-    "I've never seen so many mixed opinions on a fragrance comment section ever😭",
-    "All you need to know is that I still smell it on my shirt after I have washed it in the washing machine on 30 degrees. Eternal Beast mode.",
-    "I don't understand the hate for this scent, sweet and airy with an extremely satisfying to smell drydown. Perfect during the warmer days of the year for both men and women. Soft and not at all synthetic in my opinion, only downside for me is that for such a hefty price the composition is way too simple and lacks the depth in complexity that other niche houses tend to have in similar price points.",
-    "I cannot understand why anyone would want to purchase this. It is not pleasant, luxurious, pretty, complex, sexy, or unique. It is only strong, rudely, inappropriately so, and I personally don't understand the reason \"beastmode\" is the top of anyone's fragrance checklist. I smelt this on my uber driver, after many weeks of smelling this everywhere in the UK (migraine after migraine), and he told me what he was wearing. I realised that I had an unopened sample of it in my collection, dabbed a tiny bit on a Post-it for my husband to smell. You guys, it is EVERYWHERE. One pencil eraser-sized dab and my whole house smells like this. My hands, my sofa, the desk where I pulled the post-it. I'm getting fruit, but it's just obvious fake synthetic stank. This is the \"adult\" equivalent of a teenage boy downing themselves in Axe/Lynx. It's just... tacky. And I can understand \"I want to lean into my inner stripper,\" not every perfume has to be classy. But this, this is just unkind to wear in public. Just a massive yikes.",
-    "I LOVE Xerjoff Erba Pura!!! It's funny, that I always heard that Naxos was the best Xerjoff fragrance, but that Erba Pura, Alexandria II, and the Tony Iommi fragrances were polarizing and you shouldn't blind buy them, but I think those are all better than Naxos. Naxos was the first Xerjoff fragrance that I tried, after I ordered it from Amazon as a blind buy. It wasn't love at first smell, so I didn't order any more until I got to try them at a fancy mall in Michigan, and I instantly fell in love with Alexandria II, Erba Pura and both Tony Iommi fragrances. Erba Pura has a sweet, intense fruit salad opening, like a bowl of mixed fruits, and it has that signature Xerjoff powdery scent dry down, that I also smell in Alexandria II. I love to layer Erba Pura with Alexandria II, because the fruit really compliments the sweet notes in Alexandria II, and then the powder notes compliment each other and the oud in A2 is amazing to my nose. Xerjoff Erba Pura quickly became one of my favorite fragrances in my collection, and a dumb reach for me. If I'm not sure what fragrance I want to wear, I will often default to Erba Pura. It's pleasant and refreshing and just puts a smile on my face.",
-    "It's so OVERHATED, this is such an amazing fragrance, you get fruits, citruses, vanilla and some musk for more depth, on one of the best summer fragrances",
-    "Some reviews are just fascinating. Virtually all your fragrances are mostly synthetic compouns. Do people even understand the things they write? Do the meaning of their words even matter? On one hand, this fragrance could have been a win because the scent is sweet and bright. However, it is pungent. Not many occasions on which I would consider wearing it and I definitely wouldn't put it on my skin again. This could have been a fun and delicious scent as it isn't the sickening type of sweet but it is so heavy it suffocates me. People who like overbearing and extremely long lasting creations would absolutely love it. I personally prefer when a fragrance nicely disappears after its use is over. I don't want to actively have to get rid of a scent I am wearing. On the other hand, the sillage is absolutely devine. That's how I even discovered/noticed this fragrance. During a lunch date with a few friends. One of my girls, smelled so good, we kept commenting on it throughout the lunch. And when we were leaving, two girls came to us to ask who was smelling so good and what she was wearing. Even though I personally cannot wear it on me, I adore when she does. It's just so good. All that to say that it's a good scent in the air and it leaves a magnificent trail that follows you for a while. The friend in question gifted me a clone fragrance that is supposedly in the same vain but less aggressive. it's been two days and I must say that I prefer wearing the clone (which is also quite present too). Scent: 8.2/10 Performance: 0/10 (it does not perform in my opinion as it does not fulfil the role I expect from a fragrance. For those who like perfumes that stay on them up until they actively shower it off, this is a 1000/10) Price: 8/10 (a bottle would last for an awfully long time given how strong and persistent it is.) For anyone that has the same issue with this fragrance as me, I found that spraying just on a piece of clothing or tying your hair in a bun then spraying over it once before untying it is the best way to get around the issue. You could also try the I Am White clone I received. It's not exactly the same but it's softer and more wearable.",
-    "Smells bright and fruity. Feels luxurious and uplifting — like sunshine and sweet treats bundled into one.",
-    "Synthetic mess of a horrible aroma chemicals.. this is the kind of fragrance you'd expect from a cheap middle Eastern dupe not a niche fragrance ..but alas.. You can't always tell the quality of a fragrance based on the price point which is why I don't fall into the 'expensive is better' trap.. I couldn't even get past the synthetic chemicals in this fragrance to even appreciate any of the fruits because all I could smell is gasoline and sharp Ambery notes and it was an assault to my senses..",
-    "Just came back from Puerto Rico and so many of the uber drivers smelt like this or a at least a clone of it 😆😆😆",
-    "It’s fresh and sweet fruits with vanilla amber and musk but not complex Easy to wear maybe too sweet for some, I liked it at first sniff, read many mixed reviews about this one and for me it turned out to be on the positive side Not something I would wear but would love to smell on anyone , unisex slightly leaning fem 8/10",
-    "When I used it first time, it was puzzling, I didn't understand what it is. The second time I understood better: fruity musky scent, that's all I smell. I only had a sample but if this happens to be expensive then... I would pay maybe 60€ at most. Because it doesn't smell cheap but it's nothing too special either. It smells just nice and it's probably the first scent I like which has a fruity note in it although I haven't tried any other such. I also think the name and bottle colour is misleading because Erba makes one thing about herbs but it is far from herbs (green notes).",
-    "this brand's hype is build on their luxuries \"high prices scheme\", majority of their perfumes is YUCK-smelling, including this one. I will never understand people who pays like 200$ retail to smell like horseshit sprinkled with rotten fruits. 2/10",
-    "This is good, just don’t overspray it and wear it in the appropriate climate. She’s real strong!!! She’ll singe your nose hairs if you aren’t careful. If you don’t follow this advice, you and everyone around you, will be in an olfactory induced nightmare of your own making. One to three sprays is all you need and you’ll smell amazing! Pro tip: don’t spray around your face!! I spray the back of my neck, my chest and that’s it. I get compliments left and right. Honestly, some of these reviews are so overly dramatic.",
-    "I had to get on here and write a review because this is quite literally the worst cologne I have ever smelled in my entire life. I’ve never had such a physical reaction to a scent before—this one manages to instantly induce a headache and makes me nauseous like nothing else. Maybe I’m allergic to something in there. I don’t know. But it makes me so, so sick. Don’t be fooled by the lovely refreshing notes it claims; this smells (AND FEELS) like sticking your nose into a bottle of rubbing alcohol, combined with burning rubber and some nauseating amber. Imagine snorting gasoline, because that’s how Erba Pura is in a nutshell. It burns the whole way up. I’m genuinely baffled by the positive reviews and “fruity” claims.. like I can’t stress enough how horrifying and downright evil this scent is. I work at a restaurant, which is where I had the pleasure of coming across this monstrosity—some guy came in 2 nights in a row wearing it and it permeated throughout the entire place within 20 minutes. I could not escape. The first night, I had 2 separate couples ask to be moved shortly after being seated next to him. I can’t prove that it was because of the stench, but I have a strong suspicion. Please spare yourself and everyone within a 20 ft radius and do not purchase this disaster of a cologne. I had to leave a bit early both nights because it made me so ill that I actually couldn’t function properly.",
-    "It smells like Ushuaia grenade spray",
-    "I don’t understand the hype. I think this brand has good marketing. All the perfumes that I try in this brand is a NO!",
-    "if i hated someone i would spray this into their room",
-    "are you guys for real... so everyone and their mom was hyping this up so much... all i hear is long lasting and. BEASTMODE... yada yada yada. so i came in with an open mind. i have other xerjoffs and i like them. my 1st mistake... second...blind bought em. thankfully a small bottle. everyone is saying its good for the summer. so i bought it for 2 summers ago... got it... i tried to like it. i dont want to believe that yall actually like this for summmerrrr... cuz this is headache. like... why?. i mean its long lasting. it clings on everything. pretty much overpowers everything. its not a bad fragrance if they take the vanilla down a notch it'll be a thing... or just use it in i dunno fall maybe.",
-    "This is a beautifully fruity scent, which performs really well. I sprayed once on my arm and it went on for hours. It’s well-rounded, fruity, citrusy and musky. Close to other fragrances but somehow very different. I don’t know how they managed to get fruits to perform this well, but it’s the longest lasting bright fruit scent I’ve experienced. I know that there will be many soaps and body sprays which smell like delicious tropical fruit baskets but not all of them are done like this, and not all of them live for hours. Immediately added to my Wanted list.",
-    "when i first got this out of the bottle i was not a huge fan i liked it but didnt think i got the money i paid worth out of it but, on skin this fragrance is amazing its sweet and fruity and it just smells more expensive i wouldn't reccomend this as a signature scent but its def a key piece in a rotation this fragrance is so tropical if you ever were to go on a cruise i can't think of a fragrance i would recommend more at the moment and i think the \"zesty\" narrative is kind of off, i can see why people say it because when you say sweet and fruity it does sound feminine but from actually putting my nose on it i believe they have blended it well into not leaning feminine and being just right in the middle unisex great projection and longevity also i am happy with this as a blind buy my only regret is not buying the 3.4",
-    "ilk sıktığımda meyveli hafif narenciye acılı bir duş jeli kullanmışım gibi hissettiriyor. çok tatlı bir koku bence. yayılımı ve kalıcığı üst düzey. kuruduktan sonra veya kurumaya yakın vanilinmiş gibi kokuyor çok beğendim.",
-    "smells like a fruity bath and body works body spray but beast mode",
-    "I mostly wear unisex or borderline feminine fragrances, but the vanilla in this one pushes it way too feminine for me. This is a lady boss scent to my nose.",
-    "Synthetic zesty fregrance.",
-    "Semi-synthetic like fruity opening, but not nauseous synthetic like dupes and many designers would have. After about half an hour grows into a beautiful sweet scent. I found latter part to be powdery vanilla.",
-    "Cheapest smelling Niche Fragrance I’ve ever come across. Smells like the £1 Carex hand-soap. Synthetic & cloying.",
-    "Xerjoff is usually more miss than hit for me, but this one genuinely caught me off guard; in a good way ! That said, while I don’t think fragrance is inherently gendered, this fragrance would fit a man soooo well. It’s very aquatic; like the juicy, drippy kind, not the crisp, breezy kind, if that makes sense. Ridiculously fruity, borderline headache-inducing. Musky and just the right amount of racy. Honestly, this smells kind of promiscuous; in the best, most confident way possible. I wear it proudly, and yes, I absolutely stink up the room.",
-    "If you want to give headaches to someone or choke out a room this would be something I’d reach for 0/10. It’s funny to me how this is their flagship hahah",
-    "Famous for a reason, the hype is real. I don't even want to entertain the dupes. This is the first niche fragrance I actually want to save up my money for, God help me and my wallet. Remember that one tiktok of that arabic brand perfume oil that went viral, and the lady said it smells like an exotic woman w her boobs out getting fanned by palm leaves and fed grapes? Yeah... this is that. Not the oil. This is a hypnotic juicy tropical fruit basket in the heat of summer.",
-    "So lets break this thing down shall we..... First, I think I should note that Erba Pura smells different from when you first open & spray your brand new bottle, to when it does 10 days later. That said, this fragrance needs a bit of air in order separate its notes. So dont judge it as soon as you take it out the package. Before the fragrance is allowed to open up I can see people having an issue with this \"Fruits\" note because its indistinguishably Fruity, yet sweet, & indistinguishably Fruity in the same way that Juicy Fruit Gum is. Juicy Fruit Gum doesnt actually contain any fruit juices. Its just a mix of chemicals that trick the mind into believing theres fruit juices within its Sweetness. So I totally get it when reviewers say it smells \"Synthetic\". Your brand new Erba Pura will indeed smell like a sweet synthetic mess. But thats because its extremely concentrated. But after you give it a few days to open up this is what you'll get. Upon its initial spray you'll be hit with a very authentic, loud, & sharp amalgamation of citrus notes. Specifically, Sicilian Orange, Calabrian bergamot & Sicilian Lemon. Whats adding to that nose piercing sharpness reviewers speak about is a note of Iris. Now, this Iris note wont be clearly distinguishable as Iris until the dry down due to the loud Syrupy Sweetness of the \"Fruits\" note. Now, when talking about the \"Fruits\" note, everyone picks up on something different. But to my nose this \"Fruits\" note smells like Mango's, Peaches, Pear, Passion Fruit, Pineapple, Honeydew Melon, Watermelon, Grapes, & Kiwi, all ripe, & all resting on a platter in their extremely sweet juices. I can also smell Melon Rinds. It smells Tropical. Yet somehow, It wouldnt feel out of place it was worn in Fall or Winter. As the fragrance transitions I can begin to pick up on faint Spices. To be exact, they're the same Spices as in Erba Gold. But again, they're faint. I also smell Amber, & while the Amber smells ambry, it also gives off a subtle Caramel nuance. Similar to the Caramel nuance in Erba Magica. I also pick up on Saffron & subtle Leather nuances, along with a subtle Cypriol note & its Crude Oil nuances. Theres also times where I get a quick waft of that Skank from Erba Oud. But again, these phantom notes will be missed if you've never smelled the Erba Flankers. Its in this moment within the fragrance were it smells very Middle Eastern. Its like you get Erba Magica, Erba Gold, Erba Leather, & Erba Oud all at once... & then its gone. As the fragrance continues on it loses its Middle Eastern influence, & I begin to pick up on Vanilla, Iris, Musk, & what smells like canned Peaches in their syrup, with soft nuances of Melon. .... and for me this is the longest part of the fragrance, & the best part. When the fragrance finally dries down hours later you're left with notes of Iris, & White Musk, & it smells exactly like the Iris/Musk combo in \"Skin on Skin\" by L'Artisan Parfumeur. Which I also own a bottle of. Erba Pura is Unisex, & its sweet. However, its no more sweet than Nishane's ANI, or Jean Paul Gaultier's UltraMale. Erba Pura can be worn year round. But I'd suggest that if its worn in Summer, its worn on cooler nights. The fragrance honestly smells better in the cool night air. With regards to performance, Erba Pura is a Nuclear Bomb, & it gets stronger as it wears on. So please, for the sake of your own nose dont over spray. Now, for the question that everyone's asking. Does Erba Pura get compliments ??? Erba Pura gets a shit ton of compliments. But personally, to my nose, Erba Pura is not what I would consider a \"Compliment Monster\". But to the average nose, for some reason, this fragrance just seems to drive em wild. You can wear this fragrance on Dates, to the Club, or to any outdoors event.",
-    "Terrible, overly sweet, cloying, sickening and headache inducing arabic style scent.",
-    "i think this fragrance is branded as a unisex but this is literally a womens perfume i think it smells nice but if i sniff from the actual sprayer its very strong and in your face longejevity is veryy long on this one, yesterday at 5pm i sprayed it once, i went to sleep and had a shower and i can still smell it. so yeah i think my downside is that its too feminine for me and can be quite obnoxiously strong, sometimes lingers like a bad fart 🥱",
-    "This would be nice on a man wearing a collared button down and belted slacks for dinner on the coast. But I just can't see wearing it myself. It's nice but there are much more impressive scents in this category and price range.",
-    "Best xerjoff. But for the price ther is other better options. A dupe from lattafa ana al abyad wich is ultra cheap. A dube from al haramin. Al haramain amber oud gold wich is the best dube of erba pura with great price.",
-    "Best fragrance ever created. Erba Pura smells amazing from the first spray. It starts off fresh and fruity slightly powdery from the musk like going to a fruit market. It's the cleanest smoothest fragrance I've ever smelt and incredibly comforting, perfect for a summers night but you could wear it for any season. To my nose its only slightly citrusy from the fruits and I cannot smell a lot of amber. Performance and projection is fantastic I reccomend 8 to be smelt all day and from a distance. It is slightly on the synthetic side but in a good way. Mass appealing fragrance that is unisex but leans masculine in my opinion and is best fit for teenagers and young men. Good for all ocassions I don't know any dupes that smell like it but if you can afford it get it because it is the best fragrance ever perfumed.",
-    "Too synthetic, feels like a bath and body work spray but beast mode",
-    "Jesus Christ. Fruit everywhere. Fruit in my face, fruit down the hallway, fruit down the road, what the actual heck. This one's a bit much for me. I don't HATE it but I would never wear something like this. Synthetic smelling jam and musk. Way too daring. Trust me, if you want to make a statement, spray this one, people down the block will be aware!",
-    "As much as I love this perfume, I have to admit that the amber in this bottle amped up the already sweet citrusy fruits. If it’s a food, it would absolutely cause diabetes. The vanilla didn’t help either, as it presented a creaminess that added to the already cloying nature of this perfume. I can say that it’s the musk that has been holding this all together, but it still gets overpowered most times. It fits a certain mood or vibe to be able to enjoy it, and that is why I have to unfortunately give it up. I had to find perfumes with similar scent profiles because I definitely love this DNA. In my research, I found that Kirke and Amber Oud Gold are the most similar but with a catch - Kirke, with the addition of heliotrope, patchouli and sandalwood, created a disharmony that caused it to smell synthetic in the dry-down, as opposed to AOG where something in the opening smelled screechy and synthetic but will later evolve to a 1:1 copy of Erba Pura. Maturation helps with the latter’s case, but there’s no saving the former. I also found Jardin Eclusif but something in that perfume screams metallic or rusty which is offensive(you can try for yourself and see if you’ll like it). BUT as with all the perfumes mentioned, PLEASE DO NOT OVERSPRAY! For goodness’ sake, be mindful of others. These are all nuclear perfumes and could cause olfactory warfare. If you don’t want people to hate you, then do not attempt to spray more than 5 spritz. ALSO, I smelled it on someone who I’m sure that didn’t take any shower at all, and it smelled almost rotten. PLEASE PLEASE PLEASE! Make sure to spray it on ONLY after taking a bath because this does not mix well with some people’s natural musk or sweat. I beg of you! Anyway, if you want something more wearable, I suggest(AND HIGHLY RECOMMEND!) Erba Gold. It’s pricey but it’s worth it! Or if on a budget, try Amber Oud Gold, but you have to let it mature for about a month to diminish the synthetic note in the opening. Otherwise, scent profile, sillage and performance is almost 1:1 with Erba Pura.",
-    "Femboy Cologne. That's the joke, thank you very much",
-    "To me it's an array of different citrus fruits. All the goodness of all the citrus fruits: Their juice, their peel, their leaves, their seeds. I love it for that. It was the first time I smelled it today and I was expecting a total disaster of a scent, looking at the many negative reviews here. I was waiting for the most generic fruity citrus the perfume the world has ever created, but that was not the case. It was a lovely green and slightly herbal citrus perfume in the best possible way. I very much like it. And I love that it has a strong staying power, too...especially for a citrussy perfume. Thumbs up from me.",
-    "A monstrously strong synthetic fruit bomb with some soft musks and vanillery amber underneath, overall I wouldn't say it's a bad scent, but it's definitely not my style, even if it does smell nice in the air. On my skin it's a moderately cloying fruit fragrance (not really tropical, just a wide variety of sweet fruit in general) that is both too strong and too aggressive on the sweetness for me to enjoy personally, if the fruit smelt more natural in this I think it'd be more palatable but the projection would undoubtedly plummet a lot I'd imagine, as a result, the fruits I this are so synethic on my skin they walk the fine like between tolerable and headache inducing, I like it when I get a few wiffs, but at other times it does start to hurt my head a little if that makes sense lol. Not only that, but this fragrance also smells juvenile to me, it's definitely unisex and a good warm weather scent regardless, but this very much feels like a later teenager/early 20s persons fragrance for sure, even moreso for the fragrance layman/everyday person, speaking of, this fragrance is quite common to come across in my country (Australia) with Broccoli heads and/or Eshay's, which is definitely not something I like being associated with, which has partially ruined its wearability a bit for me personally😂. My experience with the scent profile aside, it projects strongly and almost too strongly imo, especially for a fruity fresh fragrance, I got around 11-12 hours longevity on my skin, as I said irs perfectly unisex, and its also good for warmer and more moderate weather and occasions. In conclusion, if you honestly want a mass appealing fragrance from Xerjoff, I wholeheartedly recommend Naxos in every single way over this, I personally feel like it doubles as both a versatile and likeable mass appealing fragrance, and as a work of art in Perfumery whilst staying unique. Final Verdict is a 5/10 for me, if it was the only mass appealing fragrance from Xerjoff that was easy to like, it may have been higher, but since Naxos exists i just cant objectively rate it any higher.",
-    "A fruity, sweet, ocean scent. Gives a good 3 hours of projection but after that it just lasts until u take a shower.",
-    "The notes listed for this one indicate that I should like it. A lot. But OMG, what is that awful first note that won't leave my nose? Is it the intensity of the amber? It's in several perfume samples I've tried recently and it's so hard to get away from. I don't get fruit, candy, or any of the sweet things anyone here is saying they smell. It's just awful to my nose. I'm disappointed!",
-    "Just coming back to remind y’all that this is a clone of Britney Spears Fantasy. Try to do a side by side test, go to the store and try the Britney, or just check out the other reviews here saying this. Btw Fantasy is like $20",
-    "smells like juice with honey and mixed fruits",
-    "WHOEVER CREATED ERBA PURA IS A GENIUS.Every time i smell this perfume in public it immediatly gives me a feeling of beauty,heaven,love.This never fails each time.So here i am at Istanbul's airport buying at last my own Erba Pura,feels so good to touch the sealed box of this heavenly juice i will be enjoying to wear for many many years ahead.To those who left negative reviews,thank you friends! For they flag key ponts i especially pay attention to when search perfume.YOU CANT WASH IT OFF, ITS NUCLEAR, LASTS EONS,MONSTROUS etc.All these characteristics i expect to be in my perfume.This beauty indeed has a character,so do i,feels so good to be together",
-    "Public service announcement: Just because someone comments on your fragrance dosent mean you recieved a compliment. Let that sink in.",
-    "Used to be so glazed but thanks to tik tok kids it’s hated and so forcefully, wonderful beautiful fresh fruit fragrance that’s unique compared to other freshies. 100 percent unisex, wonderful fragrance and one of the easiest niche fragrances to wear and one of the most sold/known and for a reason. 10/10",
-    "Does not compute! Smells like rotten fruit to me. Not my jam. Hard pass.",
-    "fruity and fresh absolutely nuclear it pulls compliments however synthetic this is unisex",
-    "It smells like the best women's shampoo ever - but in a way that it's suitable for men to wear",
-    "It's a beast. It also smells beastly. My nose is being hit with a mess of unpleasant synthetic notes. Screechy musk, rotten fruit and and a tar like note. This fragrance lasts forever and ever and its strength is headache inducing. Power! Try before you buy. I agree with a previous poster, because this fragrance is a popular clone, I can smell it everywhere in Germany, especially on track suit wearing teenagers. Maybe this is the perfume world's cilantro and it smells amazing to some folks. I'm baffled by the popularity of this concoction.",
-    "Wow. Where do I start. Firstly I’d like to point out that this fragrance is a CRIME to the fragrance industry, a screechy, dirty, disgusting concoction that is spreading everywhere like pancreatic cancer, I genuinely cannot smell a hint of “perfume” in here, it’s full on inhaling sharp razors in and having it choke you to near death. It’s loved by broccoli heads and individuals with a below average mental capabilities. In no way can I imagine someone who knows jackshit about perfume to even remotely like this, especially in Germany, every other “gangster” rocks this or/and Kirke and Arabians Tonka, the pinnacle of chemical synthetic trash. Pretty sure this is what they pump into you when you’re getting cancer treated. If you wear this, please just know everyone around you absolutely despises you and thinks you’re a burden to society, you don’t smell good, you actually smell like bleach with a hint of shampoo, with all due disrespect.",
-    "A sweet, powerful, charming, edible and sexy fruity fragrance that makes me feel pretty and sexy I bought it two years ago in Paris, and only now I truly appreciate its brilliance. It’s a compliment magnet and a true masterpiece of perfumery. So many dupes out there, but nothing truly compares! 10/10",
-    "This is a high heat performer. The best tropical shampoo smell, clean and fresh. It just has to warm up majorly not to smell like 🤢. Yes, some people are blessed with a skin chemistry that works this way by default, but most- are not. If you live in tropical climate, and put it only on clean skin, most likely it’s a winner.",
-    "I don't know about the others taste, but this is a great perfume for me. Maybe I'm crazy, but I don't think this is a very feminine perfume. Because the musk isn't that dominant, the vanilla balances things out a lot, and the opening reminds me a lot of Layton, maybe my nose projects different notes, but this perfume also has little \"testosterone\" in it, metaphorically speaking. The perfume is dominant, strong, loud, seductive, precisely because of that citrus note, it should not be applied too much, because it will really give you headaches, same thing like Sauvage Elixir. All those who hate this perfume are those with sensitive noses. We buy perfume for ourselves, not for others, because it's hard to convince 8 billion noses to like your perfume aka taste. A perfume does not deserve hate, and is it a masterpiece? It is not! It is the best Xerjoff? It is not, but it is good - it is.",
-    "Yağmurlu hafif rüzgarlı hafif serin havada nasıl güzel yayılıyor bayılıyorum erba Gold da aynen kirke den daha çok seviyorum",
-    "Head and Shoulders but make it fancy",
-    "This makes me VERY nauseous.",
-    "Xerjoff Erba Pura is definitely one of those fragrances that people either love or hate, and I have no problem saying I love it. It’s a powerful fruit basket scent with vanilla and a heavy musk, tropical and fun. Everyone around me always reacts positively when I wear it. For me, Erba Pura is an easy-to-wear, easy-to-enjoy fragrance—especially when there’s no one complaining about it being a synthetic mess!",
-    "Best summer performance perfume, من احلى العطور الصيفية",
-    "Smells like cheap shower gel I don’t understand how it got hyped up so much as it did. One of Xerjoffs worst creations",
-    "editing my whole review... i've had this for a week and loved it but now i'm over it... i don't know how to explain this but it smells exactly like the fruit of the loom logo...except along with the synthetic fruit you can also smell the smell of the earthy wood they used to make the cornucopia along with the dirt and grass that came with it. gonna have to PASS. silly me bought TWO 3.4 oz because i thought i loved it...this was also stuck in my wig cap for 2+ washes...i could only dream every perfume was this strong. free me from the shackles of erba pura.",
-    "OMFG what is this TERRIBLE scent?!? Sure I can smell the fruits in here but they Buried under what I think is some petrolatum or terpene derivative that reeks of something between gasoline and kerosene. I even put some on a paper sampler and a DAY later it was still there and just as bad. Who would want to wear this?!?! WHO WOULD WANT TO SMELL THIS BAD?!?! This is some crackhead crap. DO NOT BUY!!!!!!",
-    "I haven't smelled this fragrance in a long time, but from what I can remember it was absolutely awful. I remember seeing it being hyped up on my tiktok feed, and I was so disappointed. Can't exactly describe the smell, but it was something weird with notes of cheap.",
-    "Im not a fruity girl…..but baby! I love this! I can smell the fruits perfectly. It almost smells like candy. But yet still a mature 35 yr old woman age appropriate. Wear this if youre in a hot, tropical environment or a warm, summer night. Its lovely.",
-    "The reason behind my dislike towards to this is not the fruitiness nor sweetness nor being synthetic. I do not enjoy the fruits, but for those who enjoy this can serve perfectly unisex. My problem with this, Erba Gold and Accento is how they all dry down to that spicy arabian-influenced musks. I hate that musk note and on my skin, throughout it's life of 12 hours, this stays on that part for 9. Not pleasent to my nose.",
-    "Juicyfruit chewing gum:-) …..it’s beautiful.,,some might think it’s childish or too girly for a man….but it’s pretty unisex as far as tropical/fruity scents go.",
-    "If I smelled this for the first time without any background information, I would think this is an extremely niche concept-perfume that was made with ironic intent to mock extreme tackiness. I imagine a visibly malnourished meth addict, fried platina blonde, botched lip fillers, full-time tiktok livestreamer that wears giant sunglasses with rhinestones and giant fake LV bags to wear this.",
-    "Very good every day smell. Smells clean but not like detergent.",
-    "Tried in store a while ago and enjoyed it. Decided to buy it from AuraFragrance cuz it was $130. Now I'm a little bummed. On my skin this is nothing more than a masculine musky mess. There's no fruit, no citrus, not even vanilla. I sprayed it on a card to make sure I wasn't going crazy, it smells normal on the card, it's just my skin chemisty making this smell completely different.",
-    "Powerhouse of a fragrance. I love it, so fresh and summery! I am female and wear and love this, but it is so easily unisex. I also have God of Fire and I see a lot of similarities. I think someone wouldn't need both God of Fire and Erba Pura, they are too similar. Both are gorgeous, fruity, juicy and tropical.",
-    "The same people bitchin' about the intense performance of frags like this, Oud Maracuja and Sauvage Elixir, also bitch when fragrances get watered down, reformulated and neutered. Have you geniuses tried spraying less (value for money, which used to be important in this community)?",
-    "The new shiny bottles are at least half of power tuned down . Doesn’t justify the price anymore . Hence so many complained it’s too strong -> Be happy now and go buy it !!!! It’s less than moderate on my skin and not worth it anymore ! It’s a tragedy 😞. I really loved it when it was something ……",
-    "It is more feminine 100%, the scent itself is amazing. If you want to buy it for your partner, safe blind buy guaranteed. 9/10",
-    "Smells like a blonde femboy on a tropical resort with a trust fund. Smells like royal apple juice. Watery, Amber, fruity, sweet, synthetic. Id say this is a 10/10 women's scent thats worth every penny. Smells great with STRONG performance. Lasts all day and fills a room. So strong you can easily get sick of it. Get a sample first and wear it for a week to see if you get tired of it. EP is synthetic, so you can find good dupes in 2025. But none of them will match the original’s performance. Id say buy a dupe if the original is too strong.",
-    "Fun in a bottle... Blast of Sweet up till lunch... This really packs a sweet punch... After lunch and stretching long into the evening it gets really interesting as Vanilla and then later Amber is added to the sweet underlay... Very good quality but you need a sweet tooth... Still a pleasant change from time to time... No doubting the quality... I really quite enjoyed the later evening element... Good Stuff... Surprised this doesn't have a higher rating, its not like you don't know what your getting into... Very good at what it claims to be... A real journey through the day... But overall I'd say this is a young guys scent... Feels a little desperate to be wearing this at my age... A pass from me... Erba Gold more suited to the older guy but as the sweet is toned down a little and replaced by more fruity citrus...",
-    "I can see the appeal to certain noses but anyone that has any decent tastes at all will look right past this fragrance. The overall scent is reminiscent of a hair spray marketed towards teenage girls followed by spraying like three different girls body sprays of assorted fruits. I’ve smelt many girls rack store fragrances from no name brands that smell very similar to this and they cost between $10-$30.",
-    "It is a tacky combination of fruits and musk, and smells cheap. There is nothing sophisticated and elegant in this perfume; it is just bling-bling showing off. It is a very offensive perfume for an offending price point. I am willing to pay a high price for perfumes, because I love perfumes, but this one doesn't deserve a fraction of that price.",
-    "I have the feeling that Xerjoff toned down the chemical fruity notes and they amped up the musk in the newer batches (maybe even a reformulation?). However, my recently bought bottle seems to lack the original longevity. I get max. 6 hours out of mine (might be the olfactory fatigue though). Does anybody else have longevity and sillage issues with the newer batches (Nr. 24024N)?",
-    "Not a safe BLIND BUY! It sounded so good and juice and wonderful…..🤢🤢🤢 oh Lord have mercy! It about knocked me on the ground with sharp musk! It lasted for days even after scrubbing. Why did I blinds buy this! Yikes. I don’t want anyone I’m around to smell like this! Headache inducing… it really is the Devils juice!",
-    "smells like fabric softener, very strong smell gives me a headache. not recommended blindbuy",
-    "i used to love you but now i hate you. Shit lowk fake asf i used to like it alot, but now i grew some hair on my balls and realised it just smells like a mad scientist trying to use chemicals to replicate a fruit of basket. Longevity last about 5 washing machines and projects thru the room.",
-    "air freshener! yawnnnn",
-    "Really wanted to like this but smelled up like straight shampoo to me and was too sharp for my nose. Not a realistic fruity scent to me",
-    "nothing special and ridiculous pricing lasted one week on my skin tho,despite showering ;0",
-    "The worst fragrance ever, please don't wear it near people 🤢",
-    "very long lasting with beast projection but it smells very cheap extremely synthetic and harsh , instead this i would prefer twin perfumes by arabian oud.",
-    "No. Just no. This is one of the first Xerjoff scents that both my husband and I dislike. If you're on a long road trip, and stop a random truck stop, and you go into the bathroom, they just put a brand new, just-unwrapped urinal cake in the urinal, and and you spill your peach slushy. That is the scent of Xerjoff Erba Pura. I know this is very popular, but neither of us can understand why.",
-    "Horrible ... Tout ce battage médiatique pour ça... ? C'est un parfum chimique à mort , absolument rien de naturel, ca sens le désodorisant pour toilette bon marché et encore je suis gentil. Je suis choqué que la maison Xerjoff ai commercialisé un parfum de cette qualité et encore plus choqué que ca soit un succès commercial ! L'odeur est écoeurante et repoussante , il pourrait etre vendu chez lidl à 3€ je ne l'acheterai pas.",
-    "EW. I smelled it at the airport and expected at least something because people are buying it a lot but this smells disgusting. It reeks of dirt, spice and an overperfumed man. Actually nasty",
-    "Beast mode one spray l put on my hand at 6pm now at 4 am still going hard one spray 😩😁🔥🔥🔥🔥🔥 l got old velvet suede bottle purchased yesterday",
-    "@Farrque I second that. This is the most offensive perfume of all time. Even calling it a perfume is a reach, this is an odor - of rust, decay and dirt, with a hint of hand sanitizer on top. I don't know why I keep approaching these ambrocenide tributes in vibrant-colored bottles, maybe 'cause the top negative reviews are a bit hard to believe until you've tried it out for yourself, or because a negative experience is still an experience, but unless you too want to risk sending yourself into a scent-induced panic attack in case you're not noseblind to this amber mess - believe every one of them. This, THIS is what needs to be banned, IFRA: ambrocenide, the odor of hell.",
-    "I will always believe xerjoff manufacture the best scents in the world. The world, erba pura is obviously the most popular scent they have and for good reason. Its in my top 5 Xerjoffs but i dont think its the best. Thats just how good some of the others are. Cruz Del Sur II is next level and Torino 22 is so solid but this does the job excellently, i have 3 sprays on right now 2 each side of neck and 1 on the back and its so strong. I applied 3 hours ago, absolute niche quality",
-    "Citruses, vanilla ice cream, mango sorbet, white musk and xerjoff’s obnoxiously loud amber accord. I hate Xerjoff deeply for giving scents like this a platform.",
-    "Same issue with the reviewer before me, it lasts nothing on my skin. I even tried using vaseline(to enhance the duration) at got 0 projection. However it dries into a delicious skin scent.",
-    "I'm so bummed about the performance of this fragrance. The scent itself is absolutely gorgeous, I really love it. It just disappears so quickly, though! For the price, I expected way better longevity. Anyone else have this issue? It lasts maybe a few hours on my skin and the projection is abysmal. More of a close skin scent. I've checked the batch code and it's 5 years old. Surely it shouldn't be this abysmal. One of the reasons I got this perfume was because everyone was going on about the \"beastly\" performance. The only thing beastly about this fragrance is the price. The bottle is gorgeous and so is the box, but that doesn't make up for the fact it's as weak as puddle water. Xerjoff Urba Pura Perfume Review Xerjoff Urba Pura is an exquisite fragrance that brings the perfect balance of sophistication and modernity. From the first spray, Urba Pura exudes an elegant blend of citrusy brightness and rich, warm undertones, making it a versatile scent that works for any occasion, whether day or night. The opening notes are a refreshing burst of bergamot, mandarin, and lemon, offering a lively and uplifting citrus experience. These are followed by a delicate floral heart with hints of jasmine and rose, which add a touch of softness without overwhelming the composition. The base is where Urba Pura truly shines, as it settles into a luxurious mix of creamy woods, amber, and musk, creating a velvety warmth that lingers on the skin. What sets Urba Pura apart is its complexity and the way the different layers evolve over time. The citrus notes don't fade too quickly, providing a crisp and energetic top that effortlessly transitions into the deeper, more sensual base. The packaging of Xerjoff Urba Pura is just as refined as the scent inside—a sleek, elegant bottle that exudes luxury. It’s a fragrance that feels both timeless and contemporary, making it perfect for those who want something unique, yet wearable. In conclusion, Xerjoff Urba Pura is a stunning fragrance that offers an ideal balance of freshness and warmth. It’s a great choice for individuals who appreciate high-quality ingredients and well-crafted compositions, and it’s sure to turn heads wherever you go. Shame about the performance. Everything else is wonderful about this scent",
-    "I love it but i feel is more female fragance",
-    "(Sample from Surrender to Chance) This is a really fun girl. She’s super cute, she uses We Heart It. She’s a bit of a Korea-boo and she loves TWICE. If she were to bring anything to the picnic it’d be a fruit platter because she’s on and off a diet. She’s a sucker for a mimosa and getting her home is hell. 9/10",
-    "The strong fruity notes in the base notes are nice but I didn't like the creamy feeling. Is it bad? Not at all. In fact, it's much better than 75-80% of the perfumes on the market. But perfumes are a matter of personal taste. I understand why people like this perfume but personally I wouldn't buy it. 7/10",
-    "Well - I expected more. Candy, synthetic smell, I love the citruses, but nothing spectacular. The bottle is amazing tho! Rate - 7/10. Vibes - beach, fresh, synthetically sweetq unisex.",
-    "I just got it I think it’s a good scent if you are younger and you want to people to think your a little more feminine or you just like smelling like that when I first smelled it I thought of a grapefruit IPA for some reason very strong but I’m more of a wood oud more masculine smelling guy that’s what I want to smell like and I thought my mom could rock this good but in the middle of unisex and female",
-    "I thought I was going to be the person that preferred Erba Gold. I was wrong. This is BEAST mode. Huge blast of fruits with some citrus notes. On the sweeter side but still nice. Great Summer frag. 8/10",
-    "The opening is disappointing. The dry down is a bit creamier, which I almost think I like. Yeah, I’m just not digging this. 3/10",
-    "Separate yourself from the wanna-be esoteric snobs on here and apply it on a friend. Smell the sweet, clean, tropical sillage emitting from them and be in awe.",
-    "This is the absolute best fragrance I own. The projection is amazing, the vanilla works so well with the musk, and the fruit notes can actually project more than an inch from my body. I can't believe I'm alive at the same time Erba Pura exists. 100/10, every dollar well spent. tiger approved. give me mangos or give me death. >:3",
-    "I really love this, it smells minty and fresh. I can smell the sweetness a little bit. I honestly don't get citrus at all. The blending is really nice. My husband reckons it smells like urinal cakes 😭",
-    "A lovely fragrance, though a bit too fruity for my taste. The fruitiness feels somewhat artificial, and I wish it had a fresher element to balance it out. As it is, it leans a little too strong and could easily become overwhelming.",
-    "smells like fruity soap not worth the price and hype",
-    "Literally the worst cologne I’ve ever owned second to Al haramain amber oud.. the cologne literally assaulted my nose it kicked and punched my nose with an offensive scent. I couldn’t wait for this to get off my skin and for the cheap price of over $100 I’d say this is best for people who want to waste their money.",
-    "fruits and amber id say, still get whiffs of a sharrp fruit accord. sharp ish like the arab scents do it. i think its that fruit and amber thing happenng, is it etallic? unsure. i might try a few dupes and see what i think",
-    "im not hugely wsure i like this, i feel a sharpness to it which just rounds at its peak. to me this id is a green fruity with a sharp maybe vetif=ver-like base.. theres something vinegar like in the oouter notes it feels like - not stringly but a facit - leans also tart ambery maybe? bright and slightly dense, almost sharp, theres a shampooey roundedness in there.. perhaps a bit of the ie eraser scent too whatever makes that",
-    "This smells like Armani's \"Stronger With You\" to me. I hated every minute of having this on my hand.",
-    "Erba Pura, by Xerjoff, smells like Cappy Orange juice with orange pulp in it, fruity candies, powder and a hint of a stale aquatic note. In the opening, all you can smell is a Cappy Orange juice with orange pulp in it. I love this scent, but unfortunately, it evaporates after a few minutes. When it dries down a little bit, the fragrance leaves you with a scent of fruity jelly bean candies, a scent you can often find in a Xerjoff fragrance. In Erba Pura, this scent is accompanied by powdery musk and a stale aquatic note. I didn't hear anyone say they smell that aquatic note too, but to my nose, it is there. It's an aquatic note that I also smell in Megamare by Orto Parisi, I don't know how to describe it in a better way. Considering everything previously mentioned, Erba Pura is not a linear fragrance and you do smell a different perfume after some time, instead of the one you sprayed at the beginning. The perfume does have the general Xerjoff vibe: it smells refined and expensive, you smell classic Xerjoff notes in it and it is very elegant. The longevity and projection are very good. Would I wear it? I think that aquatic scent I am picking up doesn't fit me, but nevertheless, it is a great perfume.",
-    "one of the strongest fragrances that you can easily wear during summer, however it is not only a summer scent. you can wear this throughout the whole year. lasts 4 5 days on clothes projects crazy for 5 6 hours and keeps projecting till 9 10 hours, you can smell musk-fruits little bit of orange at the opening however as it dries down the citrus notes disappear completely and vanilla-amber take over with a bit of fruit and hints of musk. might smell a bit synthetic, do not blind buy but does not deserve the hate. If you have enough money, buy Erba Gold, far better, projects good (not as good but still very good)",
-    "Bathroom spray",
-    "Just pure melon/cantaloupe in a bottle.",
-    "I am so tired of much of the reviews on fragrantica. If you don’t like a fragrance, just say it didn’t work for you, list the reasons why and move on. There’s no need to insult our community’s sense of taste, or unleash a long winded diatribe, filled with unnecessary judgements about the type of people who happen to like something you don’t. Honestly, it’s just not fun and inclusive for anyone when we approach our reviews in that way. But ya know, whatever, do you boo. ✨🩵✨",
-    "these nerds be doing too much on these reviews, aint no one give a f bout the fact that it’s synthetic only thing that matter is that it smells good ion care bout how many chemicals this shi has if it smells good im wearing it",
-    "A lot of people are saying \"this works on my skin\" and \"this doesn't smell like wet dog on me\". That's great, but it won't stop others smelling wet dog on you! This fragrance is stuffed full of the most powerful molecules that exist in perfumery. Norlimbanol, Amber Xtreme, Amber Core, Grisalva, Cedramber, etc. These synthetic molecules smell great to 80-90% of people. But they're infamous for not smelling the same to everyone. Some people are more sensitive to them than others, and some detect dirty animalic faucets in them. The wearer's skin has nothing to do with this. Only each person's nose. That's why this fragrance is divisive. If you smell what the perfumer intended for you to smell, it's amazing. But if your personal perception of these mega-beastmode molecules differs, this can be absolutely terrible. It's the wearer's responsibility to make a decision. Are you willing to force a scent onto everyone with massive projection, when there's a 10% chance any given person will think you smell like a stinking wet dog?",
-    "The same people bitchin' about the intense performance of frags like this, Oud Maracuja and Sauvage Elixir, also bitch when fragrances get watered down, reformulated and neutered. Have you geniuses tried spraying less (value for money, which used to be important in this community)?",
-    "I purchased a bottle of Erba Pura recently after going back and forth with testing it out. The only thing stopping me from purchasing it sooner was that the bottle is covered in velvet. I detest the feeling of velvet. I love how this fragrance incorporates Middle Eastern influence into mainstream perfumery. Across my friendship group, my friends from the Middle East smell the best. They have no qualms in wearing a strong scent day or night. And I love that about them. All that aside, Erba Pura is a beautiful scent. A fruit cocktail with citrus to prevent it from smelling like a juvenile, immature body spray. It smells expensive. It’s also a chameleon scent. If you wear it in the day it projects just enough so that those close to you can smell it. However, when the sun goes down this perfume comes to life. I’ve experienced this with brands such as Mancera and Montale. At night, this lingers in the air, will enter a room before you do and stay in that room upon your departure. Scent: 10/10 Lasting power 10/10 Sillage 10/10",
-    "This is one of the most offensive scents that I ever smelled. I received a sample with a different order and I left it, unopened, on the dresser in the bedroom. My husband walked into the room and said \"what is this horrible smell? it smells like the locker of a gym\". It's musky, musty, it has the sweetness of a decomposing fruit, it's nauseating, it's STRONG. I see some define it as \"attention grabber\". oh, yes. Not showering for a month and using the same clothes over and over without washing them will do the same. I know that scents are a question of taste - I respect that - but I truly hope I'll never have to share a space with someone wearing Erba Pura.",
-    "Sickening sharp fruity notes and sweet woody vanilla. Made to last. I couldn’t wash it off my wrist.. it stayed all day and night. Can be used as a weapon of mass repulsion. You've been warned.",
-    "The description sounded lovely but god did it make me sick when it dries down! There’s a note I can’t yet identify that is at the heart of many perfumes that I can’t tolerate well - very powdery, yet acrid and chemical. I would love to find out what it is so I can avoid other perfumes that have it. I sprayed it once into the air and that base note is still sitting on my carpet 18 hours later. Yuck!",
-    "Even though I’m by no means a connoisseur in fragrances, I consider myself quite liberal in taste. I can appreciate and wear anything from heady white florals, challenging animalics and deep dark ouds. But this is the fragrance from hell. Sharp, screechy, sour and rancid fruits that’s kills all your (and everyone elses) senses. Impossible to shower or scrub off, it will follow you until you want to throw up. I hate it with a passion. But also, isn’t this the beauty of fragrance, how it moves us all in different ways? 😌 For me it moves me away from this, as far as I can get. 😉",
-    "This could just be a horrible match with my skin chemistry. But on ME, this scent is a giant dumpster fire. This is 1 of two fragrances I have tested in my entire life that offended my senses so severely it became “scrubber” status. To It smells like gelatinous, rotting citrus tossed out in a gas station parking lot, sun beating down on it during the hottest, humid day in history. I appreciate and enjoy a wide variety of scent profiles including the bold and abstract. But on me, EP is a sensory nightmare and only time experiencing a scent that actually makes my nose sting. I CANNOT get this chemical warfare off of me! Send help! Luckily it is only on one wrist, as i was testing a sample of it and sprayed 3 times. After multiple scrubs, a shower and 13 hours, it has not toned down one bit (and my skin devours fragrance, so I always struggle with longevity). SamplIng this became a date that turned into a stalker I cannot escape. Bottom line: “Its a no for me, dog”"
+    "I have had this on my wrist for around an hour so far and it it is a lovely fragrance , I was worried it wouldn't be wearable but it is nicely blended and addictive to smell… and this is where I say … It reminds me of PDM Layton in the dry down ?!?! WTH? This is saltier and many notes are different but i am guessing the bergamot vanilla blend is what makes it similar . Its certainly not a bad thing as both are amazing but it almost puts me off having both fragrances. I will have to see how long this lasts and compare them both together.",
+    "Has potential; lacks performance. I enjoy Megamare and Atlas that have similar profile and much better performance. Shukran Habibi!",
+    "This is a potent salty marine fragrance. Lasts like 10 hours on my skin, and forever on clothes. Smells a bit synthetic, but my wife loves it on me.",
+    "Black sea it’s not a freshie everyday fragrance it feels like a night inside a rusty yacht in the middle of the ocean it’s a very salty fragrance it feels like a foggy weather inside the ocean while it’s raining and it’s a very dark and masculine fragrance not everyone can wear this one in my opinion if we compare it to megamare this one is by far better than megamare you can feel every note in this fragrance feels like a voyage under the ocean.",
+    "A salty summer beast. Projects well and lasts long, especially on clothes—I was getting compliments on it hours after spraying. My friends said they thought I smelled like a salty thing emerging from the sea (in a good way) but to my nose this just smelled like a lighter, slightly fresher version of Megamare (my sworn nemesis in the world of marine fragrances). While it’s definitely better and more wearable than its successor Artik Sea, it was almost headache-inducing for me. Might just save this one for when I’m going out to the club and want to smell like a sexy, dirty sea sprite who hunts sailors for sport.",
+    "Black Sea isn't your typical fresh aquatic scent. Instead, it feels like a night sea, where cold, salty minerals mix with warm, smoky resins. The scent creates a mysterious marine mood, blending fog, wet wood, and grey amber. You first notice a flash of citrus—bitter orange and bergamot—mixed with black pepper and a salty, briny note that hints at waves hitting your skin. Next, you get seaweed and marine herbs, a gentle herbal bitterness from myrtle and rosemary, and a hint of metallic ozone. Here, the fragrance declares its difference: the sea here feels alive and full of energy, not just clean and simple. Sperm whale amber, labdanum resin, and salt-etched woods (cedar/guaiac) with a warm leather trace and a light smoke-like scent, reminiscent of damp wood starting to ignite. It’s a mix of salt, smoke, and amber, moving from the chill of beach metals to a warm, mysterious feeling like late-night fires by the shore. Longevity: 8–10 hours on skin, and may extend longer on fabric. Sillage: moderate leaning towards strong in the first two hours, then settles into a near-medium aura. The fragrance line is present and clear in air-conditioned indoor spaces; outdoors, its trace remains attractively salty and woody. Excellent for summer and spring evenings, and mild autumn nights; in hot summer days, it can be intense if over-sprayed. Wearing this scent adds style to smart-casual or relaxed formal outfits, especially when paired with dark colours and crisp shirts. This is for anyone looking for a mature marine scent that's more dramatic and deep than typical fresh blue perfumes. It suits both men and women with a clear masculine leaning. If you enjoy Pazzaglia's darker scents or like the idea of an amber night sea, Black Sea is worth trying. And if you're looking for a straightforward, refreshing scent, this one might feel too deep in the \"aquatic\" category. A beautiful balance between salty minerals and warm resin; a distinctive character. Outstanding performance for such a style. Weaknesses: The opening's iodine/mineral aspect may seem \"brutal\" to those seeking a clean, easy-wearing marine scent. It requires measured doses in extreme heat. Based on my personal experience in Iraq's hot climate, the suggested spraying method would be three to four sprays (neck, behind the ears, chest/collar) in the evening. You might also try a light layer underneath the fragrance of \"dry citric cologne\" if you wish to soften the saltiness during the day. In the end, I say... Black Sea by Lorenzo Pazzaglia turns the sea from a calm postcard into a nighttime scene, with sharp salt, warm smoke, and driftwood. This is a moody fragrance with strong character and artistic style, perfect when you want a deeper, more serious take on the sea. Ahmed Hadi – Baghdad – IRAQ",
+    "bro i put 7 sprays it's too strong both performance and longevity 10/10",
+    "I sampled this recently, hoping I would love it. And while I did, not at all for myself. It smelled strongly masculine to me, and I am one who typically likes unisex, feminine leaning scents. I have other perfumes that many people say lean masculine but I think are quite feminine (e.g., Gris Charnel Extrait), but this one was very manly to me. I'd love to get it for my husband!",
+    "Unfortunately I can’t help to feel as many may have obtained counterfeit bottles of this stuff. What I own stays in your clothes even after they have been washed . so I’m sorry yours is not lasting long. And I have been told I can be smelled 100 feet away. I can’t see how it does not perform for anyone. And if it’s too strong just use less and get more bang for your buck. What’s wrong with that ? Well I don’t know but to each their own. Yes it is a beast but just don’t wear it to work around the cry babies. Some people are sensitive to smelling good. Then there are cry babies. Pussies !! Heck I go out and women and even girls for that matter have stopped me to say I smell good. For anyone seeking a good or a true ole factory experience ,I would say definitely give this a try. It checks all the boxes. Especially in this heat. Peace and love and good happiness stuff to all ✌🏾",
+    "One of the best marine fragrances I’ve smelled! This is a dark, masculine, peppery, and somewhat airy fragrance that smells amazing😍. It is very potent, but it doesn’t have huge sillage. It is spicy and salty, but does not fill the room with a strong type of scent like YSL or an Arabian dupe cologne. This is a 9/10",
+    "Absolutely gorgeous with amazing longevity. More multi-faceted than Megamare (which I also love). Perfectly unisex, in my opinion.",
+    "أستخدمه في الصيف بكثرة بدون أي تردد من أولويات اختياراتي في العطور المنعشة احيانا تكون رشة تعزيزيه بعد النهار ..",
+    "It opens up with so much black pepper and salt. But within 10 minutes goes into Megamare territory, not a clone but 80-85% the same. It's more wearable than Megamare which i had a full bottle. I don'r know why but i think this would be so sexy on a girl, although it's quite dense and has no sweetness.",
+    "This is the best blue marine perfume in the market (salty & mixed with seaweed). My wife's favorite blue fragrance. The only problem with this fragrance and it is a big one, is the performance. Black Sea is the definition of beast mode, which unfortunately makes it unwearable. One spray is more than enough, 2 sprays or more is guaranteed to either choke you out or someone else who gets within 5 feet from you. For all folks below who complained about the lack of performance, most likely you bought a fake perfume.",
+    "mi favorita del 2025",
+    "Pungente, verde cupo e bluastro,odori di piante balsamiche e ricordi di acqua,che sia mare o lago nel bosco. Aggiornamento: dopo 7 ore l'odore è sempre molto forte,si espande e riempie l'ambiente dove era la striscetta di carta su cui è stato spruzzato. Beh, direi che rientra nei sinteticoni esagerati che vanno di moda nella nicchia ora e non solo. Purtroppo non amo questo tipo di profumeria. Credo che nemmeno questo sarà per me.",
+    "Very artistic house this, just got this one and tried cherry ink as well both very interesting",
+    "Its like you get wet from the rain just you smell good 🤣",
+    "Calone vibe turned to the max with salty / algae like undertones. I don’t get the hype with this brand. This smells good & probably makes much more sense 10 feet behind the wearer but… being the wearer… it’s just too much. It’s like taking a photo, editing it, turning the contrast to 100% & then trying to appreciate it’s composition.",
+    "Ok, I love a good strong aqua scent lots of minerals, sea vibes. Tried a good few variants, the wife does not like the scent profile (esp.black caviar) but I love it the profile divorce imminent. Back on track, I love the scent it grows by the minute,. lovely rich aquatic with great projection",
+    "A mi parecer es un perfume intimo pero muy atrevido, no es para cualquiera pues refleja una oscuridad apolvada muy unica en su tipo, diria que es un mar apolvado",
+    "Sample arrived today. Sprayed on my hand, thought it was great, but wasn't 100% sure on how much I liked it. Just given it a full wear and honestly this is intoxicating and invigorating. The quality is good, but there are better quality offerings out there, BUT (again), few of them feel as exciting to wear as this. It's so uplifting and unique in the air. Perfect example, I was loving Profumum Roma's Orangea (on my wrist). I tried it several times on my wrist and the quality is off the charts. But, I gave it a full wear and it bored me. It didn't excite me in the slightest. I think I'll be getting a full bottle of Black Sea for summer. Fantastic fragrance. Oh, and I do not get the Acqua Di Sale comparisons at all! This is closer to Pernoire's Vitias IMO, but this is better. I've learnt that the wear experience is key before buying!",
+    "Invigorating",
+    "This is really bad perfumery. Absolutely atrocious",
+    "After a fancy and complex opening this is basically Aqua Di Sale :) if you didn’t smell neither of them. I can explain this as lots of liquid salt and some ambergris. Other notes vanishes after 5 minutes. These are whats left.",
+    "I haven’t smelled the reformulation of Tom Ford’s Oud Minėrale, but this fragrance is very reminiscent of the original aforementioned designer frag when it was part of the private blend collection. Black Sea, however, is much better quality. The seaweed note in Black Sea is not as potent and as off-putting as it is in TF OM. The ozonic notes help dampen And this thing is beast. I can’t wait for the warmer weather to show up and see how it performs in the higher humidity.",
+    "Some of us use perfumes to ‘smell real good to other folks’. Others understand the true measure of fragrance. Perfumery is an art form and when it is used as such, can be transformative. Black Sea is a journey. Wearing it, being shrouded in its heart is to be transported to the furthest depths of a restless sea.",
+    "Opening is very masculine and salty, very shower gel like. This scent is for sure not unisex, more suited for men. Dry down after 20 or so minutes becomes a lot more ocean-like, and the seaweed and marine notes are in full effect. Performance is great, and you will only need 2-3 sprays of this. Overall: 9/10 Aquatic, Dark, Masculine.",
+    "I'm afraid I have to share some other peoples' concern about a reformulation below me: Purchased a sample from a decanter a couple years ago. The scent projected like there is no tomorrow and lasted on skin until scrubbed off. Decided last summer that Black Sea is full-bottle worthy, and ordered a brand new one from a reputable retailer. However, to my dismay, I found the performance atrocious compared to how I remembered my sample being. Granted, longevity was fine, but projection was non-existent. Consequently, sold the bottle. (And no, it wasn't nose blindness; my SO or family couldn't really pick up the scent either not long after heavy spraying.) A couple months later, I found a great deal on a second-hand bottle, and thought I could give it another try; if the performance was still lacklustre, I might as well use it as an office scent. But no. Oh, no, no. This juice was just like I recall my sample being, an absolute monster in every regard.",
+    "Very good, enjoy it. Recommend.",
+    "This is a beautiful scent, but it leans a bit too masc for me, I will buy it for my future husband. It is salty & fresh, kind of reminds me of fresh scent old spice shower gel.",
+    "I blind bought this and was initially disappointed by the strong camphorous smell that was giving Vicks vapor rub. Let this rest in my closet for a few months and something smoother is beginning to emerge. I’ll leave an updated review but it’s improving. I used to only keep one bottle of fragrance at a time but now that I started collecting- it’s amazing to see how different perfumes smell over the year(s), time of day, season, and even my mood. This perfume is more of a curiosity for now but maybe I’ll find more to love about it in the future…",
+    "Quite the aquatic, perhaps best suited for professional settings. It is extremely potent and lifeless at the same time. 4.5/10",
+    "Love this. Performance is literally ridiculous. So far all the LP fragrances I’ve tested punch seriously hard.",
+    "I no longer think this perfume is beast mode. I’ve always purchased it from a reliable seller who sells originals, but its longevity is truly disappointing. It’s a true dark aquatic fragrance, but with this level of performance, I can opt for better perfumes. It was a disappointment.",
+    "Black Sea is one of the best marine fragrances I've worn recently with a beast-level stability (Longevity & Sillage) featuring a fresh and distinctive formula inspired by the Black Sea coasts. The fragrance combines refreshing salty watery notes with earthy woody notes, making it a unique fragrance. Black Sea is categorized as a unisex fragrance, which means it is suitable for both genders. However, some people may be tempted to consider it a more man-friendly fragrance because of its woody and earthy notes. The fragrance is suitable for everyday use, but it can be a bit heavy for hot weather or formal occasions. Black Sea is best suited in spring and autumn, when it's mild. It can also be used in the summer, but it is preferable to use it in small quantities. Black Sea is a medium-strength fragrance, neither too heavy nor too light. The fragrance is best suited in temperate climates, but can also be used in cold climates. Black Sea can be used day and night, but it is preferable to use it in the evening and special occasions. Black Sea is a distinctive and different fragrance, but it may not suit all tastes. I advise you to try it yourself before buying to make sure it suits your personal taste. Conclusion: Black Sea is an icon of the Italian perfume house Lorenzo Pazzaglia",
+    "Megemare zamanında çok övülmüştü, öyle bir deniz parfümü ki sıradan bir deniz değil okyanusta dev dalgalar arasında puslu bir havada hırçın bir deniz.. Böyle betimlenince dayanamayıp dekantını aldık, pek deniz parfümü havası alamadım ve beğenemedim, çocukken bakkalların önünde satılan, güneşten rengi solmuş plastik topların ikiye bölündüğünde içinden çıkan kokuya daha çok benzettim, o övgüleri yağdıranlar hala aynı aşkla bağlı mı o parfüme merak ediyorum. Acqua Di Sale için deniz parfümü diyebilirim ama Kumburgaz denizi; Marmara kıyılarına lodosla vuran yosunların çürümeye başlamasıyla bastığınızda çamura saplanmış gibi olduğunuz o kıyıların kokusu.. Burun yakan keskin tuzlu hissiyata rağmen realistik bir çalışma olduğu için sevilebilir. Black sea de burun zorlayan yada fazla yapaylık hissettiren bir durum gözlemlemedim. Sucul bir parfümden beklenen şekilde ferah bir havası da var, öyle kasvetli bir parfüm değil, güzel.",
+    "Sea water, sand, and clean powder; that’s what it evokes on my skin. It feels like swimming in the sea while it rains. The Black Sea is always restless; so is this scent. Perfect for anyone longing for salt. I love it deeply; it satisfies me on every level, both dark and bright. The inclusion of Black Salt of Cyprus makes me especially happy, being Cypriot myself. The grey ambergris is just right, and the mossy elements are never overdone. One of my favourite marines; if Villa Lympia is daylight, this is the night. Longevity is impressive; close to beast mode.Tag(s): sea, salt, dark, beast",
+    "The sea imbued with wonderful essences: enigmatic, deep, dark, restless and rebellious towards the imminent storm. Crossed and moved by the wind with its redundant load of exotic flowers, fresh, lively, aromatic herbs, a Mediterranean hint of myrtle that hovers supreme and is dispersed in the tormented sky that breaks menacingly in the bluish and leaden water. The intrepid and swirling waves stand out violently on the shiny rocks, raising an impetuous, pungent, brackish and ozonic marine aquatic vapour. The storm raises persuasive notes of ambergris to the sky which characterize the entire olfactory experience. Black Sea is a powerful, exuberant fragrance, which embodies the kaleidoscopic olfactory magic of the sea.",
+    "All I smell is disinfectant cleaner. Nothing deep and dark about this...",
+    "Na ppczatku i jak sie malo psiknie to czuc taki okropnie mdly zapach. Ta nuta zapachowa pachnie identycznie jak woreczki zapachowe z kolorowa sola ktore mozna kupic w kopalni soli. Ale jak sie duzo popsika to czuc taka ostrą swiezosc. Zapach na bluzce przypominal lekko zapach nowych ubran z hm. Taki swidrujacy w nosie.",
+    "citrus and herbs -- an old goatherd is gathering wild seasonings for his dinner-- the breeze is cool but the day is warm in the sun and the herbs release their vaporous delectable nature into the air, turning the entire hillside into an herbal rock spa. The rivers flow down to the sea year round here. A constant fresh repleneshment. The sea in turn nurtures life. Anise grows wild here, amid a rocky mineral note by the warm salt sea.",
+    "I bought this from an authorized store during my trip to Spain. This perfume is no longer in beast mode as mentioned. I don't know if it was like that before! Buy it knowing this. I could barely smell the longevity on my clothes the next day when I smelled it very closely, the sillage was 3-4 hours from shoulder distance.",
+    "Update : 😅🤣honestly its nice and fitting summer hot days 🙌🏻😶🌫️ Glycerin + baby wipes 👎🏻",
+    "Dark blue salty abyssal fragrance. This is the summary of my experience with the fragrance. Supporting citrus tone to an oceanic scent. I pick up the plant-like green touch the myrtle brings to the fragrance but in a powdery way, especially through the first hour. The lack of citruses, if you so wished to find here can be found in Sex-Sea also by LP, they are similar in construction but sex-sea is much less mature. Performance is stellar! Nothing extreme/suffocating but I'm able to smell myself way past the 4th hour of wearing it. Will stay on skin for over 8h and will for sure allow for others to smell you with great sillage and projection. Now, I don't support blind buying this as, to some, it may be too salty. However, I get a well balanced experience with nothing being too over the top! Price point is okay I'd say, 50ml for ~150 is what I paid and will last a long time as probably 8 sprays is the most I can pull off with this when outside but typical 5-6 indoor will get you plenty of time on skin. Avoid clothes as the fragrance will stick after good 1-2 washes. This is a must sample, to say the least. In the Sea line, my order is Sex-Sea, Black Sea, Dream Sea, and Artik Sea from the ones I've tried.",
+    "Sin conocerlo, ni haber escuchado nada de este perfume, la primera vez que lo olí fue amor a primera vista. Me parece un perfume masculino, diferente, modo bestia (la gente nota cuando llegas a un sitio), sensual y que me ha dado varios cumplidos. Adicionalmente, en mi piel dura 12 horas con tan solo 3 sprays, algo que no cualquier fragancia logra puesto que el ph de mi piel es acido. Es un perfume que no es para todo el mundo, pero en mi opinión es un 10 de 10.",
+    "Like a tamer version of arktik sea Still very pleasant Kind of reminding me of a less potent acqua di sale",
+    "I smell mainly aquatic notes and it's very strong and mass appealing to everyone around me, only certain people can make out the seaweed smelling note though, it's very subtle but there. But this is very very very very very very very synthetic scent, it's not bad but sometimes it can get me reconsidering if I want to buy this or not, it's smells a lot better on clothes for me.",
+    "This is the mysterious and invigorating essence of the deep sea. The salty and fresh notes give it that oceanic feel, while the spicy elements add a bit of warmth and depth. The hint of mint, even if not listed, could be contributing a subtle coolness, enhancing the overall impression of a deep-sea voyage. This stuff is strong. 2 sprays will be a room-filler. Although I do appreciate this fragrance, it is not my cup of tea.",
+    "Stormy dark aquatic from hell, it will never disappear while being overwhelming to everyone in proxy. One spray only please. Ugh.",
+    "Totally hooked. Can't live my life without my daily fix of Black Sea.",
+    "Açılış kimilerine göre itici gelebilir. Adı gibi karanlık aquatic bir parfüm. 5-10 dakika sonra Orta notalara geçildikçe parfümün karakteri yumuşuyor ve daha sevimli bir hale geliyor. Ve 1 saat kadar sonra ise temel notalar hissedilmeye başlıyor ki buradan itibaren çok güzelleşiyor. Parfümün diğer canlandırıcı aquatic parfümlerle hiçbir benzerliği olmadığını bilerek almak gerekiyor. Her gün kullanmak için de yorucu olabileceğini düşünüyorum. Yaz akşamları özel etkinlikleri en ideal kullanım yeri olabilir. Bu gerçek anlamda bir niche parfüm. Tecrübeli olmayan burunlar için itici de olabilir ve kitlesel çekici bir parfüm olduğunu da düşünmüyorum. Şişe almadan önce mutlaka denemeli. Performans daha iyi olamazdı, muhteşem. Koku: 8/10 Versatility: 5/10 Cinsiyet: Bence kesinlikle erkek Uzun ömürlülük: 10/10 Yayılım: 10/10",
+    "2 hafta önce gömlek giyerken 3 fıs sıktım. Yıkamaya attım cıkardım astım 2 hafta sonunda bile buram buram kokuyordu aşırı kalıcı",
+    "Starts of fresh and aromatic, though I'm not able to get a sense of seaweed or saltiness. The deeper you get into the dry down, the more the freshness subsides and the more the woody and spicy notes dominate the scene. Personally, I find it a bit tiring and not something I would associate with the ocean. The perfume has a decent presence, which is to be expected at extrait concentration and the corresponding pricing.",
+    "Although aquatic fragrances are not my favorite scent group, I still enjoy testing them. So far, I've tried Jacques Fath Curacao Bay, Mancera French Riviera, Profumo and Orto Parisi Megamare, and my favorite among these is this one. The salt or perhaps other aquatic notes used in perfumes remind me of men's deodorants... When I first sprayed this on paper, I caught that aggressive scent that I never wanted to inhale and thought, \"I will never be able to use this.\" After an hour, it transformed into an addictive, naturally breezy scent. Cold, dark, but deeply peaceful. No matter how strong it is, it doesn't feel overpowering 🤌",
+    "Cheap sunscreen and pool water. 1/10",
+    "If you like salty beach marine perfumes this one is definitely for you! It honestly smells very good and projects well too! 8.5/10",
+    "Has that common sea salt + algae notes found in Acqua di Sale, Megamere, Armani Bleu Turquoise, Sea Horse etc, but smoothed out and given a mainstream, almost designer-ish twist. I wish it would be much saltier, and less sweet, but I like it. Fantastic performance.",
+    "Very potent! Stays on skin and clothes forever. Heavy scent. Suitable for warm and cold weather. Strictly evening wear. Dark clothes. Dark blue. Salt. Algae.",
+    "The marriage of Acqua di Sale and Squid in the best sense. It has absolutely nothing to do with the dark depths of Megamare. This is a popular summer sea fragrance with sweet undertones. Amazingly durable and projects beautifully. It's wearable and leans more on the masculine side. 4.8/5",
+    "Ok. I have now tested and purchased this. I was afraid that I would get Megamare nr. 2. I don't know why people say this is like Megamare... I have now both... This is like Squid from Zoologist! Nothing like Megamare. This doesn't have the metallic, musky, sharp undertone Megamare has. This is like more... inky, sweet seaweedy and doesn't project like Megamare (but it doesn't need to, since we're talking about an extrait...) This is more like Squid or Bois Flotte from Loccitane. And the iodine note Aqua di Sale has... Well, I can't stand it. Black sea has it but in a small amount only. Some says this is extra masculine, not unisex... Nope! This is more masculine, leaning to unisex. Dark, sweet, nice algae/sea/iodine scent. Not fresh, ... fresh-ish, but more like... calm, ...dark sweet. If it makes any sense. If you don't like Megamare but like more round, sweeter artistic scent, - this is for you!",
+    "My favorite perfume for this summer, which also has good chances to be a signature fragrance (for summer :)). In the store I was told „it’s the only one scent for men“ and „a bit harsh fragrance“ and grabbed for it right away. The best solution ever, so it turned to be the best aquatic scent for my nose - salty, waterly, no coconut. A cold sea - like Baltic sea in May or June, but still a sea. Like a person not talking a lot but being the hottest one when close to you.",
+    "Is this like Megamare? I have Megamare but I would like to have a more... ozonic, sunshine with open water feeling like 1988 by Rosendo. Without citrusy overtone but also without the ambroxan bomb from Megamare. Which one do you recommend? Arktik or Black? Or... dream sea? Thanks so much, fellow fragfrantics 😊🔥",
+    "Definitely one of the most underrated perfumes from this house. Fresh, crisp, bright…it leans a bit masculine (imo), but I still think femms who want to channel their inner mermaid will love this. It’s not necessarily beach-y, but it definitely reminds me of the sea. Like, being on a boat in the middle of the ocean.",
+    "I am not a big lover of marine fragrances and therefore this is one of the reviews that IS more difficult to me to write about the Discovery set. Despite not being my favorite perfumes, I have found along the way some that have captivated me like Megamare by Orto Parisi, a marine bomb that lasts all day and projects kilometers; or The Saint mariner by Parfumerie particuliere, a marine perfume full of elegance. However, this perfume has not captivated me. I didn't dislike it either and I think it has enough differentiating elements to not give it a bad grade. Also it is not the typical marine fragrance, but it has much more, but for me it is a \"just good\". Ambergris, musk, salt, orange blossom and moss... That would be the key to this Perfume for me. Within its aquatic and marine charge it also presents a dark and slightly animalic side, probably produced by the mixture of ambergris and musk. The mixture of these notes with moss produces a seaweed-like aroma, green and salty, which extends throughout the duration of the perfume. The performance, as in most perfumes that I have tried from the brand, is quite moderate for being an extrait. A powerful and intense output that immediately descends to a medium projection aroma that lasts for about 6 hours. In my opinion it is not similar to megamare but is more along the lines of a more concentrated Acqua di Gio perfume and subtracts from the citrus part. It is not a fragrance that I would buy but I can recognize the high quality. If you like this type of perfume, do not hesitate to try it, but yes, to avoid frustration and disappointment, do not buy it blindly and keep in mind that: - On many skins, at least mine, the performance is not as good as many say, if what you are looking for is something that lasts a long time and projects intensely, there are other better options. - It is not a typical marine fragrance. The floral, amber and animalic part has a lot of weight to the detriment of the usual citrus part. - It has nothing to do with megamare, so if you like megamare you don't have to like this one or vice versa Perhaps my least favorite of Lorenzo Pazzaglia's marine collection",
+    "I regret blind buying this parfume. It smells nice but nothing special. Yes it is similar to Megamare just way more lighter version. People use words like beast, monstrous projection and performance, nuclear longevity etc. Nothing of that. Uniqueness 5 Sillage 7 Longevity 6 Value 6 To me it's not worth it especially if you already have megamre in you collection.",
+    "I just received the sample I bought from lucky scent and I’m glad I bought the sample …just to give you an idea this fragrance immediately reminded me of coty musk! Extremely identical ! Coty musk comes off with more alcohol in the beginning. Black Sea is more smoother . I had my girlfriend smell it and she said it had a Vicks vapor rub vibe to it …don’t know what’s wrong with her nose lol .",
+    "This fragrance is crazy. It's the best aquatic I've owned and it's performance is monstrous. It is a salty oceanic vibe that has a sort of a piercing quality. Sweetness is absent here and it's not boozy or tropical. It is not Megamare which is more seaweedy. This is more appealing and not redundant of you have or want Megamare. The thing that should make you buy this is it's performance. Chances are if you're looking at this, you're looking for a big time freshie. Here it is. You can find it overseas and recently on Maxaroma. Bravo. Scent: 9 Sillage: 10 Longevity: eternal Uniqueness: 8 Value: 9 Worth it.",
+    "Megamare Light. Still a beast just not as deadly.",
+    "Very unique take on an aquatic fragrance. It smells truly unique but it is very wearable. The performance on this fragrance is like something I’ve never seen before. If performance is your thing, then you must look at all of Lorenzo’s fragrances. This fragrance will not come off of clothes. It just won’t. And you know what? I freakin love it.",
+    "Too screechy and harsh for me. If this is the Black Sea, I'm sure it is Putin's side of it and I'd very much prefer to go with the other 5 basin countries, please.",
+    "help, i can't get this off of my jacket! it's been 2 months! still projecting!",
+    "I mostly get an overdose of Acqua Di Sale (or a sledgehammer clone of it) over an overdose of Aqua di Gio - lot of amboroxan down there. Not as well blended as its inspirations, dries a bit messily. Had to wash it off before sleep because it just wouldn't quit. I'm a fan of Acqua Di Sale, so I thought I'd like like it for sure but glad I sampled. It's not even cheaper per ml. Just go with the original. Update: I had to change my sheets to get rid of it.",
+    "This fragrance is a commitment. It has nuclear longevity. It will be on your skin after a day and a shower, so easy does it on the trigger!! Amazing scent. High quality aquatic. I already wrote a review on how it smells, but I wore it again and my lord the longevity is probably the most out of anything I’ve ever tried. Extract De Parfum",
+    "I recently got a sample of Black Sea and also Dream Sea. Both are good fragrances but I prefer this one, possibly because it feels more masculine to me. Dream Sea is sweeter. This is a nice marine scent. It is quite fresh with a subtle sweetness and has a great salty smell in there too. Black Sea does not smell overwhelmingly of seaweed which I’ve seen some people complain of other marine scents. I also think that Black Sea is a very cool and fitting name for this scent. The longevity and Sillage are very strong too. I used only a tiny bit from the 1ml sample with the dabber and could still smell it clearly without getting too close. 50ml bottle of this would definitely last a long while.",
+    "Very good Sea collection made Pazzaglia. Recommend to test all his Sea fragrances. But recommend to test it on skin. There is not so much aquatic notes, as you can think. It's not like Megamare, but in such direction. I think it's underrated fragrances of this designer. Black sea - the most iconic in his collection and first fragrance you need to taste. It's the central star of Sea line. Arctic sea it's more cold variation. Dream sea it's more sweet variation. White floral, rose, peppery vanilla scent. Sex sea it's a more sharp, peppery, mossy variation Van Sea it's a combination black+arctic sea+ vanilla. More green, sweet vanilla variation. Recommend to buy all Sea samples to test. It's, i think, great perfumes. Underrated. It's impossible to choose one of them. Every variation it's unique, independent. Recommend to test.",
+    "This is probably one of the strongest samples I’ve ever put on my hand. It has some enormous longevity and silage. So much at first you have to wait about 5-10 mins to see what the heck is going on here, but a magnificent aquatic unfolds. Nothing like Nautica voyage aquatic type scents, no this is standing out on the coast of CA on a pier next to a bergamot tree. The ambergris and musk hit hard too. The combo is a very unique aquatic scent that isn’t very sweet. The notes are blended so softly, they all make a special accord and this is a masterpiece aquatic. For me to say that is big, never been a huge fan of the genre. I would 100% but this. Quality is what you would expect from niche. It’s very very potent juice though. I would say this one bottle would last a lifetime. It’s like a 1-2 max spray type scent and people will smell you for sure. This impression is inside my house, I have no experience of how it would do in the sun, prob even better. Love it",
+    "no senti mas q ganas de lavarme y quitarmela",
+    "Deep sea in the winter, masterpiece by Lorenzo Pazzaglia. Pay attention, it's nuclear",
+    "At first it was fresh and green. Then it started smelling more and more like yellow flowers. Not my cup of tea. Definitely a masculine scent.",
+    "This perfume reminds me of a stormy sea in winter. The salt permeates the air, the waves overcome the rocks dragging algae and seabed vegetation onto a stony shore. The grit, strength and indomitableness of the stormy sea can be worn thanks to this fragrance. I wear it very often and promptly receive compliments. Easy with the sprays, especially in summer, otherwise, in addition to not being able to take it off, you risk filling entire rooms! It has no equivalent, it has nothing to do with megamare which is more woody or salt water which is a more crystalline, less impetuous sea. Congratulations to Lorenzo Pazzaglia",
+    "Just received the perfum from the discovery box. At the first glance you can smell a marine blast with a predominance of the ambergris smell, after 1 hour the ambergris tend to lessen. The perfum is well design and last long for a marine/aquatic scent. Recommend 100%.",
+    "The notes looks good thats why i bought it but its a No for me... smells like VapoRub , Mothballs and Naphthalene!",
+    "I bought a Luckyscent sample pack of Lorenzo Pazzaglia, and I’m having the same unfortunate reaction to this line as I have with Montale, Mancerra and Ramon Monegal. I’ve never found a perfume from the listed brands that works with my chemistry. Sometimes a perfume is so strong it burns your nostril hairs, as it does with Black Sea. If you are looking for beast mode, you may love this. For me, there’s no subtlety in this composition, no artistic expression in the mix. Yes, I get sea notes, but it’s so overbearing that it’s headache inducing. Juice is also hard to wash off—which may be a good thing if you love it, or a nightmare if you don’t. I will keep an open mind as I sample the remaining line, but my initial voyage is not a good one and it made me Sea Sick. A rare but honest hate vote from me.",
+    "To me this is Prada Luna Rosa Carbon + Armani Prive Turquoise Bleu. It leans masculine, but I wear it with pleasure. I wish ambroxan wasn’t there, though.",
+    "To be honest, I expected more from this perfume based on the reviews. Longevity and projection are brutal. It's been almost 12 hours since I used 2 sprays on my wrist and it's still aggressive even after it dries. It looks a bit like Invictus to me personally. I also detect a bit of Eros by Versace. Not a blind buy, definitely. Longevity 10/10 Projection 10/10",
+    "I Had 4 testers from Lorenzo Pazzaglia and this one is the best. Very nice take on aquatic scent. To me the citrusy-juicy-flowery notes are as strong as the mineral ozonic notes. Algaes are barely noticeable which is great. Longevity and silage are godlike. I did the laundry and my tshirt still smells like Black Sea. Buy it before they reconfigure the ingredients and make it less potent.",
+    "Lorenzzo Pazzaglia is going to conquere the parfume world.Every parfume I tried is great.Black sea is great.It is marine scent,but not something we already saw.Aquatic,aromatic,salty,algae,longlasting.Litle bit dark.Great👌",
+    "Got the 14 pcs discovery box form Lorenzo. So far i tried few and this is amoung them. It smells different from everything else i tried so far. It has refreshing vibe in it but also smells luxurius & serious. It is not for casual occasions and for younger population. Definitley something related to sea with this perfume. For sure i will have toughts about getting a larger packing of this one.",
+    "Black Sea can’t be compared to other perfumes. It’s an incomparable scent that sets my mind on a particular kind scenario :I think of a dark and deep Sea before the Storm . A Marine Woody fragrance , long lasting sillage,compliments are guaranteed.",
+    "waoooooo! blind buy this fragrance and was a love at first sniff!!",
+    "Very similar to Acqua di Sale, but better priced. If you don’t want to spend the extra cash on Acqua di Sale this is as good, if not better.",
+    "Best quality/performance/smell fragrance when it comes to aquatic vibes. 10/10",
+    "Absolute kraft",
+    "Not only does Black Sea remind me of the ocean.. it's the very EMBODIMENT of the sea itself and everything it has to offer. The user before me mentioned how it's \"THE aquatic\", I couldn't agree more! Truly unlike any other marine out there, I mean just look at the note breakdown, who else is doing that? What a performer too.. I'm speechless...",
+    "This is the aquatic. I'm not joking, I smelled a lot of these ones(from Davidoff cool water & Versace Homme back in the days to Xerjoff 40 Knots, Acqua di Sale from Profumum Roma) and I can say that to my nose this is a refined aquatic scent - great projection in the first few hours, however after the salt note fades away (late-heart stage to beginning of the base), the perfume gets closer to skin but it still has character, it still has 80% of that DNA that it had in the beginning - which I have not seen in a lot of aquatics actually. Great value for money and great quality of this scent considering the profile (marine-aquatic). Great job and kudos to Lorenzo Pazzaglia. I cannot wait to test the rest of the discovery kit perfumes. Cheers! Edit 1 : The salty note/vibe persists for around 6-8h on my skin, aswell as a good sillage around that time - but also I cannot truly validate the actual performances of this one - it needs to be tested in a tropical/summer day to find out what it is really capable off. Hats-off anyway",
+    "Simply the best fresh/marine scent on the market. With this one you can't go wrong. Fresh but deep too , addictive , longevity and projection are insane. Really. To me this is even more long lasting than megamare. I agree with buzz72, even if this fragrance is often compared to aqua di sale or megamare I can assure you that this is completely different from both of them. This is easy to wear, strong but not annoying. This is the best perfume in this category that I have ever had. I get also a lot of compliments with this one. I don't need another marine scent anymore. This is all that I need during summer ( but you can wear it all year round also). Amazing scent! Good job Lorenzo!",
+    "this is very good, marine notes then ambery and turns somewhat powdery in the drydown a bit chanel no 5 like",
+    "It is a dark stormy night on the mare adriatico. No lights to be seen, you shut in your cabin by the sea and tend to the fading fireplace. Still, you stick your head outside quick enough to catch a sniff of air full of salt and electricity. Strangely enough, the roaring waves and the uneasy feeling will cradle you in a peaceful slumber, dreaming of dark oceanic depths.",
+    "Black Sea by Lorenzo Pazzaglia Black Sea is a transcendental journey into a vortex sea of summer delights. The opening of Black Sea sends you on a white sandy beach surrounded by tropical fruit trees whilst gazing at the infinite sea. Don't think sweet or coconut notes, they are not here. The blend of Black Cypriot Salt in Black Sea is heavy as it's found in the top & middle notes but it's so beautifully done it almost becomes like a creamy texture on your skin after emerging out of the sea water with the ylang ylang, orange blossom and a heavy does of ambergris, Sardinian Myrtle, algae to along with a base note of white musk, patchouli and oakmoss. Utterly hypnotic. The fragrance on skin looks like oil with a whopping concentration of 40%. Longevity and Silage are off the charts but it's so pleasant to wear you almost want to keep it a secret and tell nobody why your skin smells so amazing. Black Sea by Lorenzo Pazzaglia is often compared to Megamare by Orto Parisi or Acqua Di Sale by Profumum Roma. I can assure that Black Sea is a completely different experience from both. I own various aquatics and this one just completely stands out from other aquatic fragrances. It's not overwhelming and is a compliment magnet. Still in doubt? Jack Daniels and Yamazaki 12 year old whiskies both smell of whisky but do I really need to tell you which is the best? 😊 Black Sea is an aquatic Masterpiece for aquatic connoisseurs. Soundtrack to this: Omar: There's nothing like this.",
+    "This one is a masterpiece. The salty and marine notes are blended so well with some fruits and Amber notes( after my nose). It start with some salty fruitty marine top and it goes to marine ambery dry down. On my skin it is more than 12 hours of life.",
+    "Not only does Black Sea remind me of the ocean.. it's the very EMBODIMENT of the sea itself and everything it has to offer. The user before me mentioned how it's \"THE aquatic\", I couldn't agree more! Truly unlike any other marine out there, I mean just look at the note breakdown, who else is doing that? What a performer too.. I'm speechless...",
+    "Best quality/performance/smell fragrance when it comes to aquatic vibes. 10/10",
+    "Although aquatic fragrances are not my favorite scent group, I still enjoy testing them. So far, I've tried Jacques Fath Curacao Bay, Mancera French Riviera, Profumo and Orto Parisi Megamare, and my favorite among these is this one. The salt or perhaps other aquatic notes used in perfumes remind me of men's deodorants... When I first sprayed this on paper, I caught that aggressive scent that I never wanted to inhale and thought, \"I will never be able to use this.\" After an hour, it transformed into an addictive, naturally breezy scent. Cold, dark, but deeply peaceful. No matter how strong it is, it doesn't feel overpowering 🤌",
+    "Black Sea by Lorenzo Pazzaglia Black Sea is a transcendental journey into a vortex sea of summer delights. The opening of Black Sea sends you on a white sandy beach surrounded by tropical fruit trees whilst gazing at the infinite sea. Don't think sweet or coconut notes, they are not here. The blend of Black Cypriot Salt in Black Sea is heavy as it's found in the top & middle notes but it's so beautifully done it almost becomes like a creamy texture on your skin after emerging out of the sea water with the ylang ylang, orange blossom and a heavy does of ambergris, Sardinian Myrtle, algae to along with a base note of white musk, patchouli and oakmoss. Utterly hypnotic. The fragrance on skin looks like oil with a whopping concentration of 40%. Longevity and Silage are off the charts but it's so pleasant to wear you almost want to keep it a secret and tell nobody why your skin smells so amazing. Black Sea by Lorenzo Pazzaglia is often compared to Megamare by Orto Parisi or Acqua Di Sale by Profumum Roma. I can assure that Black Sea is a completely different experience from both. I own various aquatics and this one just completely stands out from other aquatic fragrances. It's not overwhelming and is a compliment magnet. Still in doubt? Jack Daniels and Yamazaki 12 year old whiskies both smell of whisky but do I really need to tell you which is the best? 😊 Black Sea is an aquatic Masterpiece for aquatic connoisseurs. Soundtrack to this: Omar: There's nothing like this.",
+    "It is a dark stormy night on the mare adriatico. No lights to be seen, you shut in your cabin by the sea and tend to the fading fireplace. Still, you stick your head outside quick enough to catch a sniff of air full of salt and electricity. Strangely enough, the roaring waves and the uneasy feeling will cradle you in a peaceful slumber, dreaming of dark oceanic depths.",
+    "I bought a Luckyscent sample pack of Lorenzo Pazzaglia, and I’m having the same unfortunate reaction to this line as I have with Montale, Mancerra and Ramon Monegal. I’ve never found a perfume from the listed brands that works with my chemistry. Sometimes a perfume is so strong it burns your nostril hairs, as it does with Black Sea. If you are looking for beast mode, you may love this. For me, there’s no subtlety in this composition, no artistic expression in the mix. Yes, I get sea notes, but it’s so overbearing that it’s headache inducing. Juice is also hard to wash off—which may be a good thing if you love it, or a nightmare if you don’t. I will keep an open mind as I sample the remaining line, but my initial voyage is not a good one and it made me Sea Sick. A rare but honest hate vote from me.",
+    "Too screechy and harsh for me. If this is the Black Sea, I'm sure it is Putin's side of it and I'd very much prefer to go with the other 5 basin countries, please.",
+    "The notes looks good thats why i bought it but its a No for me... smells like VapoRub , Mothballs and Naphthalene!",
+    "I mostly get an overdose of Acqua Di Sale (or a sledgehammer clone of it) over an overdose of Aqua di Gio - lot of amboroxan down there. Not as well blended as its inspirations, dries a bit messily. Had to wash it off before sleep because it just wouldn't quit. I'm a fan of Acqua Di Sale, so I thought I'd like like it for sure but glad I sampled. It's not even cheaper per ml. Just go with the original. Update: I had to change my sheets to get rid of it.",
+    "Starts of fresh and aromatic, though I'm not able to get a sense of seaweed or saltiness. The deeper you get into the dry down, the more the freshness subsides and the more the woody and spicy notes dominate the scene. Personally, I find it a bit tiring and not something I would associate with the ocean. The perfume has a decent presence, which is to be expected at extrait concentration and the corresponding pricing."
   ]
 }

@@ -14,8 +14,6 @@ from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup, Tag, NavigableString
 from crawl4ai import AsyncWebCrawler
-from crawl4ai import ProxyConfig, BrowserConfig
-from crawl4ai.proxy_strategy import RoundRobinProxyStrategy
 
 
 def clean_text(text: str) -> str:
@@ -989,13 +987,12 @@ def extract_all_voting_data(soup: BeautifulSoup) -> Dict[str, Dict[str, Any]]:
     }
 
 
-async def scrape_perfume_data(url: str, max_retries: int = 3, proxy_config: Optional[ProxyConfig] = None) -> Dict[str, Any]:
+async def scrape_perfume_data(url: str, max_retries: int = 3) -> Dict[str, Any]:
     """Główna funkcja scrapująca dane o perfumach.
     
     Args:
         url: URL strony do scrapowania
         max_retries: Maksymalna liczba prób przy błędach 429
-        proxy_config: Opcjonalna konfiguracja proxy (ProxyConfig lub None)
     """
     # Konfiguracja nagłówków HTTP, aby uniknąć wykrycia
     headers = {
@@ -1016,20 +1013,11 @@ async def scrape_perfume_data(url: str, max_retries: int = 3, proxy_config: Opti
     # Zwiększone opóźnienie przed requestem (5-10 sekund) - aby uniknąć 429
     await asyncio.sleep(random.uniform(5.0, 10.0))
     
-    # Przygotuj BrowserConfig z proxy jeśli dostępne
-    browser_config = None
-    if proxy_config:
-        browser_config = BrowserConfig(
-            headless=True,
-            proxy_config=proxy_config,
-        )
-    
     for attempt in range(max_retries):
         try:
             async with AsyncWebCrawler(
                 headless=True,
                 verbose=False,
-                browser_config=browser_config,
             ) as crawler:
                 # Użyj networkidle z dłuższym timeoutem i większym opóźnieniem
                 # aby zapewnić pełne załadowanie JavaScript
@@ -1129,53 +1117,6 @@ async def scrape_perfume_data(url: str, max_retries: int = 3, proxy_config: Opti
     return perfume_data
 
 
-def load_proxy_config() -> Optional[ProxyConfig]:
-    """Ładuje konfigurację proxy z zmiennej środowiskowej PROXY.
-    
-    Obsługiwane formaty:
-    - http://username:password@ip:port
-    - http://ip:port
-    - socks5://ip:port
-    - ip:port:username:password
-    - ip:port
-    
-    Returns:
-        ProxyConfig lub None jeśli proxy nie jest ustawione
-    """
-    import os
-    proxy_str = os.getenv("PROXY")
-    if not proxy_str:
-        return None
-    
-    try:
-        return ProxyConfig.from_string(proxy_str.strip())
-    except Exception as e:
-        print(f"⚠️  Błąd podczas ładowania proxy: {e}", file=sys.stderr)
-        return None
-
-
-def load_proxy_list() -> List[ProxyConfig]:
-    """Ładuje listę proxy z zmiennej środowiskowej PROXIES (rozdzielone przecinkami).
-    
-    Returns:
-        Lista ProxyConfig lub pusta lista jeśli proxy nie są ustawione
-    """
-    import os
-    proxies_str = os.getenv("PROXIES")
-    if not proxies_str:
-        return []
-    
-    proxies = []
-    for proxy_str in proxies_str.split(","):
-        proxy_str = proxy_str.strip()
-        if proxy_str:
-            try:
-                proxies.append(ProxyConfig.from_string(proxy_str))
-            except Exception as e:
-                print(f"⚠️  Błąd podczas ładowania proxy '{proxy_str}': {e}", file=sys.stderr)
-    return proxies
-
-
 async def main():
     """Główna funkcja programu."""
     if len(sys.argv) > 1:
@@ -1192,15 +1133,8 @@ async def main():
     
     print(f"Scrapowanie strony: {url}")
     
-    # Załaduj proxy jeśli dostępne
-    proxy_config = load_proxy_config()
-    if proxy_config:
-        print(f"✓ Używam proxy: {proxy_config.server}")
-    else:
-        print("ℹ️  Proxy nie jest skonfigurowane (ustaw zmienną PROXY aby użyć proxy)")
-    
     try:
-        data = await scrape_perfume_data(url, proxy_config=proxy_config)
+        data = await scrape_perfume_data(url)
         
         # Zapisz do output.js
         output_file = "output.js"

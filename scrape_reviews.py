@@ -8,11 +8,10 @@ import json
 import sys
 import random
 import asyncio
-from typing import List, Optional
+from typing import List
 
 from bs4 import BeautifulSoup
 from crawl4ai import AsyncWebCrawler
-from crawl4ai import ProxyConfig, BrowserConfig
 
 
 def clean_text(text: str) -> str:
@@ -40,12 +39,11 @@ def extract_reviews(soup: BeautifulSoup) -> List[str]:
     return reviews
 
 
-async def scrape_reviews(url: str, proxy_config: Optional[ProxyConfig] = None) -> List[str]:
+async def scrape_reviews(url: str) -> List[str]:
     """Główna funkcja scrapująca recenzje.
     
     Args:
         url: URL strony do scrapowania
-        proxy_config: Opcjonalna konfiguracja proxy (ProxyConfig lub None)
     """
     # Dodaj #all-reviews do URL jeśli nie ma
     if "#all-reviews" not in url:
@@ -70,18 +68,9 @@ async def scrape_reviews(url: str, proxy_config: Optional[ProxyConfig] = None) -
     # Zwiększone opóźnienie przed requestem (5-10 sekund) - aby uniknąć 429
     await asyncio.sleep(random.uniform(5.0, 10.0))
     
-    # Przygotuj BrowserConfig z proxy jeśli dostępne
-    browser_config = None
-    if proxy_config:
-        browser_config = BrowserConfig(
-            headless=True,
-            proxy_config=proxy_config,
-        )
-    
     async with AsyncWebCrawler(
         headless=True,
         verbose=False,
-        browser_config=browser_config,
     ) as crawler:
         # Użyj networkidle z dłuższym timeoutem i większym opóźnieniem
         # aby zapewnić pełne załadowanie JavaScript

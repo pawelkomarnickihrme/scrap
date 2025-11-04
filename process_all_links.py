@@ -13,7 +13,7 @@ import sys
 from urllib.parse import urlparse
 from pathlib import Path
 
-from scraper import scrape_perfume_data, load_proxy_config
+from scraper import scrape_perfume_data
 from scrape_reviews import scrape_reviews
 
 
@@ -71,7 +71,7 @@ def generate_filename_from_perfume_name(perfume_name: str, brand: str = None) ->
     return filename
 
 
-async def process_single_link(url: str, output_dir: Path = None, proxy_config = None) -> str:
+async def process_single_link(url: str, output_dir: Path = None) -> str:
     """Przetwarza pojedynczy link i zapisuje wyniki do pliku JSON.
     
     Zwraca ścieżkę do zapisanego pliku lub None w przypadku błędu.
@@ -86,11 +86,11 @@ async def process_single_link(url: str, output_dir: Path = None, proxy_config = 
     try:
         # Krok 1: Scrapuj dane podstawowe z scraper.py
         print("✓ Scrapowanie danych podstawowych...")
-        perfume_data = await scrape_perfume_data(url, proxy_config=proxy_config)
+        perfume_data = await scrape_perfume_data(url)
         
         # Krok 2: Scrapuj recenzje z scrape_reviews.py
         print("✓ Scrapowanie recenzji...")
-        reviews = await scrape_reviews(url, proxy_config=proxy_config)
+        reviews = await scrape_reviews(url)
         
         # Krok 3: Połącz dane
         perfume_data["review"] = reviews
@@ -144,13 +144,6 @@ async def main():
     
     print(f"Znaleziono {len(links)} linków do przetworzenia")
     
-    # Załaduj proxy jeśli dostępne
-    proxy_config = load_proxy_config()
-    if proxy_config:
-        print(f"✓ Używam proxy: {proxy_config.server}")
-    else:
-        print("ℹ️  Proxy nie jest skonfigurowane (ustaw zmienną PROXY aby użyć proxy)")
-    
     # Utwórz katalog na wyniki (opcjonalnie)
     output_dir = Path("output")
     output_dir.mkdir(exist_ok=True)
@@ -174,7 +167,7 @@ async def main():
         
         print(f"\n[{i}/{len(links)}] Przetwarzanie linku {i}...")
         
-        result = await process_single_link(url, output_dir, proxy_config=proxy_config)
+        result = await process_single_link(url, output_dir)
         if result:
             success_count += 1
             processed_files.append(result)

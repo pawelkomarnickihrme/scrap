@@ -1,70 +1,77 @@
 {
-  "perfumeName": "Erba Pura Xerjoff",
-  "brand": "Xerjoff",
-  "description": "Erba Pura by Xerjoff is a Oriental fragrance for women and men. Erba Pura was launched in 2019. Erba Pura was created by Christian Carbonnel and Laura Santander. Top notes are Sicilian Orange, Calabrian bergamot and Sicilian Lemon; middle note is Fruits; base notes are White Musk, Madagascar Vanilla and Amber. Read about this perfume in other languages: Deutsch, Español, Français, Čeština, Italiano, Русский, Polski, Português, Ελληνικά, 汉语, Nederlands, Srpski, Română, العربية, Українська, Монгол, עברית.",
-  "mainImageUrl": "https://fimgs.net/mdimg/perfume-thumbs/375x500.55157.jpg",
-  "rating": 3.8,
-  "ratingCount": 10084,
+  "perfumeName": "Black Sea Lorenzo Pazzaglia",
+  "brand": "Lorenzo Pazzaglia",
+  "description": "Black Sea by Lorenzo Pazzaglia is a fragrance for women and men. Black Sea was launched in 2019. The nose behind this fragrance is Lorenzo Pazzaglia. Top notes are Salt, Ozonic notes, Watery Notes, Myrtle and Bergamot; middle notes are Sea Notes, Salt, Ylang-Ylang and Orange Blossom; base notes are Ambergris, Algae, White Musk, Oakmoss and Patchouli. \"The sky darkens and the sea is calm, just before the storm. The wind arrives with its load of flowers and aromatic herbs and the menacing sky is reflected in the leaden water that looks like ink. It's a moment: the waves slap the rocks with such a force as to saturate the air and the saltiness applauds the air filling the lungs. Nature is demonstrating her immense strength. Black Sea is a perfume that releases the power of the elements, a fragrance for me as I fearlessly throw myself into the arms of a creation to be discovered. \" - Antea DevonTop Notes: Bergamot, Sardinian Myrtle, Salt, Ozone, Aquatic Notes Heart notes: Orange Blossom, Black Salt of Cyprus, Ylang-Ylang, Marine Notes Base Notes: Seaweed, White Musk, Patchouli, Oakmoss, OrientalgrisRead about this perfume in other languages: Deutsch, Español, Français, Čeština, Italiano, Русский, Polski, Português, Ελληνικά, 汉语, Nederlands, Srpski, Română, العربية, Українська, Монгол, עברית.",
+  "mainImageUrl": "https://fimgs.net/mdimg/perfume-thumbs/375x500.69652.jpg",
+  "rating": 4.19,
+  "ratingCount": 1116,
   "notes": {
     "topNotes": [
-      "Sicilian Orange",
-      "Calabrian bergamot",
-      "Sicilian Lemon"
+      "Salt",
+      "Ozonic notes",
+      "Watery Notes",
+      "Myrtle",
+      "Bergamot"
     ],
     "heartNotes": [
-      "Fruits"
+      "Sea Notes",
+      "Salt",
+      "Ylang-Ylang",
+      "Orange Blossom"
     ],
     "baseNotes": [
+      "Ambergris",
+      "Algae",
       "White Musk",
-      "Madagascar Vanilla",
-      "Amber"
+      "Oakmoss",
+      "Patchouli"
     ]
   },
   "similarPerfumes": [
     {
-      "name": "Lush Lust"
+      "name": "Cirque du Soleil L'eau de Parfum"
     },
     {
-      "name": "Sol de Janeiro Flor Mística"
+      "name": "Spiritica Atmayatra"
     },
     {
-      "name": "Maison Martin Margiela Jazz Club"
+      "name": "Versace Crystal Emerald"
     },
     {
-      "name": "Clive Christian Blonde Amber"
+      "name": "Banana Republic Dark Cherry & Amber"
     },
     {
-      "name": "Commodity Milk Orchid"
+      "name": "Amouage Imitation Man"
     },
     {
-      "name": "Al-Rehab Dakar"
+      "name": "Zoologist Perfumes Portuguese Man O' War"
     },
     {
-      "name": "Davidoff Cool Water"
+      "name": "Kerosene Unknown Pleasures"
     },
     {
-      "name": "Serge Lutens Feminité du Bois"
+      "name": "Toskovat' Inexcusable Evil"
     },
     {
-      "name": "Maison Mataha Café des Délices"
+      "name": "Afnan Supremacy Collector's Edition Pour Homme"
     },
     {
-      "name": "Maison Martin Margiela Afternoon Delight"
+      "name": "Etat Libre d'Orange Une Amourette Roland Mouret"
     },
     {
-      "name": "Valentino Valentino Uomo Born in Roma Ivory"
+      "name": "Maison Alhambra Athena"
     },
     {
-      "name": "Dior Dior Homme Parfum 2025"
+      "name": "Aaron Terence Hughes Kayos"
     },
     {
-      "name": "Novellista Citrus Affair"
+      "name": "Lattafa Perfumes Dynasty"
     },
     {
-      "name": "The Dua Brand Invasion of the Barbers"
+      "name": "Zara Amber Satin"
     },
     {
-      "name": "Orientica Muntasira Dhahab"
+      "name": "Mazzolari Vaniglia"
     },
     {
       "name": "New Reviews"
@@ -88,219 +95,219 @@
       "brand": "Xerjoff"
     },
     {
-      "name": "Angels' Share",
-      "brand": "By Kilian"
+      "name": "Bois Impérial",
+      "brand": "Essential Parfums"
     },
     {
-      "name": "Baccarat Rouge 540",
-      "brand": "Maison Francis Kurkdjian"
+      "name": "Megamare",
+      "brand": "Orto Parisi"
     },
     {
-      "name": "Layton",
-      "brand": "Parfums de Marly"
+      "name": "Sex-Sea",
+      "brand": "Lorenzo Pazzaglia"
     },
     {
-      "name": "Tobacco Vanille",
-      "brand": "Tom Ford"
+      "name": "Dream Sea",
+      "brand": "Lorenzo Pazzaglia"
     },
     {
-      "name": "Le Male Elixir",
-      "brand": "Jean Paul Gaultier"
+      "name": "Hacivat",
+      "brand": "Nishane"
+    },
+    {
+      "name": "Van Py Rhum",
+      "brand": "Lorenzo Pazzaglia"
+    },
+    {
+      "name": "Summer Hammer",
+      "brand": "Lorenzo Pazzaglia"
     },
     {
       "name": "Aventus",
       "brand": "Creed"
     },
     {
-      "name": "Le Male Le Parfum",
-      "brand": "Jean Paul Gaultier"
+      "name": "Evil Angel a.k.a. 28.09",
+      "brand": "Lorenzo Pazzaglia"
     },
     {
-      "name": "Grand Soir",
-      "brand": "Maison Francis Kurkdjian"
+      "name": "Layton",
+      "brand": "Parfums de Marly"
     },
     {
-      "name": "Emporio Armani Stronger With You Intensely",
-      "brand": "Giorgio Armani"
+      "name": "Carbonara",
+      "brand": "Lorenzo Pazzaglia"
     },
     {
-      "name": "Dior Homme Intense 2011",
-      "brand": "Dior"
-    },
-    {
-      "name": "Y Eau de Parfum",
-      "brand": "Yves Saint Laurent"
-    },
-    {
-      "name": "Khamrah",
-      "brand": "Lattafa Perfumes"
+      "name": "Ganymede",
+      "brand": "Marc-Antoine Barrois"
     },
     {
       "name": "Sauvage Elixir",
       "brand": "Dior"
     },
     {
-      "name": "By the Fireplace",
-      "brand": "Maison Martin Margiela"
+      "name": "Grand Soir",
+      "brand": "Maison Francis Kurkdjian"
     },
     {
-      "name": "Althaïr",
-      "brand": "Parfums de Marly"
+      "name": "Artik Sea",
+      "brand": "Lorenzo Pazzaglia"
     },
     {
-      "name": "Black Orchid",
-      "brand": "Tom Ford"
+      "name": "Reflection Man",
+      "brand": "Amouage"
     },
     {
-      "name": "Spicebomb Extreme",
-      "brand": "Viktor&Rolf"
+      "name": "Red Tobacco",
+      "brand": "Mancera"
     },
     {
-      "name": "Side Effect",
-      "brand": "Initio Parfums Prives"
+      "name": "Dior Homme Intense 2011",
+      "brand": "Dior"
     },
     {
-      "name": "Ombré Leather (2018)",
-      "brand": "Tom Ford"
+      "name": "Black Afgano",
+      "brand": "Nasomatto"
     }
   ],
   "remindsMePerfumes": [
     {
-      "name": "Kirke",
-      "brand": "Tiziana Terenzi"
+      "name": "Acqua di Sale",
+      "brand": "Profumum Roma"
     },
     {
-      "name": "Amber Oud Gold Edition",
-      "brand": "Al Haramain Perfumes"
+      "name": "Ask",
+      "brand": "Maiora Parfum"
     },
     {
-      "name": "Ana Abiyedh",
-      "brand": "Lattafa Perfumes"
+      "name": "Salaria",
+      "brand": "Giardino Benessere"
     },
     {
-      "name": "Jardin Exclusif",
-      "brand": "Mancera"
+      "name": "Megamare",
+      "brand": "Orto Parisi"
     },
     {
-      "name": "Erba Gold",
-      "brand": "Xerjoff"
+      "name": "Sex Sea",
+      "brand": "Lorenzo Pazzaglia"
     },
     {
-      "name": "Erba Pura",
-      "brand": "Sospiro Perfumes"
+      "name": "A Chaos In The Ocean",
+      "brand": "PARIS CORNER"
     },
     {
-      "name": "King",
-      "brand": "Bharara"
+      "name": "Turkuaz",
+      "brand": "Regalien"
     },
     {
-      "name": "Tender Amber",
-      "brand": "Zara"
+      "name": "Villa Lympia",
+      "brand": "Oriza L Legrand"
     },
     {
-      "name": "Don t Ask Me Permission",
-      "brand": "Simone Andreoli"
+      "name": "Blu Mare",
+      "brand": "Giardini Di Toscana"
     },
     {
-      "name": "Erba Pura Magica",
-      "brand": "Sospiro Perfumes"
+      "name": "Hades",
+      "brand": "Giardino Benessere"
     },
     {
-      "name": "Royal Amber",
-      "brand": "Orientica Premium"
+      "name": "Black Caviar",
+      "brand": "Electimuss"
     },
     {
-      "name": "Herbal Aquatica",
-      "brand": "Montale"
+      "name": "Tonic Water",
+      "brand": "Mizensir"
     },
     {
-      "name": "Confidential Private Gold",
-      "brand": "Lattafa Perfumes"
+      "name": "A mmare",
+      "brand": "Carthusia"
     },
     {
-      "name": "Philos Pura",
-      "brand": "Maison Alhambra"
+      "name": "Insomnia",
+      "brand": "Kinetic Perfumes"
     },
     {
-      "name": "La Yuqawam Jasmine Wisp",
-      "brand": "Rasasi"
+      "name": "Yaringa",
+      "brand": "Parfums d Elmar"
     },
     {
-      "name": "Juicy Flowers",
-      "brand": "Mancera"
+      "name": "Squid",
+      "brand": "Zoologist Perfumes"
     },
     {
-      "name": "Shaghaf Oud Ahmar",
-      "brand": "Swiss Arabian"
+      "name": "Artik Sea",
+      "brand": "Lorenzo Pazzaglia"
     },
     {
-      "name": "Durrat Al Aroos",
-      "brand": "Al Wataniah"
+      "name": "For Easy Days",
+      "brand": "NIVIRU"
     },
     {
-      "name": "Saffira",
-      "brand": "La Rive"
+      "name": "Armani Prive Bleu Turquoise",
+      "brand": "Giorgio Armani"
     },
     {
-      "name": "Velvet Fantasy",
-      "brand": "Montale"
+      "name": "Out At Sea",
+      "brand": "The Dua Brand"
     }
   ],
   "pros": [
-    "Beastly projection",
-    "24hr performance",
-    "Luscious fruits",
-    "Beautiful scent",
-    "Long lasting citrus"
+    "Great performance and longevity",
+    "Excellent aquatic scent",
+    "Addictive and easy to wear",
+    "Good quality fragrance",
+    "Ideal for summer season"
   ],
   "cons": [
-    "May be too strong if oversprayed",
-    "Offensive scent to some people",
-    "Overdosing of synthetics",
-    "Sickening sharp fruity notes",
-    "Aggressive aromachemicals ruining the scent"
+    "Not suitable for those who prefer sweet or coconut notes",
+    "May not be suitable for those who dislike aquatic scents",
+    "The seaweed and algae notes may not be appealing to everyone",
+    "Some people find it too strong or overwhelming",
+    "Not suitable for formal occasions or winter season"
   ],
   "longevity": {
-    "veryWeak": 79,
-    "weak": 122,
-    "moderate": 919,
-    "longLasting": 2367,
-    "eternal": 3083,
+    "veryWeak": 18,
+    "weak": 12,
+    "moderate": 73,
+    "longLasting": 246,
+    "eternal": 519,
     "mostVoted": "eternal"
   },
   "gender": {
-    "female": 1085,
-    "moreFemale": 1316,
-    "unisex": 3495,
-    "moreMale": 514,
-    "male": 310,
+    "female": 12,
+    "moreFemale": 5,
+    "unisex": 303,
+    "moreMale": 285,
+    "male": 232,
     "mostVoted": "unisex"
   },
   "valueForMoney": {
-    "priceTooHigh": 1285,
-    "overpriced": 2178,
-    "fair": 1886,
-    "goodQuality": 411,
-    "excellentQuality": 160,
-    "mostVoted": "overpriced"
+    "priceTooHigh": 72,
+    "overpriced": 132,
+    "fair": 280,
+    "goodQuality": 145,
+    "excellentQuality": 150,
+    "mostVoted": "fair"
   },
   "season": {
-    "winter": 35.454,
-    "spring": 92.7324,
+    "winter": 32.4695,
+    "spring": 83.9939,
     "summer": 100.0,
-    "fall": 58.1195,
+    "fall": 54.4207,
     "mostVoted": "summer"
   },
   "timeOfDay": {
-    "day": 93.0343,
-    "night": 56.308,
+    "day": 86.8902,
+    "night": 72.7134,
     "mostVoted": "day"
   },
   "sillage": {
-    "intimate": 198,
-    "moderate": 1305,
-    "strong": 2647,
-    "enormous": 2387,
-    "mostVoted": "strong"
+    "intimate": 25,
+    "moderate": 112,
+    "strong": 304,
+    "enormous": 406,
+    "mostVoted": "enormous"
   }
 }
