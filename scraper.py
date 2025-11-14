@@ -14,6 +14,73 @@ from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup, Tag, NavigableString
 from crawl4ai import AsyncWebCrawler
+from vpn_manager import VPNManager
+
+
+# Lista User-Agent do rotacji (różne przeglądarki i systemy)
+USER_AGENTS = [
+    # Chrome na Windows
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
+    # Chrome na macOS
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+    # Firefox na Windows
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0",
+    # Firefox na macOS
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:121.0) Gecko/20100101 Firefox/121.0",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:120.0) Gecko/20100101 Firefox/120.0",
+    # Safari na macOS
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1 Safari/605.1.15",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15",
+    # Edge na Windows
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0",
+]
+
+
+def get_random_headers() -> Dict[str, str]:
+    """Generuje losowe nagłówki HTTP z rotacją User-Agent."""
+    user_agent = random.choice(USER_AGENTS)
+    
+    # Różne Accept-Language w zależności od User-Agent
+    if "Firefox" in user_agent:
+        accept_language = random.choice([
+            "pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7",
+            "en-US,en;q=0.9",
+            "pl-PL,pl;q=0.9",
+        ])
+    else:
+        accept_language = random.choice([
+            "pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7",
+            "en-US,en;q=0.9,pl;q=0.8",
+            "pl-PL,pl;q=0.9",
+        ])
+    
+    headers = {
+        "User-Agent": user_agent,
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+        "Accept-Language": accept_language,
+        "Accept-Encoding": "gzip, deflate, br",
+        "DNT": "1",
+        "Connection": "keep-alive",
+        "Upgrade-Insecure-Requests": "1",
+        "Sec-Fetch-Dest": "document",
+        "Sec-Fetch-Mode": "navigate",
+        "Sec-Fetch-Site": random.choice(["none", "same-origin"]),
+        "Sec-Fetch-User": "?1",
+        "Cache-Control": random.choice(["max-age=0", "no-cache", "no-store"]),
+        "Referer": random.choice([
+            "https://www.google.com/",
+            "https://www.google.pl/",
+            "https://www.fragrantica.com/",
+            "",
+        ]),
+    }
+    
+    return headers
 
 
 def clean_text(text: str) -> str:
@@ -21,6 +88,89 @@ def clean_text(text: str) -> str:
     if not text:
         return ""
     return " ".join(text.split())
+
+
+def is_404_error_page(html: str, status_code: int = None) -> bool:
+    """Sprawdza czy strona jest stroną błędu 404.
+
+    Args:
+        html: Zawartość HTML strony
+        status_code: Kod statusu HTTP (jeśli dostępny)
+
+    Returns:
+        True jeśli strona jest błędem 404, False w przeciwnym razie
+    """
+    # Jeśli mamy kod statusu 404, to na pewno błąd
+    if status_code == 404:
+        return True
+
+    # Jeśli mamy inny kod statusu błędu (4xx, 5xx), prawdopodobnie błąd
+    if status_code and status_code >= 400:
+        return True
+
+    # Jeśli nie mamy kodu statusu lub jest 200, sprawdzamy zawartość HTML
+    if not html:
+        return False
+
+    soup = BeautifulSoup(html, "html.parser")
+    html_lower = html.lower()
+
+    # Sprawdź tytuł strony
+    title = soup.find("title")
+    if title:
+        title_text = clean_text(title.get_text()).lower()
+        if "404" in title_text or "not found" in title_text or "page not found" in title_text:
+            return True
+
+    # Sprawdź czy strona zawiera charakterystyczne elementy błędów 404
+    # Szukaj specyficznych wzorców błędów 404, nie tylko słów
+    error_indicators = [
+        "404 error",
+        "page not found",
+        "the page you are looking for",
+        "this page doesn't exist",
+        "error 404",
+        "http 404",
+        "404 - not found"
+    ]
+
+    for indicator in error_indicators:
+        if indicator in html_lower:
+            return True
+
+    # Sprawdź czy strona jest bardzo krótka (typowe dla stron błędów)
+    # ale zawiera słowa kluczowe błędów w widocznej treści (nie w JavaScript)
+    if len(html) < 2000 and ("error" in html_lower or "not found" in html_lower):
+        # Dodatkowe sprawdzenie - czy to nie jest normalna strona zawierająca te słowa
+        # w JavaScript lub innych niewidocznych elementach
+        body = soup.find("body")
+        if body:
+            # Usuń skrypty przed wyciągnięciem tekstu
+            body_copy = BeautifulSoup(str(body), "html.parser")
+            for script in body_copy.find_all("script"):
+                script.decompose()
+            for style in body_copy.find_all("style"):
+                style.decompose()
+
+            body_text = clean_text(body_copy.get_text()).lower()
+            # Jeśli główna widoczna treść strony jest bardzo krótka i zawiera specyficzne błędy 404, to prawdopodobnie 404
+            error_patterns_in_body = [
+                "404 error", "404 not found", "page not found", "error 404",
+                "http 404", "404 - not found", "the page you are looking for",
+                "this page doesn't exist"
+            ]
+            if len(body_text) < 500 and any(pattern in body_text for pattern in error_patterns_in_body):
+                return True
+
+    # Sprawdź czy strona nie zawiera podstawowych elementów strony perfum
+    # (np. brak nazwy perfum, opisu itp.)
+    if not soup.find("h1", itemprop="name") and not soup.find(id="pyramid"):
+        # Jeśli strona nie zawiera podstawowych elementów perfum
+        # i jest krótka, prawdopodobnie to błąd
+        if len(html) < 5000:
+            return True
+
+    return False
 
 
 def remove_unwanted_elements(soup: BeautifulSoup) -> None:
@@ -72,17 +222,25 @@ def extract_brand(soup: BeautifulSoup) -> Optional[str]:
 
 def extract_description(soup: BeautifulSoup) -> str:
     """Wyciąga opis perfum."""
+    description = ""
+    
     # Spróbuj znaleźć w elemencie z itemprop="description"
     desc_elem = soup.find(itemprop="description")
     if desc_elem:
-        return clean_text(desc_elem.get_text())
+        description = clean_text(desc_elem.get_text())
     
     # Alternatywnie szukaj w meta description
-    meta_desc = soup.find("meta", attrs={"name": "description"})
-    if meta_desc and meta_desc.get("content"):
-        return clean_text(meta_desc.get("content"))
+    if not description:
+        meta_desc = soup.find("meta", attrs={"name": "description"})
+        if meta_desc and meta_desc.get("content"):
+            description = clean_text(meta_desc.get("content"))
     
-    return ""
+    # Jeśli znaleziono "Read about this perfume", usuń wszystko od tego miejsca do końca
+    if description and "Read about this perfume" in description:
+        index = description.find("Read about this perfume")
+        description = description[:index].strip()
+    
+    return description
 
 
 def extract_main_image_url(soup: BeautifulSoup, base_url: str) -> str:
@@ -301,7 +459,7 @@ def extract_similar_perfumes(soup: BeautifulSoup) -> List[Dict[str, str]]:
                     if name and len(name) > 2 and name not in [s["name"] for s in similar]:
                         similar.append({"name": name})
     
-    return similar[:20]  # Limit do 20 podobnych
+    return similar[1:13]  
 
 
 def extract_people_also_like(soup: BeautifulSoup) -> List[Dict[str, str]]:
@@ -987,37 +1145,38 @@ def extract_all_voting_data(soup: BeautifulSoup) -> Dict[str, Dict[str, Any]]:
     }
 
 
-async def scrape_perfume_data(url: str, max_retries: int = 3) -> Dict[str, Any]:
+async def scrape_perfume_data(url: str, max_retries: int = 3, vpn_manager: Optional[VPNManager] = None) -> Dict[str, Any]:
     """Główna funkcja scrapująca dane o perfumach.
     
     Args:
         url: URL strony do scrapowania
         max_retries: Maksymalna liczba prób przy błędach 429
+        vpn_manager: Opcjonalny menedżer VPN
     """
-    # Konfiguracja nagłówków HTTP, aby uniknąć wykrycia
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-        "Accept-Language": "pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7",
-        "Accept-Encoding": "gzip, deflate, br",
-        "DNT": "1",
-        "Connection": "keep-alive",
-        "Upgrade-Insecure-Requests": "1",
-        "Sec-Fetch-Dest": "document",
-        "Sec-Fetch-Mode": "navigate",
-        "Sec-Fetch-Site": "none",
-        "Sec-Fetch-User": "?1",
-        "Cache-Control": "max-age=0",
-    }
-    
-    # Zwiększone opóźnienie przed requestem (5-10 sekund) - aby uniknąć 429
-    await asyncio.sleep(random.uniform(5.0, 10.0))
+    # Upewnij się, że VPN jest połączony
+    if vpn_manager:
+        if not vpn_manager.is_connected():
+            print("🔌 Łączenie z VPN przed scrapowaniem...")
+            if not await vpn_manager.connect():
+                print("⚠️  Nie udało się połączyć z VPN, kontynuowanie bez VPN...", file=sys.stderr)
     
     for attempt in range(max_retries):
         try:
+            # Generuj nowe losowe nagłówki dla każdej próby
+            headers = get_random_headers()
+            
+            # Dodaj losowe opóźnienie przed żądaniem (1-5 sekund)
+            if attempt > 0:
+                delay = random.uniform(2.0, 5.0)
+                print(f"⏳ Oczekiwanie {delay:.1f}s przed ponowną próbą...")
+                await asyncio.sleep(delay)
+            
+            # Utwórz nowy crawler dla każdej próby (czyści sesję i cookies)
             async with AsyncWebCrawler(
                 headless=True,
                 verbose=False,
+                # Wyłącz cache i cookies aby uniknąć śledzenia
+                cache_enabled=False,
             ) as crawler:
                 # Użyj networkidle z dłuższym timeoutem i większym opóźnieniem
                 # aby zapewnić pełne załadowanie JavaScript
@@ -1025,27 +1184,54 @@ async def scrape_perfume_data(url: str, max_retries: int = 3) -> Dict[str, Any]:
                     url=url,
                     headers=headers,
                     wait_for="networkidle",  # Czekaj na zakończenie ładowania sieci
-                    delay_before_return_html=random.uniform(3.0, 5.0),  # Dłuższe opóźnienie przed zwróceniem HTML (3-5 sekund)
+                    delay_before_return_html=0.0,  # Brak opóźnienia - maksymalna prędkość
                 )
                 
                 # Sprawdź czy otrzymaliśmy błąd 429
                 if result.status_code == 429:
-                    wait_time = (2 ** attempt) * random.uniform(30, 60)  # Exponential backoff: 30-60s, 60-120s, 120-240s
-                    print(f"⚠️  Otrzymano błąd 429 (Too Many Requests). Czekam {wait_time:.1f} sekund przed ponowną próbą...", file=sys.stderr)
-                    await asyncio.sleep(wait_time)
+                    print(f"⚠️  Otrzymano błąd 429 (Too Many Requests). Próba ponowna...", file=sys.stderr)
+                    
+                    # W przypadku błędu 429, zmień konfigurację VPN i poczekaj dłużej
+                    if vpn_manager:
+                        print("🔄 Zmienianie konfiguracji VPN...", file=sys.stderr)
+                        await vpn_manager.reconnect_with_new_config()
+                        # Dłuższe oczekiwanie po zmianie VPN (5-10 sekund)
+                        wait_time = random.uniform(5.0, 10.0)
+                        print(f"⏳ Oczekiwanie {wait_time:.1f}s po zmianie VPN...")
+                        await asyncio.sleep(wait_time)
+                    
                     continue  # Spróbuj ponownie
-                
-                # Dodatkowe opóźnienie po pobraniu strony (symulacja czytania strony)
-                await asyncio.sleep(random.uniform(2.0, 4.0))
                 
                 if not result.success:
                     # Sprawdź czy błąd zawiera informację o 429
                     if "429" in str(result.error_message) or "too many" in str(result.error_message).lower():
-                        wait_time = (2 ** attempt) * random.uniform(30, 60)
-                        print(f"⚠️  Wykryto błąd 429. Czekam {wait_time:.1f} sekund przed ponowną próbą...", file=sys.stderr)
-                        await asyncio.sleep(wait_time)
+                        print(f"⚠️  Wykryto błąd 429. Próba ponowna...", file=sys.stderr)
+                        
+                        # W przypadku błędu 429, zmień konfigurację VPN i poczekaj dłużej
+                        if vpn_manager:
+                            print("🔄 Zmienianie konfiguracji VPN...", file=sys.stderr)
+                            await vpn_manager.reconnect_with_new_config()
+                            # Dłuższe oczekiwanie po zmianie VPN (5-10 sekund)
+                            wait_time = random.uniform(5.0, 10.0)
+                            print(f"⏳ Oczekiwanie {wait_time:.1f}s po zmianie VPN...")
+                            await asyncio.sleep(wait_time)
+                        
                         continue
                     raise Exception(f"Nie udało się pobrać strony: {result.error_message}")
+                
+                # Sprawdź czy strona zwróciła błąd 404 lub podobny
+                html = result.html
+                if html and is_404_error_page(html, getattr(result, 'status_code', None)):
+                    # W przypadku błędu 404, zmień VPN i spróbuj ponownie
+                    if vpn_manager:
+                        print("🔄 Strona zwróciła błąd (404 lub podobny), zmienianie konfiguracji VPN...", file=sys.stderr)
+                        await vpn_manager.reconnect_with_new_config()
+                        # Krótsze oczekiwanie dla 404 (2-4 sekundy)
+                        wait_time = random.uniform(2.0, 4.0)
+                        await asyncio.sleep(wait_time)
+                        continue
+                    else:
+                        raise Exception("Strona zwróciła błąd (404 lub podobny)")
                 
                 # Jeśli dotarliśmy tutaj, request był udany
                 break
@@ -1055,13 +1241,41 @@ async def scrape_perfume_data(url: str, max_retries: int = 3) -> Dict[str, Any]:
             if attempt == max_retries - 1:
                 raise
             
-            # Sprawdź czy błąd zawiera informację o 429
+            # Sprawdź czy błąd zawiera informację o 429 lub problemach z siecią
             error_str = str(e).lower()
             if "429" in error_str or "too many" in error_str or "rate limit" in error_str:
-                wait_time = (2 ** attempt) * random.uniform(30, 60)
-                print(f"⚠️  Wykryto błąd rate limiting. Czekam {wait_time:.1f} sekund przed ponowną próbą...", file=sys.stderr)
-                await asyncio.sleep(wait_time)
+                print(f"⚠️  Wykryto błąd rate limiting. Próba ponowna...", file=sys.stderr)
+                
+                # W przypadku błędu rate limiting, zmień konfigurację VPN i poczekaj dłużej
+                if vpn_manager:
+                    print("🔄 Zmienianie konfiguracji VPN...", file=sys.stderr)
+                    await vpn_manager.reconnect_with_new_config()
+                    # Dłuższe oczekiwanie po zmianie VPN (5-10 sekund)
+                    wait_time = random.uniform(5.0, 10.0)
+                    print(f"⏳ Oczekiwanie {wait_time:.1f}s po zmianie VPN...")
+                    await asyncio.sleep(wait_time)
+                
                 continue
+            elif "network" in error_str or "connection" in error_str or "timeout" in error_str:
+                # W przypadku problemów z siecią, spróbuj zmienić VPN
+                if vpn_manager:
+                    print("🔄 Problem z siecią, zmienianie konfiguracji VPN...", file=sys.stderr)
+                    await vpn_manager.reconnect_with_new_config()
+                    wait_time = random.uniform(3.0, 6.0)
+                    await asyncio.sleep(wait_time)
+                    continue
+                else:
+                    raise
+            elif "404" in error_str or "not found" in error_str or "strona zwróciła błąd" in error_str:
+                # W przypadku błędu 404, zmień VPN i spróbuj ponownie
+                if vpn_manager:
+                    print("🔄 Strona zwróciła błąd (404 lub podobny), zmienianie konfiguracji VPN...", file=sys.stderr)
+                    await vpn_manager.reconnect_with_new_config()
+                    wait_time = random.uniform(2.0, 4.0)
+                    await asyncio.sleep(wait_time)
+                    continue
+                else:
+                    raise
             else:
                 # Jeśli to inny błąd, rzuć wyjątek od razu
                 raise
@@ -1080,7 +1294,8 @@ async def scrape_perfume_data(url: str, max_retries: int = 3) -> Dict[str, Any]:
             raise Exception(f"Nie udało się pobrać zawartości strony. HTML ma tylko {len(html) if html else 0} znaków.")
         
         # Sprawdź czy strona została przekierowana lub czy jest błąd
-        if "error" in html.lower() or "not found" in html.lower() or "404" in html.lower():
+        # (to sprawdzenie jest już wykonane w pętli retry, ale zostawiamy jako dodatkowe zabezpieczenie)
+        if is_404_error_page(html):
             raise Exception("Strona zwróciła błąd (404 lub podobny)")
         
         # Spróbuj użyć body jako fallback

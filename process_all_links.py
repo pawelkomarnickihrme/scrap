@@ -7,14 +7,34 @@ a następnie zapisuje wyniki do osobnego pliku JSON.
 
 import asyncio
 import json
+import os
 import random
 import re
 import sys
+import time
+import getpass
 from urllib.parse import urlparse
 from pathlib import Path
 
 from scraper import scrape_perfume_data
 from scrape_reviews import scrape_reviews
+from vpn_manager import VPNManager
+
+
+def get_sudo_password() -> str:
+    """Pobiera hasło sudo z zmiennej środowiskowej lub pyta użytkownika."""
+    # Najpierw sprawdź zmienną środowiskową
+    sudo_password = os.getenv("SUDO_PASSWORD")
+    if sudo_password:
+        return sudo_password
+    
+    # Jeśli nie ma w zmiennej środowiskowej, zapytaj użytkownika
+    try:
+        sudo_password = getpass.getpass("🔐 Podaj hasło sudo (lub ustaw SUDO_PASSWORD w zmiennych środowiskowych): ")
+        return sudo_password
+    except KeyboardInterrupt:
+        print("\n❌ Anulowano", file=sys.stderr)
+        sys.exit(1)
 
 
 def generate_filename_from_url(url: str) -> str:
@@ -71,7 +91,7 @@ def generate_filename_from_perfume_name(perfume_name: str, brand: str = None) ->
     return filename
 
 
-async def process_single_link(url: str, output_dir: Path = None) -> str:
+async def process_single_link(url: str, output_dir: Path = None, vpn_manager: VPNManager = None) -> str:
     """Przetwarza pojedynczy link i zapisuje wyniki do pliku JSON.
     
     Zwraca ścieżkę do zapisanego pliku lub None w przypadku błędu.
@@ -83,14 +103,17 @@ async def process_single_link(url: str, output_dir: Path = None) -> str:
     print(f"Przetwarzanie: {url}")
     print(f"{'='*80}")
     
+    # Rozpocznij pomiar czasu
+    start_time = time.time()
+    
     try:
         # Krok 1: Scrapuj dane podstawowe z scraper.py
         print("✓ Scrapowanie danych podstawowych...")
-        perfume_data = await scrape_perfume_data(url)
+        perfume_data = await scrape_perfume_data(url, vpn_manager=vpn_manager)
         
         # Krok 2: Scrapuj recenzje z scrape_reviews.py
         print("✓ Scrapowanie recenzji...")
-        reviews = await scrape_reviews(url)
+        reviews = await scrape_reviews(url, vpn_manager=vpn_manager)
         
         # Krok 3: Połącz dane
         perfume_data["review"] = reviews
@@ -112,15 +135,22 @@ async def process_single_link(url: str, output_dir: Path = None) -> str:
         with open(output_path, "w", encoding="utf-8") as f:
             json.dump(perfume_data, f, ensure_ascii=False, indent=2)
         
+        # Zakończ pomiar czasu
+        elapsed_time = time.time() - start_time
+        
         print(f"✓ Zapisano do: {output_path}")
         print(f"  - Nazwa perfum: {perfume_data.get('perfumeName', 'N/A')}")
         print(f"  - Marka: {perfume_data.get('brand', 'N/A')}")
         print(f"  - Liczba recenzji: {len(reviews)}")
+        print(f"  - Czas scrapowania: {elapsed_time:.2f} sekund ({elapsed_time/60:.2f} minut)")
         
         return str(output_path)
         
     except Exception as e:
+        # Zakończ pomiar czasu również w przypadku błędu
+        elapsed_time = time.time() - start_time
         print(f"✗ Błąd podczas przetwarzania {url}: {e}", file=sys.stderr)
+        print(f"  - Czas przed błędem: {elapsed_time:.2f} sekund ({elapsed_time/60:.2f} minut)", file=sys.stderr)
         import traceback
         traceback.print_exc()
         return None
@@ -128,8 +158,14 @@ async def process_single_link(url: str, output_dir: Path = None) -> str:
 
 async def main():
     """Główna funkcja programu."""
+    # Pobierz hasło sudo
+    sudo_password = get_sudo_password()
+    
+    # Inicjalizuj VPN Manager z hasłem sudo
+    vpn_manager = VPNManager(sudo_password=sudo_password)
+    
     # Wczytaj linki z DATA.json
-    data_file = Path("DATA.json")
+    data_file = Path("all-links.json")
     if not data_file.exists():
         print(f"Błąd: Plik {data_file} nie istnieje", file=sys.stderr)
         sys.exit(1)
@@ -153,24 +189,35 @@ async def main():
     error_count = 0
     processed_files = []
     
-    for i, url in enumerate(links, 1):
+    # Iteruj po kopii listy, aby móc bezpiecznie modyfikować oryginalną listę
+    links_to_process = links.copy()
+    
+    for i, url in enumerate(links_to_process, 1):
         if not url or not url.strip():
             continue
         
         url = url.strip()
         
-        # Odczekaj 60-90 sekund przed każdym zapytaniem (oprócz pierwszego) - aby uniknąć 429
-        if i > 1:
-            wait_time = random.uniform(60, 90)
-            print(f"\n⏳ Oczekiwanie {wait_time:.1f} sekund przed następnym zapytaniem...")
-            await asyncio.sleep(wait_time)
+        # # Odczekaj 60-90 sekund przed każdym zapytaniem (oprócz pierwszego) - aby uniknąć 429
+        # if i > 1:
+        #     wait_time = random.uniform(30, 60)
+        #     print(f"\n⏳ Oczekiwanie {wait_time:.1f} sekund przed następnym zapytaniem...")
+        #     await asyncio.sleep(wait_time)
         
-        print(f"\n[{i}/{len(links)}] Przetwarzanie linku {i}...")
-        
-        result = await process_single_link(url, output_dir)
+        print(f"\n[{i}/{len(links_to_process)}] Przetwarzanie linku {i}...")
+               
+        result = await process_single_link(url, output_dir, vpn_manager)
         if result:
             success_count += 1
             processed_files.append(result)
+            
+            # Usuń przetworzony link z listy i zapisz zaktualizowany plik
+            if url in links:
+                links.remove(url)
+                # Zapisz zaktualizowaną listę do pliku
+                with open(data_file, "w", encoding="utf-8") as f:
+                    json.dump({"links": links}, f, ensure_ascii=False, indent=2)
+                print(f"✓ Usunięto link z listy. Pozostało {len(links)} linków.")
         else:
             error_count += 1
     
@@ -181,6 +228,10 @@ async def main():
     print(f"✓ Pomyślnie przetworzono: {success_count}")
     print(f"✗ Błędów: {error_count}")
     print(f"📁 Pliki zapisane w katalogu: {output_dir}")
+    
+    # Rozłącz VPN na końcu
+    if vpn_manager:
+        await vpn_manager.disconnect()
     
     if processed_files:
         print(f"\nPrzetworzone pliki:")
