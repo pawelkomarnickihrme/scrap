@@ -76,3 +76,4 @@ Program zapisuje dane do pliku `output.js` w formacie JSON zgodnym z interfejsem
 
 
 
+
